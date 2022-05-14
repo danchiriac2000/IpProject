@@ -302,7 +302,7 @@ namespace DataBaseManager
             return product;
         }
         /// <summary>
-        /// This method delete an user from database. if the id is not found, it will do nothing.
+        /// This method deletes an user from the database. if the id is not found, it will do nothing.
         /// </summary>
         /// <param name="id"></param>
         public void DeleteUser(int id)
@@ -315,7 +315,7 @@ namespace DataBaseManager
         }
 
         /// <summary>
-        /// This method delete a product from database. if the id is not found, it will do nothing.
+        /// This method deletes a product from the database. if the id is not found, it will do nothing.
         /// </summary>
         /// <param name="id"></param>
         public void DeleteProduct(int id)
@@ -327,7 +327,7 @@ namespace DataBaseManager
         }
 
         /// <summary>
-        /// This method delete all users from database.
+        /// This method deletes all users from the database.
         /// </summary>
         public void ClearUsers()
         {
@@ -337,7 +337,7 @@ namespace DataBaseManager
             command.ExecuteNonQuery();
         }
         /// <summary>
-        /// This method delete all products from database.
+        /// This method deletes all products from the database.
         /// </summary>
         public void ClearProducts()
         {
@@ -345,6 +345,79 @@ namespace DataBaseManager
             command = _connection.CreateCommand();
             command.CommandText = String.Format("DELETE FROM products");
             command.ExecuteNonQuery();
+        }
+        /// <summary>
+        /// This method will check if the user exists in the database. If It exists,it will update the record from the database with all modified members of the object.
+        /// </summary>
+        /// <param name="user"></param>
+        public void Update(User user)
+        {
+            SQLiteCommand command;
+            command = _connection.CreateCommand();
+            command.CommandText = String.Format("SELECT id FROM users WHERE id={0}",user.Id);
+            SQLiteDataReader sqlite_datareader = command.ExecuteReader();
+            string id = "";
+            while (sqlite_datareader.Read())
+            {
+                int myreader = sqlite_datareader.GetInt32(0);
+                id += myreader;
+            }
+            if (id != "")
+            {
+                command = _connection.CreateCommand();
+                command.CommandText = String.Format("UPDATE users" +
+                    " SET username='{0}'," +
+                    "password='{1}'," +
+                    "rights='{2}'" +
+                    " WHERE id={3}",user.Username,user.Password,user.Rights,user.Id);
+                
+                command.ExecuteNonQuery();
+            }
+
+            else
+            {
+                //Do nothing...The user was not found in the database.
+            
+            }
+
+
+        }
+        /// <summary>
+        /// This method will check if the product exists in the database. If It exists,it will update the record from the database with all modified members of the object.
+        /// </summary>
+        /// <param name="product"></param>
+        public void Update(Product product)
+        {
+            SQLiteCommand command;
+            command = _connection.CreateCommand();
+            command.CommandText = String.Format("SELECT id FROM products WHERE id={0}", product.Id);
+            SQLiteDataReader sqlite_datareader = command.ExecuteReader();
+            string id = "";
+            while (sqlite_datareader.Read())
+            {
+                int myreader = sqlite_datareader.GetInt32(0);
+                id += myreader;
+            }
+            if (id != "")
+            {
+                command = _connection.CreateCommand();
+                command.CommandText = String.Format("UPDATE products" +
+                    " SET name='{0}'," +
+                    "category='{1}'," +
+                    "price='{2}'," +
+                    "stock={3}" +
+                    " WHERE id={4}", product.Name,product.Category,product.Price,product.Stock,product.Id);
+
+                command.ExecuteNonQuery();
+            }
+
+            else
+            {
+                //Do nothing... The product was not found in the database.
+
+            }
+
+
         }
     }
 }
