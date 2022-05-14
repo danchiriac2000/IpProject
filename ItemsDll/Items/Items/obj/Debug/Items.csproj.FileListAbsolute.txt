@@ -4,3 +4,9 @@ C:\Users\danco\source\repos\Github_copy\ItemsDll\Items\Items\obj\Debug\Items.csp
 C:\Users\danco\source\repos\Github_copy\ItemsDll\Items\Items\obj\Debug\Items.csproj.CoreCompileInputs.cache
 C:\Users\danco\source\repos\Github_copy\ItemsDll\Items\Items\obj\Debug\Items.dll
 C:\Users\danco\source\repos\Github_copy\ItemsDll\Items\Items\obj\Debug\Items.pdb
+C:\Users\danco\Desktop\IpProject\ItemsDll\Items\Items\bin\Debug\Items.dll
+C:\Users\danco\Desktop\IpProject\ItemsDll\Items\Items\bin\Debug\Items.pdb
+C:\Users\danco\Desktop\IpProject\ItemsDll\Items\Items\obj\Debug\Items.csproj.AssemblyReference.cache
+C:\Users\danco\Desktop\IpProject\ItemsDll\Items\Items\obj\Debug\Items.csproj.CoreCompileInputs.cache
+C:\Users\danco\Desktop\IpProject\ItemsDll\Items\Items\obj\Debug\Items.dll
+C:\Users\danco\Desktop\IpProject\ItemsDll\Items\Items\obj\Debug\Items.pdb

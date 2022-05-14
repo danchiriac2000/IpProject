@@ -40,10 +40,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Exceptions">
+    <Reference Include="Exceptions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ExceptionsDll\Exceptions\Exceptions\bin\Debug\Exceptions.dll</HintPath>
     </Reference>
-    <Reference Include="Items">
+    <Reference Include="Items, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ItemsDll\Items\Items\bin\Debug\Items.dll</HintPath>
     </Reference>
     <Reference Include="System" />
