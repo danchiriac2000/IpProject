@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="DataBaseManager">
+      <HintPath>..\DataBaseDll\DataBaseManager\bin\Debug\DataBaseManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Exceptions">
+      <HintPath>..\ExceptionsDll\Exceptions\Exceptions\bin\Debug\Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="Items">
+      <HintPath>..\ItemsDll\Items\Items\bin\Debug\Items.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
