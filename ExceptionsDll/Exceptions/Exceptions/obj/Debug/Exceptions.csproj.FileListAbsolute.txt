@@ -1,0 +1,6 @@
+C:\Users\danco\source\repos\Github_copy\ExceptionsDll\Exceptions\Exceptions\bin\Debug\Exceptions.dll
+C:\Users\danco\source\repos\Github_copy\ExceptionsDll\Exceptions\Exceptions\bin\Debug\Exceptions.pdb
+C:\Users\danco\source\repos\Github_copy\ExceptionsDll\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.AssemblyReference.cache
+C:\Users\danco\source\repos\Github_copy\ExceptionsDll\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.CoreCompileInputs.cache
+C:\Users\danco\source\repos\Github_copy\ExceptionsDll\Exceptions\Exceptions\obj\Debug\Exceptions.dll
+C:\Users\danco\source\repos\Github_copy\ExceptionsDll\Exceptions\Exceptions\obj\Debug\Exceptions.pdb

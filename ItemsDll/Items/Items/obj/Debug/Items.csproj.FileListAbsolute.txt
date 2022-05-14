@@ -1,0 +1,6 @@
+C:\Users\danco\source\repos\Github_copy\ItemsDll\Items\Items\bin\Debug\Items.dll
+C:\Users\danco\source\repos\Github_copy\ItemsDll\Items\Items\bin\Debug\Items.pdb
+C:\Users\danco\source\repos\Github_copy\ItemsDll\Items\Items\obj\Debug\Items.csproj.AssemblyReference.cache
+C:\Users\danco\source\repos\Github_copy\ItemsDll\Items\Items\obj\Debug\Items.csproj.CoreCompileInputs.cache
+C:\Users\danco\source\repos\Github_copy\ItemsDll\Items\Items\obj\Debug\Items.dll
+C:\Users\danco\source\repos\Github_copy\ItemsDll\Items\Items\obj\Debug\Items.pdb
