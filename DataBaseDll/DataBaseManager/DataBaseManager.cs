@@ -301,5 +301,50 @@ namespace DataBaseManager
             }
             return product;
         }
+        /// <summary>
+        /// This method delete an user from database. if the id is not found, it will do nothing.
+        /// </summary>
+        /// <param name="id"></param>
+        public void DeleteUser(int id)
+        {
+            SQLiteCommand command;
+            command = _connection.CreateCommand();
+            command.CommandText = String.Format("DELETE FROM users where id={0}", id);
+            command.ExecuteNonQuery();
+
+        }
+
+        /// <summary>
+        /// This method delete a product from database. if the id is not found, it will do nothing.
+        /// </summary>
+        /// <param name="id"></param>
+        public void DeleteProduct(int id)
+        {
+            SQLiteCommand command;
+            command = _connection.CreateCommand();
+            command.CommandText = String.Format("DELETE FROM products where id={0}", id);
+            command.ExecuteNonQuery();
+        }
+
+        /// <summary>
+        /// This method delete all users from database.
+        /// </summary>
+        public void ClearUsers()
+        {
+            SQLiteCommand command;
+            command = _connection.CreateCommand();
+            command.CommandText = String.Format("DELETE FROM users");
+            command.ExecuteNonQuery();
+        }
+        /// <summary>
+        /// This method delete all products from database.
+        /// </summary>
+        public void ClearProducts()
+        {
+            SQLiteCommand command;
+            command = _connection.CreateCommand();
+            command.CommandText = String.Format("DELETE FROM products");
+            command.ExecuteNonQuery();
+        }
     }
 }
