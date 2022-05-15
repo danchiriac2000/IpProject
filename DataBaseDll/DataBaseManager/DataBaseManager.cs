@@ -30,23 +30,24 @@ namespace DataBaseManager
     public class DB
     {
         /// <summary>
-        /// Private member used to retain the connection to the database. Is initialized in the constructor.
+        /// Private member used to retain the connection to the database.It is initialized in the constructor.
         /// </summary>
+      
         private SQLiteConnection _connection;
-   
+        private static DB instance = null;
         /// <summary>
         /// This is the constructor for the database manager. This initializes the connection and check if the database has the right file extension. This constructor can throw an exception if 
-        /// something goes wrong.
+        /// something goes wrong. It is private becouse the class is a singleton and need to be instantiated just once.
         /// </summary>
-        /// <param name="dbPath"></param>
+        /// <param name="dbName"></param>
         /// <exception cref="InvalidExtensionException"></exception>
-        public DB(string dbPath)
+        private DB(string dbName)
         {
-            if (Path.GetExtension(dbPath) != ".db")
+            if (Path.GetExtension(dbName) != ".db")
             {
                 throw new InvalidExtensionException();
             }
-            _connection = new SQLiteConnection(String.Format("Data Source={0}; Version = 3; New = True; Compress = True; ", dbPath));
+            _connection = new SQLiteConnection(String.Format("Data Source={0}; Version = 3; New = True; Compress = True; ", dbName));
             try
             {
                 _connection.Open();
@@ -58,6 +59,25 @@ namespace DataBaseManager
             }
         }
         /// <summary>
+        /// Method to get the global instance of the class.
+        /// </summary>
+        /// <param name="dbPath"></param>
+        /// <returns></returns>
+        public static DB GetInstance(string dbName)
+        {
+            if (instance == null)
+            {
+                instance = new DB(dbName);
+            }
+            //If the dbName is different from the path of the current connection, change it.
+            if (dbName.Substring(0, dbName.Length - 3) != instance.Connection.DataSource)
+            {
+            
+                instance.ChangeConnection(dbName);
+            }
+            return instance;
+        }
+        /// <summary>
         /// The getter for the connection. It is necessary if the main application wants to use commmands on the database.
         /// </summary>
         public SQLiteConnection Connection
@@ -66,7 +86,33 @@ namespace DataBaseManager
             {
                 return _connection;
             }
+          
         }
+        /// <summary>
+        /// This method change the connection of the database instance.
+        /// </summary>
+        /// <param name="dbName"></param>
+        /// <exception cref="InvalidExtensionException"></exception>
+        public void ChangeConnection(string dbName)
+        {
+            if (Path.GetExtension(dbName) != ".db")
+            {
+                throw new InvalidExtensionException();
+            }
+            _connection.Close();
+            _connection = new SQLiteConnection(String.Format("Data Source={0}; Version = 3; New = True; Compress = True; ", dbName));
+            try
+            {
+                _connection.Open();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+      
     
         /// <summary>
         /// This method creates the users and the products tables.
@@ -175,6 +221,10 @@ namespace DataBaseManager
         /// <exception cref="UniqueException"></exception>
         public void Insert(Product prod)
         {
+            if (prod.Stock < 0)
+            {
+                throw new InvalidStockException();
+            }
             SQLiteCommand command;
             command = _connection.CreateCommand();
             command.CommandText = String.Format("SELECT id FROM products WHERE id={0}",prod.Id);
@@ -373,10 +423,9 @@ namespace DataBaseManager
                 
                 command.ExecuteNonQuery();
             }
-
             else
             {
-                //Do nothing...The user was not found in the database.
+                throw new RecordNotFoundException();
             
             }
 
@@ -388,6 +437,10 @@ namespace DataBaseManager
         /// <param name="product"></param>
         public void Update(Product product)
         {
+            if (product.Stock < 0)
+            {
+                throw new InvalidStockException();
+            }
             SQLiteCommand command;
             command = _connection.CreateCommand();
             command.CommandText = String.Format("SELECT id FROM products WHERE id={0}", product.Id);
@@ -410,14 +463,68 @@ namespace DataBaseManager
 
                 command.ExecuteNonQuery();
             }
-
             else
             {
-                //Do nothing... The product was not found in the database.
+                throw new RecordNotFoundException();
 
             }
 
 
         }
+        /// <summary>
+        /// This method is used to get max id from users table. It is used for autoincrement:
+        /// new User(GetLastUserId()+1,.....)
+        /// </summary>
+        /// <returns></returns>
+        public int GetLastUserID()
+        {
+            SQLiteCommand command;
+            command = _connection.CreateCommand();
+            command.CommandText = String.Format("SELECT MAX(id) FROM users");
+            SQLiteDataReader sqlite_datareader = command.ExecuteReader();
+            int id = -1;
+            if (sqlite_datareader.Read())
+            {
+                try
+                {
+                    int myreader = sqlite_datareader.GetInt32(0);
+                    id = myreader;
+                }
+                catch
+                {
+                    id = -1;
+                }
+            }
+
+            return id;
+        }
+        /// <summary>
+        /// This method is used to get max id from products table. It is used for autoincrement:
+        /// new Product(GetLastProductId()+1,.....)
+        /// </summary>
+        /// <returns></returns>
+        public int GetLastProductID()
+        {
+            SQLiteCommand command;
+            command = _connection.CreateCommand();
+            command.CommandText = String.Format("SELECT MAX(id) FROM products");
+            SQLiteDataReader sqlite_datareader = command.ExecuteReader();
+            int id = -1;
+            if (sqlite_datareader.Read())
+            {
+                try
+                {
+                    int myreader = sqlite_datareader.GetInt32(0);
+                    id = myreader;
+                }
+                catch
+                {
+                    id = -1;
+                }
+            }
+
+            return id;
+        }
+        
     }
 }
