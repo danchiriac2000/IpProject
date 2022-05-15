@@ -137,7 +137,7 @@ namespace DataBaseManager
                 string usersTableCreate = "CREATE TABLE USERS  (id INT PRIMARY KEY," +
                     "username VARCHAR2(40) UNIQUE," +
                     "password VARCHAR2(40) NOT NULL," +
-                    "rights VARCHAR2(15) NOT NULL)";
+                    "rights INT NOT NULL)";
                 command = _connection.CreateCommand();
                 command.CommandText = usersTableCreate;
                 command.ExecuteNonQuery();
@@ -210,7 +210,7 @@ namespace DataBaseManager
                 throw new ConstraintViolatedException();
             }
             command = _connection.CreateCommand();
-            command.CommandText =String.Format("INSERT INTO users(id,username,password,rights) VALUES({0},'{1}','{2}','{3}')",usr.Id,usr.Username,usr.Password,usr.Rights);
+            command.CommandText =String.Format("INSERT INTO users(id,username,password,rights) VALUES({0},'{1}','{2}',{3})",usr.Id,usr.Username,usr.Password,usr.Rights);
             command.ExecuteNonQuery();
 
         }
@@ -273,7 +273,7 @@ namespace DataBaseManager
                 int id = sqlite_datareader.GetInt32(0);
                 string username = sqlite_datareader.GetString(1);
                 string password = sqlite_datareader.GetString(2);
-                string rights = sqlite_datareader.GetString(3);
+                int rights = sqlite_datareader.GetInt32(3);
                 User usr = new User(id, username, password, rights);
                 users.Add(usr);
             }
@@ -322,7 +322,7 @@ namespace DataBaseManager
                 int uid = sqlite_datareader.GetInt32(0);
                 string username = sqlite_datareader.GetString(1);
                 string password = sqlite_datareader.GetString(2);
-                string rights = sqlite_datareader.GetString(3);
+                int rights = sqlite_datareader.GetInt32(3);
                 user = new User(uid, username, password, rights);
             }
             return user;
@@ -418,7 +418,7 @@ namespace DataBaseManager
                 command.CommandText = String.Format("UPDATE users" +
                     " SET username='{0}'," +
                     "password='{1}'," +
-                    "rights='{2}'" +
+                    "rights={2}" +
                     " WHERE id={3}",user.Username,user.Password,user.Rights,user.Id);
                 
                 command.ExecuteNonQuery();

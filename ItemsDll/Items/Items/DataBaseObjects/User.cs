@@ -26,7 +26,7 @@ namespace Items.DataBaseObjects
         /// <summary>
         /// The rights of the user.
         /// </summary>
-        private string _rights;
+        private int _rights;
         /// <summary>
         /// This is the constructor which initialize the variables.
         /// </summary>
@@ -34,7 +34,7 @@ namespace Items.DataBaseObjects
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <param name="rights"></param>
-        public User(int id, string username, string password, string rights)
+        public User(int id, string username, string password, int rights)
         {
             this._id = id;
             this._password = password;
@@ -75,7 +75,7 @@ namespace Items.DataBaseObjects
                 _password = value;
             }
         }
-        public string Rights
+        public int Rights
         {
             get
             {
