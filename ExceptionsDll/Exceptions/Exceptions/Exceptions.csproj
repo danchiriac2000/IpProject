@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessRightsExceptions\PermissionDeniedException.cs" />
     <Compile Include="DataBaseExceptions\ConstraintViolatedException.cs" />
     <Compile Include="DataBaseExceptions\InvalidExtensionException.cs" />
+    <Compile Include="DataBaseExceptions\InvalidStockException.cs" />
+    <Compile Include="DataBaseExceptions\RecordNotFoundException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

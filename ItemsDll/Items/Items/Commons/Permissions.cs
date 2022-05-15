@@ -33,9 +33,9 @@ namespace PharmacyManagementDLL
         /// </summary>
         public Permissions()
         {
-            _permissionsList.Add(Constants.AssistantPharmacist, new List<int>() { Constants.SellRight,Constants.VerifyStockRight });
-            _permissionsList.Add(Constants.Pharmacist, new List<int>() { Constants.SellRight, Constants.UpdateStockRight,
-                    Constants.VerifyStockRight, Constants.AddProductRight });
+            _permissionsList.Add(Constants.AssistantPharmacist, new List<int>() { Constants.SellRight,Constants.ViewProductsRight });
+            _permissionsList.Add(Constants.Pharmacist, new List<int>() { Constants.SellRight, Constants.ViewProductsRight,Constants.ModifyProductsDBRight });
+            _permissionsList.Add(Constants.Admin, new List<int>() { Constants.ModifyUsersDBRight, Constants.ViewUsersRight });
 
         }
 

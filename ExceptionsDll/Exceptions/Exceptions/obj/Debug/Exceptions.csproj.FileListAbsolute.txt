@@ -10,3 +10,9 @@ C:\Users\danco\Desktop\IpProject\ExceptionsDll\Exceptions\Exceptions\obj\Debug\E
 C:\Users\danco\Desktop\IpProject\ExceptionsDll\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.CoreCompileInputs.cache
 C:\Users\danco\Desktop\IpProject\ExceptionsDll\Exceptions\Exceptions\obj\Debug\Exceptions.dll
 C:\Users\danco\Desktop\IpProject\ExceptionsDll\Exceptions\Exceptions\obj\Debug\Exceptions.pdb
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\ExceptionsDll\Exceptions\Exceptions\bin\Debug\Exceptions.dll
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\ExceptionsDll\Exceptions\Exceptions\bin\Debug\Exceptions.pdb
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\ExceptionsDll\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.AssemblyReference.cache
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\ExceptionsDll\Exceptions\Exceptions\obj\Debug\Exceptions.csproj.CoreCompileInputs.cache
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\ExceptionsDll\Exceptions\Exceptions\obj\Debug\Exceptions.dll
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\ExceptionsDll\Exceptions\Exceptions\obj\Debug\Exceptions.pdb

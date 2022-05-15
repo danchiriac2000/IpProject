@@ -16,92 +16,310 @@
  *                                                                        *
  **************************************************************************/
 
+using Items.Commons;
 using Items.DataBaseObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using DataBaseManager;
 using Exceptions.DataBaseExceptions;
-
+using Exceptions.AccessRightsExceptions;
+using System.IO;
 
 namespace PharmacyManagementDLL
 {
+    /// <summary>
+    /// This class acts as a protection proxy between those who will use the 
+    /// application and the various actions it provides in the context of
+    /// pharmacy management. 
+    /// </summary>
     public class ProxyActionManager : IActionManager
     {
+        private DB _dbInstance;
         private RealActionManager _realActionManager;
         private User _currentUser;
         private Permissions _permissions;
-        private DB _dbInstance;
-
+      
+        /// <summary>
+        /// Class constructor: it initializes all its members for later use
+        /// </summary>
         public ProxyActionManager()
         {
+            _dbInstance = DB.GetInstance("IPpharma.db");
             _realActionManager = new RealActionManager();
-            _currentUser = null;
+            //_currentUser = null;
             _permissions = new Permissions();
-            // _dbInstance=DB.getInstance();
         }
 
-
-
-        public bool AddNewProduct(Product newProduct)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool AddToStock(int barcode, int quantity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Product> GetProducts()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool SellProduct(int barcode, int quantity)
-        {
-            throw new NotImplementedException();
-        }
-
-        //TODO
+        /// <summary>
+        /// Verifies username and password and provides access to app
+        /// only to those who are registered in the users database.
+        /// </summary>
+        /// <param name="username">Account username</param>
+        /// <param name="password">Account password</param>
+        /// <returns></returns>
         public bool Login(string username, string password)
         {
-            return true;
+            List<User> users = _dbInstance.SelectAllUsers();
+            foreach(User user in users)
+            {
+                if (user.Username.Equals(username))
+                {
+                    if (user.Password.Equals(Cryptography.HashString(password)))
+                    {
+                        _currentUser = user;
+                        return true;
+                    }
+                }
+            }
+            
+            return false;
         }
 
-
-
-
-        //TODO
-        public void AddUser(User user)
+        /// <summary>
+        /// Adds a new product to the database only if registered user has this right.
+        /// </summary> 
+        /// <param name="newProduct">Product to be added</param>
+        public void AddNewProduct(Product newProduct)
         {
+            bool hasAccess = true;
             try
             {
-                _dbInstance.Insert(user);
+                //gives access only to thosewho are Pharmacists
+                if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyProductsDBRight))
+                {
+                    _realActionManager.AddNewProduct(newProduct);
+                }
+                else
+                {
+                    hasAccess = false;
+                }
+            }
+            //forwards exceptions for display a suggestive message on GUI
+            catch (ConstraintViolatedException exc)
+            {
+                throw exc;
+            }
+            catch (InvalidStockException exc)
+            {
+                throw exc;
+            }
+
+            if (!hasAccess)
+            {
+                throw new PermissionDeniedException();
+            }
+        }
+
+        /// <summary>
+        /// Lets only those who have modify access right to increase/decrease product stock.
+        /// </summary>
+        /// <param name="barcode">Unique identifier of product</param>
+        /// <param name="quantity">Value to be added to the current stock. </param>   
+        public void AddToStock(int barcode, int quantity)
+        {
+            bool hasAccess = true;
+            try
+            {
+                //gives access only to thosewho are Pharmacists
+                if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyProductsDBRight))
+                {
+                    _realActionManager.AddToStock(barcode, quantity);
+                }
+                else
+                {
+                    hasAccess = false;
+                }
+            }
+            catch(RecordNotFoundException exc)
+            {
+                throw exc;
+            }
+            catch (InvalidStockException exc)
+            {
+                throw exc;
+            }
+
+
+            if (!hasAccess)
+            {
+                throw new PermissionDeniedException();
+            }
+        }
+
+        /// <summary>
+        /// Transmit Product list only to those who have viewProducts right.
+        /// </summary>
+        /// <returns>Products list from database.</returns>
+        public List<Product> GetProducts()
+        {
+            if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ViewProductsRight))
+            {
+                return _realActionManager.GetProducts();
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Gives access to sell products only to those who have SellRight.
+        /// </summary>
+        /// <param name="barcode">Unique identifier of product.</param>
+        /// <param name="quantity">Product amount which will be sold. </param>
+        public void SellProduct(int barcode, int quantity)
+        {
+            bool hasAccess = true;
+            try
+            {
+                if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.SellRight))
+                {
+                    _realActionManager.SellProduct(barcode, quantity);
+                }
+                else
+                {
+                    hasAccess = false;
+                }
+            }
+            catch(RecordNotFoundException exc)
+            {
+                throw exc;
+            }
+            catch(InvalidStockException exc)
+            {
+                throw exc;
+            }
+
+
+            if (!hasAccess)
+            {
+                throw new PermissionDeniedException();
+            }
+
+        }
+
+        /// <summary>
+        /// Lets currentUser to add new employee profile to database only if he has this right
+        /// </summary>
+        /// <param name="username">Newly added username</param>
+        /// /// <param name="password">Password for this profile</param>
+        /// /// <param name="occupationCode">A specific code given to the user's function in pharmacy</param>
+        public void AddUser(string username, string password, int occupationCode)
+        {
+            bool hasAccess = true;
+            try
+            {
+                if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight))
+                {
+                    _realActionManager.AddUser(username, password, occupationCode);
+                }
+                else
+                {
+                    hasAccess = false;
+                }
             }
             catch(ConstraintViolatedException exc)
             {
-                //MessageBox.Show("User already exists");
+                throw exc;
             }
-            
+
+            if (!hasAccess)
+            {
+                throw new PermissionDeniedException();
+            }
         }
 
-        //TODO
-        public void UpdateUser(string username,User user)
+        /// <summary>
+        /// Lets only those with modify users db right to modify user password in database
+        /// </summary>
+        /// <param name="userID">Modified userID.</param>
+        /// <param name="oldPass">Old password for this account.</param>
+        /// <param name="newPass">New password for this account.</param>
+        public void UpdateUserPassword(int userID, string oldPass, string newPass)
         {
+            bool hasAccess = true;
+            try
+            {
+                if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight))
+                {
+                    _realActionManager.UpdateUserPassword(userID, oldPass, newPass);
+                }
+                else
+                {
+                    hasAccess = false;
+                }
+            }
+            catch (RecordNotFoundException exc)
+            {
+                throw exc;
+            }
+            catch(InvalidDataException exc)
+            {
+                throw exc;
+            }
 
+            if (!hasAccess)
+            {
+                throw new PermissionDeniedException();
+            }
         }
 
-        //TODO
-        public void DeleteUser(string username)
+        /// <summary>
+        /// Lets only those with modify users db right to remove a user ;
+        /// </summary>
+        /// <param name="userID">ID of the user we want to remove</param>
+        public void DeleteUser(int userID)
         {
+            bool hasAccess = true;
 
+            if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight))
+            {
+                _realActionManager.DeleteUser(userID);
+            }
+            else
+            {
+                hasAccess = false;
+            }
+
+
+            if (!hasAccess)
+            {
+                throw new PermissionDeniedException();
+            }
         }
 
-        //TODO
+        /// <summary>
+        /// Gets info about a user only to those who have view users right.
+        /// </summary>
+        /// <param name="userID">ID of the user we want info about</param>
+        /// <returns>Requested user or null if it doesn't exist.</returns>
+        public User GetUser(int userID)
+        {         
+            User searchedUser = null;
+
+            if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ViewUsersRight))
+            {
+                searchedUser = _realActionManager.GetUser(userID);
+                return searchedUser;
+            }
+            else
+            {
+                throw new PermissionDeniedException();
+            }           
+        }
+
+        /// <summary>
+        /// Queries database to display all existing users only if current user has 'view users right'
+        /// </summary>
+        /// <returns>All existing users</returns>
         public List<User> GetUsers()
         {
-            return new List<User>();
+            if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ViewUsersRight))
+            {
+                return _realActionManager.GetUsers();
+            }
+            else
+            {
+                throw new PermissionDeniedException();
+            }
         }
         
     }

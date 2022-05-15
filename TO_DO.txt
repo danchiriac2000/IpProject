@@ -1,8 +1,7 @@
 Database & proxy
--user acces rights : int or string
--database singleton
+-invalidStockException from Update(User)
 -initializing users table from database before app starting
--move Constants.cs and Permissions.cs to Items
+
 
 GENERAL:
 -SRS

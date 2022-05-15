@@ -1,10 +1,10 @@
 ﻿/**************************************************************************
  *                                                                        *
- *  File:        Constants.cs                                             *
+ *  File:        PermissionDeniedException.cs                             *
  *  Copyright:   (c) 2022, Gabriela Ursachi                               *
  *  E-mail:      gabriela.ursachi@student.tuiasi.ro                       *
- *  Description: This file maintains codes for different properties       *
- *               of application.                                          *
+ *  Description: This file contains the implementation of an              *
+ *               access right exception                                  *
  *                                                                        *
  *                                                                        *
  *  This program is free software; you can redistribute it and/or modify  *
@@ -18,24 +18,42 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace PharmacyManagementDLL
+namespace Exceptions.AccessRightsExceptions
 {
-    /// <summary>
-    /// Constant codes for different access rights.
-    /// </summary>
-    public class Constants
+    public class PermissionDeniedException : Exception
     {
-        public const int SellRight = 10;
-        public const int VerifyStockRight = 11;
-        public const int UpdateStockRight = 12;
-        public const int AddProductRight = 13;
+        private string _message;
 
-        
-        //occupation codes within the pharmacy
-        public const int Admin = -1;
-        public const int Pharmacist = 0;
-        public const int AssistantPharmacist = 1;
+        /// <summary>
+        /// Constructor without arguments. 
+        /// </summary>
+        public PermissionDeniedException()
+        {
+            _message = "You do not have access right for this action.";
+        }
+
+        /// <summary>
+        /// Constructor with arguments.
+        /// </summary>
+        /// <param name="message"></param>
+        public PermissionDeniedException(string message)
+        {
+            this._message = message;
+        }
+
+        /// <summary>
+        /// Get property for _message variable.
+        /// </summary>
+        public string Message
+        {
+            get
+            {
+                return _message;
+            }
+        }
     }
 }

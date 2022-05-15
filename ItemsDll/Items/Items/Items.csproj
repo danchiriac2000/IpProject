@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commons\Constants.cs" />
+    <Compile Include="Commons\Cryptography.cs" />
+    <Compile Include="Commons\Permissions.cs" />
     <Compile Include="DataBaseObjects\Product.cs" />
     <Compile Include="DataBaseObjects\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
