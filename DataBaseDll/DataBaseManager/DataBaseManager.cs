@@ -20,7 +20,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace DataBaseManager
 {
@@ -55,7 +55,7 @@ namespace DataBaseManager
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
         /// <summary>
@@ -108,7 +108,7 @@ namespace DataBaseManager
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
 
         }

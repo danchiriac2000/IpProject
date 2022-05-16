@@ -152,7 +152,7 @@ namespace PharmacyManagementDLL
             try
             {   
                 string encryptedPass = Cryptography.HashString(password);
-                int userID = _dbInstance.GetLastUserID();
+                int userID = _dbInstance.GetLastUserID()+1;
                 User newUser = new User(userID, username, encryptedPass, occupationCode);
                 _dbInstance.Insert(newUser);
             }
