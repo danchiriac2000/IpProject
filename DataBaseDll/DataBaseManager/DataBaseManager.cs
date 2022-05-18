@@ -37,7 +37,7 @@ namespace DataBaseManager
         private static DB instance = null;
         /// <summary>
         /// This is the constructor for the database manager. This initializes the connection and check if the database has the right file extension. This constructor can throw an exception if 
-        /// something goes wrong. It is private becouse the class is a singleton and need to be instantiated just once.
+        /// something goes wrong. It is private because the class is a singleton and need to be instantiated just once.
         /// </summary>
         /// <param name="dbName"></param>
         /// <exception cref="InvalidExtensionException"></exception>
@@ -351,6 +351,54 @@ namespace DataBaseManager
             }
             return product;
         }
+        /// <summary>
+        /// Because username is UK, get user by username is relevant.
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public User SelectUser(string userName)
+        {
+            SQLiteCommand command;
+            command = _connection.CreateCommand();
+            command.CommandText = String.Format("SELECT * FROM users where username='{0}'", userName);
+            SQLiteDataReader sqlite_datareader = command.ExecuteReader();
+            User user = null;
+            while (sqlite_datareader.Read())
+            {
+                int uid = sqlite_datareader.GetInt32(0);
+                string username = sqlite_datareader.GetString(1);
+                string password = sqlite_datareader.GetString(2);
+                int rights = sqlite_datareader.GetInt32(3);
+                user = new User(uid, username, password, rights);
+            }
+            return user;
+        }
+
+        /// <summary>
+        /// Because name is UK, get product by name is relevant.
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public Product SelectProduct(string name)
+        {
+            SQLiteCommand command;
+            command = _connection.CreateCommand();
+            command.CommandText = String.Format("SELECT * FROM products where name='{0}'", name);
+            SQLiteDataReader sqlite_datareader = command.ExecuteReader();
+            Product product = null;
+            while (sqlite_datareader.Read())
+            {
+                int pid = sqlite_datareader.GetInt32(0);
+                string productname = sqlite_datareader.GetString(1);
+                string category = sqlite_datareader.GetString(2);
+                double price = sqlite_datareader.GetDouble(3);
+                int stock = sqlite_datareader.GetInt32(4);
+                product = new Product(pid, productname, category, price, stock);
+
+            }
+            return product;
+        }
+
         /// <summary>
         /// This method deletes an user from the database. if the id is not found, it will do nothing.
         /// </summary>
