@@ -1,4 +1,5 @@
-﻿using Exceptions.DataBaseExceptions;
+﻿using Exceptions.AccessRightsExceptions;
+using Exceptions.DataBaseExceptions;
 using PharmacyManagementDLL;
 using System;
 using System.Collections.Generic;
@@ -12,27 +13,47 @@ using System.Windows.Forms;
 
 namespace Interface
 {
-    public partial class Form3 : Form
+    public partial class FormAddUser : Form
     {
-        private ProxyActionManager _util = new ProxyActionManager();
+        private ProxyActionManager _util = ProxyActionManager.GetInstance();
 
-        public Form3()
+        public FormAddUser()
         {
             InitializeComponent();
         }
 
         private void buttonAddNewUser_Click(object sender, EventArgs e)
-        { 
+        {
             try
             {
                 string newUsername = textBoxNewUserName.Text;
                 string newPassword = textBoxNewUserPassword.Text;
                 int newOccupation = Convert.ToInt32(textBoxNewUserOccupation.Text);
-                _util.AddUser(newUsername, newPassword,newOccupation);
-                //MessageBox.Show("" + (_util == null));
-                this.Close(); 
+
+                if(newUsername=="" || newPassword == "")
+                {
+                    throw new FormatException();
+                }
+
+                //se considera ca se pot adauga doar farmacisti si asistenti
+                if (newOccupation != Constants.AssistantPharmacist || newOccupation != Constants.Pharmacist)
+                {
+                    throw new FormatException();
+                }
+                _util.AddUser(newUsername, newPassword, newOccupation);
+                this.Close();
             }
-            catch(ConstraintViolatedException exc)
+            catch (FormatException exc)
+            {
+                MessageBox.Show("Please insert a valid data : \n " +
+                    "Occupational code : 0(pharmacist) or 1(assistant); \n" +
+                    "Username and password cannot be empty.");
+            }
+            catch (ConstraintViolatedException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            catch(PermissionDeniedException exc)
             {
                 MessageBox.Show(exc.Message);
             }

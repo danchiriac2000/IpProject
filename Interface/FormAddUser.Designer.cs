@@ -1,7 +1,7 @@
 ﻿
 namespace Interface
 {
-    partial class Form3
+    partial class FormAddUser
     {
         /// <summary>
         /// Required designer variable.

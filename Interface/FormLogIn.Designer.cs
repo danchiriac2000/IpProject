@@ -1,7 +1,7 @@
 ﻿
 namespace Interface
 {
-    partial class Form1
+    partial class FormLogIn
     {
         /// <summary>
         /// Required designer variable.

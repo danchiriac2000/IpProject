@@ -31,7 +31,7 @@ namespace PharmacyManagementDLL
     /// <summary>
     /// This class acts as a protection proxy between those who will use the 
     /// application and the various actions it provides in the context of
-    /// pharmacy management. 
+    /// pharmacy management. It is also a singleton class for use in different views with the same values.
     /// </summary>
     public class ProxyActionManager : IActionManager
     {
@@ -39,16 +39,39 @@ namespace PharmacyManagementDLL
         private RealActionManager _realActionManager;
         private User _currentUser;
         private Permissions _permissions;
-      
+        private static ProxyActionManager _instance=null;
+
         /// <summary>
         /// Class constructor: it initializes all its members for later use
         /// </summary>
-        public ProxyActionManager()
+        private ProxyActionManager()
         {
             _dbInstance = DB.GetInstance("IPpharma.db");
             _realActionManager = new RealActionManager();
-            //_currentUser = null;
+            _currentUser = null;
             _permissions = new Permissions();
+        }
+
+        /// <summary>
+        /// It creates a new instance of proxy only if it hasn't been already created.
+        /// </summary>
+        /// <returns>ProxyActionManager singleton instance</returns>
+        public static ProxyActionManager GetInstance()
+        {
+            if (_instance == null)
+            {
+                _instance = new ProxyActionManager();
+            }
+
+            return _instance;
+        }
+
+        public User CurrentUser
+        {
+            get
+            {
+                return _currentUser;
+            }
         }
 
         /// <summary>
@@ -61,7 +84,7 @@ namespace PharmacyManagementDLL
         public bool Login(string username, string password)
         {
             List<User> users = _dbInstance.SelectAllUsers();
-            foreach(User user in users)
+            foreach (User user in users)
             {
                 if (user.Username.Equals(username))
                 {
@@ -72,7 +95,7 @@ namespace PharmacyManagementDLL
                     }
                 }
             }
-            
+
             return false;
         }
 
@@ -131,7 +154,7 @@ namespace PharmacyManagementDLL
                     hasAccess = false;
                 }
             }
-            catch(RecordNotFoundException exc)
+            catch (RecordNotFoundException exc)
             {
                 throw exc;
             }
@@ -179,11 +202,11 @@ namespace PharmacyManagementDLL
                     hasAccess = false;
                 }
             }
-            catch(RecordNotFoundException exc)
+            catch (RecordNotFoundException exc)
             {
                 throw exc;
             }
-            catch(InvalidStockException exc)
+            catch (InvalidStockException exc)
             {
                 throw exc;
             }
@@ -207,7 +230,7 @@ namespace PharmacyManagementDLL
             bool hasAccess = true;
             try
             {
-                if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight))
+                if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight) && occupationCode!=Constants.Admin)
                 {
                     _realActionManager.AddUser(username, password, occupationCode);
                 }
@@ -216,7 +239,7 @@ namespace PharmacyManagementDLL
                     hasAccess = false;
                 }
             }
-            catch(ConstraintViolatedException exc)
+            catch (ConstraintViolatedException exc)
             {
                 throw exc;
             }
@@ -230,17 +253,17 @@ namespace PharmacyManagementDLL
         /// <summary>
         /// Lets only those with modify users db right to modify user password in database
         /// </summary>
-        /// <param name="userID">Modified userID.</param>
+        /// <param name="username">Modified user's name.</param>
         /// <param name="oldPass">Old password for this account.</param>
         /// <param name="newPass">New password for this account.</param>
-        public void UpdateUserPassword(int userID, string oldPass, string newPass)
+        public void UpdateUserPassword(string username, string oldPass, string newPass)
         {
             bool hasAccess = true;
             try
             {
                 if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight))
                 {
-                    _realActionManager.UpdateUserPassword(userID, oldPass, newPass);
+                    _realActionManager.UpdateUserPassword(username, oldPass, newPass);
                 }
                 else
                 {
@@ -251,7 +274,7 @@ namespace PharmacyManagementDLL
             {
                 throw exc;
             }
-            catch(InvalidDataException exc)
+            catch (InvalidDataException exc)
             {
                 throw exc;
             }
@@ -292,7 +315,7 @@ namespace PharmacyManagementDLL
         /// <param name="userID">ID of the user we want info about</param>
         /// <returns>Requested user or null if it doesn't exist.</returns>
         public User GetUser(int userID)
-        {         
+        {
             User searchedUser = null;
 
             if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ViewUsersRight))
@@ -303,7 +326,7 @@ namespace PharmacyManagementDLL
             else
             {
                 throw new PermissionDeniedException();
-            }           
+            }
         }
 
         /// <summary>
@@ -321,6 +344,17 @@ namespace PharmacyManagementDLL
                 throw new PermissionDeniedException();
             }
         }
-        
+
+        /// <summary>
+        /// Transmits information about the current status of the user.
+        /// </summary>
+        /// <returns></returns>
+        public bool RootAccess()
+        {
+            return _currentUser.Rights == -1;
+        }
+
+
+
     }
 }

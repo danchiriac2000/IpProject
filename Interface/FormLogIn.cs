@@ -17,31 +17,36 @@ using Items.Commons;
 
 namespace Interface
 {
-    public partial class Form1 : Form
+    public partial class FormLogIn : Form
     {
-        private DB _dbInstance;
-        private Permissions _permissions;
-        private ProxyActionManager _util;
-        public static string username;
-        public static string password;
+ 
+        private ProxyActionManager _util=ProxyActionManager.GetInstance();
 
-        public Form1()
+
+        public FormLogIn()
         {
-            InitializeComponent();
-            
+            InitializeComponent();        
+
         }
 
         private void login_Click(object sender, EventArgs e)
         {
-            username = textBoxUser.Text;
-            password = textBoxPass.Text;
-            _util = new ProxyActionManager();
+            string username = textBoxUser.Text;
+            string password = textBoxPass.Text;
+            
+            
             if (_util.Login(username, password)==true){
 
-                Form pagina2 = new Form2();
+                Form pagina2 = new FormPaginaPrincipala();
                 this.Hide();
                 pagina2.Show();
             }
+            else
+            {
+                MessageBox.Show("Incorrect username or password!","ERROR");
+            }
+
+
         }
     }
 }

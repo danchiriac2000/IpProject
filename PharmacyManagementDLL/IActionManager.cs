@@ -66,10 +66,10 @@ namespace PharmacyManagementDLL
         /// <summary>
         /// Modifies user password in database.
         /// </summary>
-        /// <param name="userID">Modified userID.</param>
+        /// <param name="username">Modified user's name.</param>
         /// <param name="oldPass">Old password for this account.</param>
         /// <param name="newPass">New password for this account.</param>
-        void UpdateUserPassword(int userID,string oldPass,string newPass);
+        void UpdateUserPassword(string username,string oldPass,string newPass);
 
         /// <summary>
         /// Gets info about a user with the given id

@@ -14,32 +14,41 @@ using System.Windows.Forms;
 
 namespace Interface
 {
-    public partial class Form2 : Form
+    public partial class FormPaginaPrincipala : Form
     {
-        //private ProxyActionManager _util = new ProxyActionManager();
-        private Permissions  _permissions = new Permissions();
-        private DB _dbInstance = DB.GetInstance("IPpharma.db");
+        private ProxyActionManager _util = ProxyActionManager.GetInstance();
 
-        public Form2()
+
+        public FormPaginaPrincipala()
         {
             InitializeComponent();
-            label1.Text = "" + Form1.username.ToUpper(CultureInfo.CurrentCulture);
-            if (Form1.username.Equals("admin")){
+
+            label1.Text = "" + _util.CurrentUser.Username.ToUpper(CultureInfo.CurrentCulture); 
+            
+            if (_util.RootAccess()){
                 buttonAddUser.Enabled = true;
                 buttonDeleteUser.Enabled = true;
                 buttonPassUpdate.Enabled = true;
+                buttonAddNewProduct.Enabled = false;
+                buttonAddStock.Enabled = false;
+                buttonProductList.Enabled = false;
+                buttonSellProduct.Enabled = false;
             }
             else
             {
                 buttonAddUser.Enabled = false;
                 buttonDeleteUser.Enabled = false;
                 buttonPassUpdate.Enabled = false;
+                buttonAddNewProduct.Enabled = true;
+                buttonAddStock.Enabled = true;
+                buttonProductList.Enabled = true;
+                buttonSellProduct.Enabled = true;
             }
         }
 
         private void logOut_Click(object sender, EventArgs e)
         {
-            Form pagina = new Form1();
+            Form pagina = new FormLogIn();
             this.Hide();
             pagina.Show();
         }
@@ -52,7 +61,7 @@ namespace Interface
 
         private void buttonAddUser_Click(object sender, EventArgs e)
         {
-            Form pagina3 = new Form3();
+            Form pagina3 = new FormAddUser();
             pagina3.Show();
         }
 

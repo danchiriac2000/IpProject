@@ -166,15 +166,15 @@ namespace PharmacyManagementDLL
         /// <summary>
         /// Modifies user password in database.
         /// </summary>
-        /// <param name="userID">Modified userID.</param>
+        /// <param name="username">Modified user's name.</param>
         /// <param name="oldPass">Old password for this account.</param>
         /// <param name="newPass">New password for this account.</param>
-        public void UpdateUserPassword(int userID, string oldPass, string newPass)
+        public void UpdateUserPassword(string username, string oldPass, string newPass)
         {
-            User existingUser = _dbInstance.SelectUser(userID);
+            User existingUser = _dbInstance.SelectUser(username);
             if (existingUser == null)
             {
-                throw new RecordNotFoundException("The given userID is not specific for an existing user.");
+                throw new RecordNotFoundException("The given username is not specific for an existing user.");
             }
             else
             {
@@ -229,6 +229,8 @@ namespace PharmacyManagementDLL
         {
             return _dbInstance.SelectAllUsers();
         }
+
+  
 
     }
 }
