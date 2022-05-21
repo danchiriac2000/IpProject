@@ -54,6 +54,14 @@ namespace PharmacyManagementDLL
         /// <param name="newProduct">Product to be added</param>
         public void AddNewProduct(Product newProduct)
         {
+            if (newProduct.Stock < 0)
+            {
+                throw new ConstraintViolatedException("Stock cannot be less than zero");
+            }
+            if (newProduct.Price < 0)
+            {
+                throw new ConstraintViolatedException("Price cannot be less than zero");
+            }
             try
             {     
                 _dbInstance.Insert(newProduct);
@@ -86,6 +94,10 @@ namespace PharmacyManagementDLL
             }
             else
             {
+                if (quantity <= 0)
+                {
+                    throw new ConstraintViolatedException("Quantity must be greater than zero.");
+                }
                 int newStock = product.Stock - quantity;
                 Product updatedProduct = new Product(product.Id, product.Name, product.Category, product.Price, newStock);
 
@@ -149,6 +161,10 @@ namespace PharmacyManagementDLL
         /// /// <param name="occupationCode">A specific code given to the user's function in pharmacy</param>
         public void AddUser(string username, string password, int occupationCode)
         {
+            if((occupationCode!=Constants.AssistantPharmacist)&&(occupationCode != Constants.Pharmacist))
+            {
+                throw new ConstraintViolatedException("Invalid occupational code.");
+            }
             try
             {   
                 string encryptedPass = Cryptography.HashString(password);
