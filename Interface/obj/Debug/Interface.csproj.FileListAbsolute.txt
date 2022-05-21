@@ -28,3 +28,5 @@ D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\Interface\obj\Debug\Interfac
 D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\Interface\bin\Debug\Interface.exe.config
 D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\Interface\bin\Debug\Interface.pdb
 D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\Interface\obj\Debug\Interface.csproj.CopyComplete
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\Interface\obj\Debug\Interface.FormDeleteUser.resources
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\Interface\obj\Debug\Interface.FormUpdatePass.resources

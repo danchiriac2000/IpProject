@@ -36,7 +36,7 @@ namespace Interface
                 }
 
                 //se considera ca se pot adauga doar farmacisti si asistenti
-                if (newOccupation != Constants.AssistantPharmacist || newOccupation != Constants.Pharmacist)
+                if ((newOccupation != Constants.AssistantPharmacist) && (newOccupation != Constants.Pharmacist))
                 {
                     throw new FormatException();
                 }
@@ -57,6 +57,7 @@ namespace Interface
             {
                 MessageBox.Show(exc.Message);
             }
+            this.Close();
         }
     }
 }

@@ -81,8 +81,8 @@ namespace PharmacyManagementDLL
         /// <summary>
         /// Removes a user only if it exists.
         /// </summary>
-        /// <param name="userID">ID of the user we want to remove</param>
-        void DeleteUser(int userID);
+        /// <param name="username">username of the user we want to remove</param>
+        void DeleteUser(string username);
 
         /// <summary>
         /// Queries database to display all existing users.

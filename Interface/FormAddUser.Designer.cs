@@ -40,30 +40,33 @@ namespace Interface
             // 
             // textBoxNewUserName
             // 
-            this.textBoxNewUserName.Location = new System.Drawing.Point(279, 126);
+            this.textBoxNewUserName.Location = new System.Drawing.Point(279, 101);
+            this.textBoxNewUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNewUserName.Name = "textBoxNewUserName";
-            this.textBoxNewUserName.Size = new System.Drawing.Size(246, 27);
+            this.textBoxNewUserName.Size = new System.Drawing.Size(246, 22);
             this.textBoxNewUserName.TabIndex = 0;
             // 
             // textBoxNewUserPassword
             // 
-            this.textBoxNewUserPassword.Location = new System.Drawing.Point(279, 185);
+            this.textBoxNewUserPassword.Location = new System.Drawing.Point(279, 148);
+            this.textBoxNewUserPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNewUserPassword.Name = "textBoxNewUserPassword";
-            this.textBoxNewUserPassword.Size = new System.Drawing.Size(246, 27);
+            this.textBoxNewUserPassword.Size = new System.Drawing.Size(246, 22);
             this.textBoxNewUserPassword.TabIndex = 1;
             // 
             // textBoxNewUserOccupation
             // 
-            this.textBoxNewUserOccupation.Location = new System.Drawing.Point(279, 246);
+            this.textBoxNewUserOccupation.Location = new System.Drawing.Point(279, 197);
+            this.textBoxNewUserOccupation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNewUserOccupation.Name = "textBoxNewUserOccupation";
-            this.textBoxNewUserOccupation.Size = new System.Drawing.Size(246, 27);
+            this.textBoxNewUserOccupation.Size = new System.Drawing.Size(246, 22);
             this.textBoxNewUserOccupation.TabIndex = 2;
             // 
             // labelNewUserName
             // 
             this.labelNewUserName.AutoSize = true;
-            this.labelNewUserName.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelNewUserName.Location = new System.Drawing.Point(164, 126);
+            this.labelNewUserName.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.labelNewUserName.Location = new System.Drawing.Point(164, 101);
             this.labelNewUserName.Name = "labelNewUserName";
             this.labelNewUserName.Size = new System.Drawing.Size(98, 21);
             this.labelNewUserName.TabIndex = 3;
@@ -72,8 +75,8 @@ namespace Interface
             // labelNewUserPass
             // 
             this.labelNewUserPass.AutoSize = true;
-            this.labelNewUserPass.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelNewUserPass.Location = new System.Drawing.Point(164, 185);
+            this.labelNewUserPass.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.labelNewUserPass.Location = new System.Drawing.Point(164, 148);
             this.labelNewUserPass.Name = "labelNewUserPass";
             this.labelNewUserPass.Size = new System.Drawing.Size(93, 21);
             this.labelNewUserPass.TabIndex = 4;
@@ -82,8 +85,8 @@ namespace Interface
             // labelNewUserOccupation
             // 
             this.labelNewUserOccupation.AutoSize = true;
-            this.labelNewUserOccupation.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelNewUserOccupation.Location = new System.Drawing.Point(164, 248);
+            this.labelNewUserOccupation.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.labelNewUserOccupation.Location = new System.Drawing.Point(164, 198);
             this.labelNewUserOccupation.Name = "labelNewUserOccupation";
             this.labelNewUserOccupation.Size = new System.Drawing.Size(109, 21);
             this.labelNewUserOccupation.TabIndex = 5;
@@ -91,19 +94,20 @@ namespace Interface
             // 
             // buttonAddNewUser
             // 
-            this.buttonAddNewUser.Location = new System.Drawing.Point(343, 298);
+            this.buttonAddNewUser.Location = new System.Drawing.Point(343, 238);
+            this.buttonAddNewUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAddNewUser.Name = "buttonAddNewUser";
-            this.buttonAddNewUser.Size = new System.Drawing.Size(94, 29);
+            this.buttonAddNewUser.Size = new System.Drawing.Size(94, 23);
             this.buttonAddNewUser.TabIndex = 6;
             this.buttonAddNewUser.Text = "Add!";
             this.buttonAddNewUser.UseVisualStyleBackColor = true;
             this.buttonAddNewUser.Click += new System.EventHandler(this.buttonAddNewUser_Click);
             // 
-            // Form3
+            // FormAddUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 360);
             this.Controls.Add(this.buttonAddNewUser);
             this.Controls.Add(this.labelNewUserOccupation);
             this.Controls.Add(this.labelNewUserPass);
@@ -111,8 +115,9 @@ namespace Interface
             this.Controls.Add(this.textBoxNewUserOccupation);
             this.Controls.Add(this.textBoxNewUserPassword);
             this.Controls.Add(this.textBoxNewUserName);
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "FormAddUser";
+            this.Text = "Adaugare utilizator:";
             this.ResumeLayout(false);
             this.PerformLayout();
 

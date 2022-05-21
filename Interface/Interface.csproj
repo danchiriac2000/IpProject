@@ -77,6 +77,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormDeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeleteUser.Designer.cs">
+      <DependentUpon>FormDeleteUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,16 +101,28 @@
     <Compile Include="FormPaginaPrincipala.designer.cs">
       <DependentUpon>FormPaginaPrincipala.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUpdatePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdatePass.Designer.cs">
+      <DependentUpon>FormUpdatePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddUser.resx">
       <DependentUpon>FormAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeleteUser.resx">
+      <DependentUpon>FormDeleteUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPaginaPrincipala.resx">
       <DependentUpon>FormPaginaPrincipala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdatePass.resx">
+      <DependentUpon>FormUpdatePass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

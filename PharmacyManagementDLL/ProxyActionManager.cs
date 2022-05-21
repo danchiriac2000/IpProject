@@ -288,14 +288,14 @@ namespace PharmacyManagementDLL
         /// <summary>
         /// Lets only those with modify users db right to remove a user ;
         /// </summary>
-        /// <param name="userID">ID of the user we want to remove</param>
-        public void DeleteUser(int userID)
+        /// <param name="username">username of the user we want to remove</param>
+        public void DeleteUser(string username)
         {
             bool hasAccess = true;
 
             if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight))
             {
-                _realActionManager.DeleteUser(userID);
+                _realActionManager.DeleteUser(username);
             }
             else
             {

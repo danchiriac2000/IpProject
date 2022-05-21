@@ -56,11 +56,11 @@ namespace PharmacyManagementDLL
         {
             if (newProduct.Stock < 0)
             {
-                throw new ConstraintViolatedException("Stock cannot be less than zero");
+                throw new InvalidDataException("Stock cannot be less than zero");
             }
             if (newProduct.Price < 0)
             {
-                throw new ConstraintViolatedException("Price cannot be less than zero");
+                throw new InvalidDataException("Price cannot be less than zero");
             }
             try
             {     
@@ -96,7 +96,7 @@ namespace PharmacyManagementDLL
             {
                 if (quantity <= 0)
                 {
-                    throw new ConstraintViolatedException("Quantity must be greater than zero.");
+                    throw new InvalidDataException("Quantity must be greater than zero.");
                 }
                 int newStock = product.Stock - quantity;
                 Product updatedProduct = new Product(product.Id, product.Name, product.Category, product.Price, newStock);
@@ -122,6 +122,7 @@ namespace PharmacyManagementDLL
         /// <param name="quantity">Value to be added to the current stock. </param>    
         public void AddToStock(int barcode, int quantity)
         {
+
             //verify if database contains a product with the given barcode
             Product product = _dbInstance.SelectProduct(barcode);
             if (product == null)
@@ -130,6 +131,11 @@ namespace PharmacyManagementDLL
             }
             else
             {
+                if (quantity < 0)
+                {
+                    throw new InvalidDataException("Quantity must be greater than zero.");
+                }
+
                 int newStock = product.Stock + quantity;
                 Product updatedProduct = new Product(product.Id, product.Name, product.Category, product.Price, newStock);
 
@@ -163,7 +169,7 @@ namespace PharmacyManagementDLL
         {
             if((occupationCode!=Constants.AssistantPharmacist)&&(occupationCode != Constants.Pharmacist))
             {
-                throw new ConstraintViolatedException("Invalid occupational code.");
+                throw new InvalidDataException("Invalid occupational code.");
             }
             try
             {   
@@ -212,10 +218,19 @@ namespace PharmacyManagementDLL
         /// <summary>
         /// Removes a user only if it exists.
         /// </summary>
-        /// <param name="userID">ID of the user we want to remove</param>
-        public void DeleteUser(int userID)
+        //// <param name="username">username of the user we want to remove</param>
+        public void DeleteUser(string username)
         {
-            _dbInstance.DeleteUser(userID);
+            User deletedUser = _dbInstance.SelectUser(username);
+            if (deletedUser == null)
+            {
+                throw new RecordNotFoundException("Inexistent user");
+            }
+            else
+            {
+                _dbInstance.DeleteUser(deletedUser.Id);
+            }
+           
         }
 
         /// <summary>

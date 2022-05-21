@@ -4,6 +4,7 @@ using System;
 using Exceptions.AccessRightsExceptions;
 using Exceptions.DataBaseExceptions;
 using Items.DataBaseObjects;
+using System.IO;
 
 namespace TestPharmacyManagement
 {
@@ -34,7 +35,7 @@ namespace TestPharmacyManagement
 
 
         [TestMethod]
-        [ExpectedException(typeof(ConstraintViolatedException))]
+        [ExpectedException(typeof(InvalidDataException))]
         public void AddNewProductTestNegativeStock()
         {
             _proxyInstance.Login("farmacist1", "farmacist1");
@@ -53,7 +54,7 @@ namespace TestPharmacyManagement
 
 
         [TestMethod]
-        [ExpectedException(typeof(ConstraintViolatedException))]
+        [ExpectedException(typeof(InvalidDataException))]
         public void AddNewProductTestNegativePrice()
         {
             _proxyInstance.Login("farmacist1", "farmacist1");
@@ -85,7 +86,7 @@ namespace TestPharmacyManagement
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ConstraintViolatedException))]
+        [ExpectedException(typeof(InvalidDataException))]
         public void AddUserTestInvalidOccupationCode()
         {
             _proxyInstance.Login("admin", "admin");

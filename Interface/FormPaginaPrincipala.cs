@@ -27,8 +27,9 @@ namespace Interface
             
             if (_util.RootAccess()){
                 buttonAddUser.Enabled = true;
-                buttonDeleteUser.Enabled = true;
+                buttonUsersList.Enabled = true;
                 buttonPassUpdate.Enabled = true;
+                buttonUsersList.Enabled = true;
                 buttonAddNewProduct.Enabled = false;
                 buttonAddStock.Enabled = false;
                 buttonProductList.Enabled = false;
@@ -37,8 +38,9 @@ namespace Interface
             else
             {
                 buttonAddUser.Enabled = false;
-                buttonDeleteUser.Enabled = false;
+                buttonUsersList.Enabled = false;
                 buttonPassUpdate.Enabled = false;
+                buttonUsersList.Enabled = false;
                 buttonAddNewProduct.Enabled = true;
                 buttonAddStock.Enabled = true;
                 buttonProductList.Enabled = true;
@@ -56,7 +58,21 @@ namespace Interface
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            //if(_permissions.Equals("")
+            /*StringBuilder table = new StringBuilder();
+            table.Append("{\rtf1");
+            for (int i = 0; i <= 2; i++)
+            {
+                table.Append(@"\trowd"); //start the row
+                table.Append(@"\cellx200"); //first cell with width 200
+                table.Append(@"\cellx400"); //second cell with width 200
+                table.Append(@"\cellx600"); //third cell with width 200
+                table.Append(@"\intbl \cell \row"); //appent the row in StringBuilder
+            }
+            table.Append(@"\pard");
+
+            table.Append(@"}");
+
+            this.richTextBox.Rtf = table.ToString();*/
         }
 
         private void buttonAddUser_Click(object sender, EventArgs e)
@@ -67,7 +83,31 @@ namespace Interface
 
         private void buttonPassUpdate_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void buttonUsersList_Click(object sender, EventArgs e)
+        {
+            /*StringBuilder table = new StringBuilder();
+            table.Append("{\rtf1");
+            for (int i = 0; i <= 2; i++)
+            {
+                table.Append(@"\trowd"); //start the row
+                table.Append(@"\cellx200"); //first cell with width 200
+                table.Append(@"\cellx400"); //second cell with width 200
+                table.Append(@"\intbl \cell \row"); //appent the row in StringBuilder
+            }
+            table.Append(@"\pard");
+
+            table.Append(@"}");
+
+            richTextBox.Text=*/
+        }
+
+        private void buttonDeleteUser_Click(object sender, EventArgs e)
+        {
+            Form pagina4 = new FormDeleteUser();
+            pagina4.Show();
         }
     }
 }
