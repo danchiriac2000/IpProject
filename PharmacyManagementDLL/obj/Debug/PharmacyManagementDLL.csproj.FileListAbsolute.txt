@@ -1,0 +1,16 @@
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\bin\Debug\PharmacyManagementDLL.dll
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\bin\Debug\PharmacyManagementDLL.pdb
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\bin\Debug\DataBaseManager.dll
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\bin\Debug\Exceptions.dll
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\bin\Debug\Items.dll
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\bin\Debug\System.Data.SQLite.dll
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\bin\Debug\DataBaseManager.pdb
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\bin\Debug\DataBaseManager.dll.config
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\bin\Debug\Exceptions.pdb
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\bin\Debug\Items.pdb
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\bin\Debug\System.Data.SQLite.xml
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\obj\Debug\PharmacyManagementDLL.csproj.AssemblyReference.cache
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\obj\Debug\PharmacyManagementDLL.csproj.CoreCompileInputs.cache
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\obj\Debug\PharmacyManagementDLL.csproj.CopyComplete
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\obj\Debug\PharmacyManagementDLL.dll
+D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\PharmacyManagementDLL\obj\Debug\PharmacyManagementDLL.pdb

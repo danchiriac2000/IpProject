@@ -1,11 +1,6 @@
-Database & proxy
--invalidStockException from Update(User)
--initializing users table from database before app starting
-
 
 GENERAL:
 -SRS
--GUI
 -Doxygen
 -Help from GUI
 -Diagrams
