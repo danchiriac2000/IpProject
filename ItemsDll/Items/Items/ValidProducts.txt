@@ -1,0 +1,12 @@
+﻿Analgesics : Acetylsalicylic acid, Paracetamol, Ibuprofen, Ketoprofen, Naproxen
+Anti-viral: Acyclovir, Tamiflu 
+Anti-fungal: Econazole, Fluconazole, Miconazole, Ketoconazole 
+Antibiotics: Azithromycin, Amoxicillin, Doxycycline, Cephalexin, Clindamycin
+Antitussives: Bronchophan, Children's Robitussin, Codeine
+Antispasmodic: Bentyl, Librax, Dicycloverine, Hyoscine, Atropine
+Beta blockers: Metoprolol, Acebutolol, Bisoprolol, Propranolol  
+Corticosteroid: Dexamethasone , Cotolone, Medrol, Prednicot
+Diuretics:Bumex , Spironolactone, Furosemid, Zaroxolyn 
+Immunosuppressant's:Imuran , Revlimid , Pomalyst ,Otrexup 
+Sedatives:Xanax , Librium, Diazepam
+Vitamin supplements: Vitamin D3, Biotin, Niaspan, Vitamin C

@@ -293,7 +293,7 @@ namespace PharmacyManagementDLL
         {
             bool hasAccess = true;
 
-            if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight))
+            if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight) && username!="admin")
             {
                 _realActionManager.DeleteUser(username);
             }
