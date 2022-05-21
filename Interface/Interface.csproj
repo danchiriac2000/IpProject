@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite" Version="1.0.115.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DataBaseManager">
+      <HintPath>D:\IP\PROIECT\IpProject\PharmacyManagementDLL\bin\Debug\netcoreapp3.1\DataBaseManager.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\Desktop\IP_PROIECT\IpProject\DataBaseDll\DataBaseManager\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\Desktop\IP_PROIECT\vedem\IpProject\DataBaseDll\DataBaseManager\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Exceptions">
+      <HintPath>D:\IP\PROIECT\IpProject\PharmacyManagementDLL\bin\Debug\netcoreapp3.1\Exceptions.dll</HintPath>
+    </Reference>
+    <Reference Include="Items">
+      <HintPath>D:\IP\PROIECT\IpProject\PharmacyManagementDLL\bin\Debug\netcoreapp3.1\Items.dll</HintPath>
+    </Reference>
+    <Reference Include="PharmacyManagementDLL">
+      <HintPath>D:\IP\PROIECT\IpProject\PharmacyManagementDLL\bin\Debug\netcoreapp3.1\PharmacyManagementDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>D:\IP\PROIECT\IpProject\PharmacyManagementDLL\bin\Debug\netcoreapp3.1\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>..\..\..\Desktop\IP_PROIECT\vedem\IpProject\DataBaseDll\DataBaseManager\bin\Debug\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\..\..\Desktop\IP_PROIECT\IpProject\DataBaseDll\DataBaseManager\bin\Debug\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
