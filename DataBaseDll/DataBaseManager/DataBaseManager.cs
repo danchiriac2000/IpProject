@@ -1,7 +1,7 @@
 ﻿/**************************************************************************
  *                                                                        *
  *  File:        DataBaseManager.cs                                       *
- *  Creator:     Chiriac Dan-Constantin                                     *
+ *  Creator:     Chiriac Dan-Constantin                                   *
  *  E-mail:      dan-constantin.chiriac@student.tuiasi.ro                 *      
  *  Description: This file contain the management for the database.       *
  *                                                                        *
@@ -30,7 +30,7 @@ namespace DataBaseManager
     public class DB
     {
         /// <summary>
-        /// Private member used to retain the connection to the database.It is initialized in the constructor.
+        /// Private member used to retain the connection to the database. It is initialized in the constructor.
         /// </summary>
       
         private SQLiteConnection _connection;
@@ -352,7 +352,7 @@ namespace DataBaseManager
             return product;
         }
         /// <summary>
-        /// Because username is UK, get user by username is relevant.
+        /// Because username is UK, SelectUser function by username is relevant.
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
@@ -375,7 +375,7 @@ namespace DataBaseManager
         }
 
         /// <summary>
-        /// Because name is UK, get product by name is relevant.
+        /// Because name is UK, SelectProduct function by name is relevant.
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
@@ -445,7 +445,7 @@ namespace DataBaseManager
             command.ExecuteNonQuery();
         }
         /// <summary>
-        /// This method will check if the user exists in the database. If It exists,it will update the record from the database with all modified members of the object.
+        /// This method will check if the user exists in the database. If it exists, it will update the record from the database with all modified members of the object.
         /// </summary>
         /// <param name="user"></param>
         public void Update(User user)
@@ -480,7 +480,7 @@ namespace DataBaseManager
 
         }
         /// <summary>
-        /// This method will check if the product exists in the database. If It exists,it will update the record from the database with all modified members of the object.
+        /// This method will check if the product exists in the database. If it exists, it will update the record from the database with all modified members of the object.
         /// </summary>
         /// <param name="product"></param>
         public void Update(Product product)

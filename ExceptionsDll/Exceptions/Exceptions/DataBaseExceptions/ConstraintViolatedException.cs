@@ -1,4 +1,14 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        ConstraintViolatedException.cs                           *
+ *  Creator:     Chiriac Dan-Constantin                                   *
+ *  E-mail:      dan-constantin.chiriac@student.tuiasi.ro                 *      
+ *  Description: This file contains an exception that will be thrown      *
+ *  if a constraint is violated.                                          *
+ *                                                                        *
+ *                                                                        *
+ **************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +18,7 @@ namespace Exceptions.DataBaseExceptions
 {
 
     /// <summary>
-    /// This class inherits the Exception base class. If the unique or the primary key constraint is violated, this exception will be throwned.
+    /// This class inherits the Exception base class. If the unique or the primary key constraint is violated, this exception will be thrown.
     /// </summary>
     public class ConstraintViolatedException : Exception
     {

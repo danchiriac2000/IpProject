@@ -1,4 +1,14 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        Product.cs                                               *
+ *  Creator:     Chiriac Dan-Constantin                                   *
+ *  E-mail:      dan-constantin.chiriac@student.tuiasi.ro                 *      
+ *  Description: This file the data class for a product                   *
+ *                                                                        *
+ *                                                                        *
+ **************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -107,7 +117,7 @@ namespace Items.DataBaseObjects
             }
         }
         /// <summary>
-        /// Return the members of the class in the form of a single string.
+        /// Return the members of the class in the form of a string.
         /// </summary>
         /// <returns></returns>
         public string ToString()
