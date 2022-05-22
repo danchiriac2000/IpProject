@@ -45,11 +45,11 @@ namespace Interface
             // 
             this.labelNewUserName.AutoSize = true;
             this.labelNewUserName.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.labelNewUserName.Location = new System.Drawing.Point(177, 159);
+            this.labelNewUserName.Location = new System.Drawing.Point(171, 159);
             this.labelNewUserName.Name = "labelNewUserName";
-            this.labelNewUserName.Size = new System.Drawing.Size(80, 21);
+            this.labelNewUserName.Size = new System.Drawing.Size(98, 21);
             this.labelNewUserName.TabIndex = 4;
-            this.labelNewUserName.Text = "User ID:";
+            this.labelNewUserName.Text = "Username:";
             // 
             // buttonDelete
             // 

@@ -29,7 +29,6 @@ namespace Interface
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.buttonAddUser = new System.Windows.Forms.Button();
             this.buttonAddStock = new System.Windows.Forms.Button();
             this.buttonProductList = new System.Windows.Forms.Button();
@@ -40,16 +39,10 @@ namespace Interface
             this.buttonLogOut = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonDeleteUser = new System.Windows.Forms.Button();
+            this.buttonHelp = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // richTextBox
-            // 
-            this.richTextBox.Location = new System.Drawing.Point(11, 166);
-            this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(825, 272);
-            this.richTextBox.TabIndex = 0;
-            this.richTextBox.Text = "";
-            this.richTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // buttonAddUser
             // 
@@ -71,6 +64,7 @@ namespace Interface
             this.buttonAddStock.TabIndex = 4;
             this.buttonAddStock.Text = "Add to stock";
             this.buttonAddStock.UseVisualStyleBackColor = true;
+            this.buttonAddStock.Click += new System.EventHandler(this.buttonAddStock_Click);
             // 
             // buttonProductList
             // 
@@ -81,6 +75,7 @@ namespace Interface
             this.buttonProductList.TabIndex = 5;
             this.buttonProductList.Text = "Product List";
             this.buttonProductList.UseVisualStyleBackColor = true;
+            this.buttonProductList.Click += new System.EventHandler(this.buttonProductList_Click);
             // 
             // buttonSellProduct
             // 
@@ -91,6 +86,7 @@ namespace Interface
             this.buttonSellProduct.TabIndex = 6;
             this.buttonSellProduct.Text = "Sell Product";
             this.buttonSellProduct.UseVisualStyleBackColor = true;
+            this.buttonSellProduct.Click += new System.EventHandler(this.buttonSellProduct_Click);
             // 
             // buttonAddNewProduct
             // 
@@ -101,6 +97,7 @@ namespace Interface
             this.buttonAddNewProduct.TabIndex = 7;
             this.buttonAddNewProduct.Text = "Add new product";
             this.buttonAddNewProduct.UseVisualStyleBackColor = true;
+            this.buttonAddNewProduct.Click += new System.EventHandler(this.buttonAddNewProduct_Click);
             // 
             // buttonPassUpdate
             // 
@@ -127,9 +124,9 @@ namespace Interface
             // buttonLogOut
             // 
             this.buttonLogOut.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold);
-            this.buttonLogOut.Location = new System.Drawing.Point(16, 75);
+            this.buttonLogOut.Location = new System.Drawing.Point(16, 56);
             this.buttonLogOut.Name = "buttonLogOut";
-            this.buttonLogOut.Size = new System.Drawing.Size(115, 54);
+            this.buttonLogOut.Size = new System.Drawing.Size(115, 40);
             this.buttonLogOut.TabIndex = 10;
             this.buttonLogOut.Text = "Log Out";
             this.buttonLogOut.UseVisualStyleBackColor = true;
@@ -156,12 +153,34 @@ namespace Interface
             this.buttonDeleteUser.UseVisualStyleBackColor = true;
             this.buttonDeleteUser.Click += new System.EventHandler(this.buttonDeleteUser_Click);
             // 
+            // buttonHelp
+            // 
+            this.buttonHelp.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold);
+            this.buttonHelp.Location = new System.Drawing.Point(16, 102);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(115, 37);
+            this.buttonHelp.TabIndex = 13;
+            this.buttonHelp.Text = "Help";
+            this.buttonHelp.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(16, 158);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 24;
+            this.dataGridView.Size = new System.Drawing.Size(766, 279);
+            this.dataGridView.TabIndex = 14;
+            // 
             // FormPaginaPrincipala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(849, 449);
+            this.ClientSize = new System.Drawing.Size(797, 449);
+            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.buttonDeleteUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonLogOut);
@@ -172,17 +191,15 @@ namespace Interface
             this.Controls.Add(this.buttonProductList);
             this.Controls.Add(this.buttonAddStock);
             this.Controls.Add(this.buttonAddUser);
-            this.Controls.Add(this.richTextBox);
             this.Name = "FormPaginaPrincipala";
             this.Text = "Pagina principala:";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.RichTextBox richTextBox;
         private System.Windows.Forms.Button buttonAddUser;
         private System.Windows.Forms.Button buttonAddStock;
         private System.Windows.Forms.Button buttonProductList;
@@ -193,5 +210,7 @@ namespace Interface
         private System.Windows.Forms.Button buttonLogOut;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonDeleteUser;
+        private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

@@ -22,16 +22,7 @@ namespace Interface
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            string username;
-            if (textBoxDelete.Text.Equals(""))
-            {
-                throw new FormatException();
-            }
-            else
-            {
-                username = textBoxDelete.Text;
-            }
-
+            string username= textBoxDelete.Text;
             try
             {
                 _util.DeleteUser(username);

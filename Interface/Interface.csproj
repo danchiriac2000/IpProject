@@ -77,6 +77,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddProduct.Designer.cs">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddToStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddToStock.Designer.cs">
+      <DependentUpon>FormAddToStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDeleteUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +113,12 @@
     <Compile Include="FormPaginaPrincipala.designer.cs">
       <DependentUpon>FormPaginaPrincipala.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSell.Designer.cs">
+      <DependentUpon>FormSell.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpdatePass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +127,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddProduct.resx">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddToStock.resx">
+      <DependentUpon>FormAddToStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddUser.resx">
       <DependentUpon>FormAddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPaginaPrincipala.resx">
       <DependentUpon>FormPaginaPrincipala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSell.resx">
+      <DependentUpon>FormSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdatePass.resx">
       <DependentUpon>FormUpdatePass.cs</DependentUpon>

@@ -29,7 +29,7 @@ namespace Interface
                 buttonAddUser.Enabled = true;
                 buttonUsersList.Enabled = true;
                 buttonPassUpdate.Enabled = true;
-                buttonUsersList.Enabled = true;
+                buttonDeleteUser.Enabled = true;
                 buttonAddNewProduct.Enabled = false;
                 buttonAddStock.Enabled = false;
                 buttonProductList.Enabled = false;
@@ -40,7 +40,7 @@ namespace Interface
                 buttonAddUser.Enabled = false;
                 buttonUsersList.Enabled = false;
                 buttonPassUpdate.Enabled = false;
-                buttonUsersList.Enabled = false;
+                buttonDeleteUser.Enabled = false;
                 buttonAddNewProduct.Enabled = true;
                 buttonAddStock.Enabled = true;
                 buttonProductList.Enabled = true;
@@ -58,21 +58,14 @@ namespace Interface
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            /*StringBuilder table = new StringBuilder();
-            table.Append("{\rtf1");
-            for (int i = 0; i <= 2; i++)
+            float scaleX = 1.30f;
+            float scaleY = 1.15f;
+           int size = 10;
+            for(int i = 0; i < size*size; i++)
             {
-                table.Append(@"\trowd"); //start the row
-                table.Append(@"\cellx200"); //first cell with width 200
-                table.Append(@"\cellx400"); //second cell with width 200
-                table.Append(@"\cellx600"); //third cell with width 200
-                table.Append(@"\intbl \cell \row"); //appent the row in StringBuilder
+                int x = i % size;
+                int y = i / size;
             }
-            table.Append(@"\pard");
-
-            table.Append(@"}");
-
-            this.richTextBox.Rtf = table.ToString();*/
         }
 
         private void buttonAddUser_Click(object sender, EventArgs e)
@@ -83,31 +76,52 @@ namespace Interface
 
         private void buttonPassUpdate_Click(object sender, EventArgs e)
         {
-            
+            Form pagina5 = new FormUpdatePass();
+            pagina5.Show();
         }
 
         private void buttonUsersList_Click(object sender, EventArgs e)
         {
-            /*StringBuilder table = new StringBuilder();
-            table.Append("{\rtf1");
-            for (int i = 0; i <= 2; i++)
+            List<User> users = _util.GetUsers();
+            dataGridView.Columns.Clear();
+            dataGridView.Columns.Add("ID", "ID");
+            dataGridView.Columns.Add("Username", "Username");
+            dataGridView.Columns.Add("Rights", "Rights");
+
+            for(int i = 0; i < users.Count; i++)
             {
-                table.Append(@"\trowd"); //start the row
-                table.Append(@"\cellx200"); //first cell with width 200
-                table.Append(@"\cellx400"); //second cell with width 200
-                table.Append(@"\intbl \cell \row"); //appent the row in StringBuilder
+                dataGridView.Rows.Add(users[i].Id.ToString(), users[i].Username, users[i].Rights.ToString());
             }
-            table.Append(@"\pard");
-
-            table.Append(@"}");
-
-            richTextBox.Text=*/
         }
 
         private void buttonDeleteUser_Click(object sender, EventArgs e)
         {
             Form pagina4 = new FormDeleteUser();
             pagina4.Show();
+        }
+
+        private void buttonAddNewProduct_Click(object sender, EventArgs e)
+        {
+            Form pagina6 = new FormAddProduct();
+            pagina6.Show();
+        }
+
+        private void buttonAddStock_Click(object sender, EventArgs e)
+        {
+            Form pagina7 = new FormAddToStock();
+            pagina7.Show();
+        }
+
+        private void buttonSellProduct_Click(object sender, EventArgs e)
+        {
+            Form pagina8 = new FormSell();
+            pagina8.Show();
+        }
+
+        private void buttonProductList_Click(object sender, EventArgs e)
+        {
+            List<Product> products = _util.GetProducts();
+            
         }
     }
 }
