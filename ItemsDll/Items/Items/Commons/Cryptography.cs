@@ -22,6 +22,9 @@ using System.Text;
 
 namespace Items.Commons
 {
+    /// <summary>
+    /// This class is used for provide methods to securely store information to database.
+    /// </summary>
     public class Cryptography
     {
 

@@ -24,6 +24,10 @@ using System.Text;
 
 namespace PharmacyManagementDLL
 {
+    /// <summary>
+    /// This class is used to retain associations between employee positions and access 
+    /// rights for various actions that may take place in a pharmacy.
+    /// </summary>
     public class Permissions
     {
         private Dictionary<int,List<int>> _permissionsList;
@@ -39,7 +43,6 @@ namespace PharmacyManagementDLL
             _permissionsList.Add(Constants.Admin, new List<int>() { Constants.ModifyUsersDBRight, Constants.ViewUsersRight });
 
         }
-
 
         /// <summary>
         /// Returns a list of action rights depending on the position of each employee.

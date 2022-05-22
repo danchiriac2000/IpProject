@@ -31,19 +31,27 @@ namespace TestPharmacyManagement
     {
         private ProxyActionManager _proxyInstance = ProxyActionManager.GetInstance();
 
+        /// <summary>
+        /// Function that tests whether the proxy instance is always successful.
+        /// </summary>
         [TestMethod]
         public void GetInstanceTest()
         {
             Assert.IsNotNull(ProxyActionManager.GetInstance());
         }
 
+        /// <summary>
+        /// Function  that tests if a inexistent user can use the application.
+        /// </summary>
         [TestMethod]
         public void LoginTestIncorrectUser()
         {
             Assert.IsFalse(_proxyInstance.Login("dfnwef", "wgferufr"));
         }
 
-
+        /// <summary>
+        /// Function that tests if admin gets it's correct rights after login.
+        /// </summary>
         [TestMethod]
         public void LoginTestProperRights()
         {
@@ -51,7 +59,10 @@ namespace TestPharmacyManagement
             Assert.IsTrue(_proxyInstance.CurrentUser.Rights == -1);
         }
 
-
+        /// <summary>
+        /// Function that tests if it's thrown an exception when app user try to 
+        /// introduce to product stock a negative value.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(InvalidDataException))]
         public void AddNewProductTestNegativeStock()
@@ -61,6 +72,9 @@ namespace TestPharmacyManagement
             
         }
 
+        /// <summary>
+        /// Function that tests if product insert action it's in accordance with the logged user right.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(PermissionDeniedException))]
         public void AddNewProductTestAdmin()
@@ -70,7 +84,10 @@ namespace TestPharmacyManagement
 
         }
 
-
+        /// <summary>
+        /// Function that tests if it's thrown an exception when user tries to add a negative
+        /// value for quantity attribute in database.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(InvalidDataException))]
         public void AddNewProductTestNegativePrice()
@@ -79,7 +96,9 @@ namespace TestPharmacyManagement
             _proxyInstance.AddNewProduct(new Product(3, "paracetamol2", "analgezice", -12, 4));
         }
 
-
+        /// <summary>
+        /// Function that tests if update stock action cannot be done for an inexistent product barcode.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(RecordNotFoundException))]
         public void AddToStockTestInvalidID()
@@ -88,6 +107,10 @@ namespace TestPharmacyManagement
             _proxyInstance.AddToStock(-12, 20);
         }
 
+        /// <summary>
+        /// Function that tests if get products returns null value for users 
+        /// without this access right.
+        /// </summary>
         [TestMethod]
         public void GetProductsTestAdminQuery()
         {
@@ -95,6 +118,10 @@ namespace TestPharmacyManagement
             Assert.IsNull(_proxyInstance.GetProducts());
         }
 
+        /// <summary>
+        /// Function that tests that an attempt to sell a non-existent product 
+        /// will throw an exception.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(RecordNotFoundException))]      
         public void SellProductTestInexistentID()
@@ -103,6 +130,9 @@ namespace TestPharmacyManagement
             _proxyInstance.SellProduct(234234, -3);
         }
 
+        /// <summary>
+        /// Function that tests that admin has no access right for product selling.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(PermissionDeniedException))]
         public void SellProductTestAdmin()
@@ -110,8 +140,11 @@ namespace TestPharmacyManagement
             _proxyInstance.Login("admin", "admin");
             _proxyInstance.SellProduct(0, 3);
         }
-        
 
+        /// <summary>
+        /// Function that tests whether the attempt to introduce a new user
+        /// in the database is always done with a valid occupational code.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(InvalidDataException))]
         public void AddUserTestInvalidOccupationCode()
@@ -120,6 +153,9 @@ namespace TestPharmacyManagement
             _proxyInstance.AddUser("farmacist22", "farmacist22", 5);
         }
 
+        /// <summary>
+        /// Function that tests if it's thrown a specific exception for override user attempt.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ConstraintViolatedException))]
         public void AddUserTestExistingUser()
@@ -128,6 +164,10 @@ namespace TestPharmacyManagement
             _proxyInstance.AddUser("farmacist2", "farmacist2", 0);
         }
 
+        /// <summary>
+        /// Function that tests if it's thrown an exception for permission right when a user different from
+        /// admin tries to update another user's password in database.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(PermissionDeniedException))]
         public void UpdateUserPasswordTestPharmacistAttempt()
@@ -136,8 +176,10 @@ namespace TestPharmacyManagement
             _proxyInstance.UpdateUserPassword("farmacist1", "farmacist1", "farma1");
         }
 
-
-
+        /// <summary>
+        /// Function that tests that it's impossible for admin to change user password 
+        /// if the old password is unknown.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(InvalidDataException))]
         public void UpdateUserPasswordTestWrongOldPass()
@@ -146,7 +188,10 @@ namespace TestPharmacyManagement
             _proxyInstance.UpdateUserPassword("farmacist1", "farmacist11", "farma1");
         }
 
-
+        /// <summary>
+        /// Function that tests if it's thrown an exception for permission right when a user different from
+        /// admin tries to delete another user in database.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(PermissionDeniedException))]
         public void DeleteUserTest()
@@ -155,7 +200,10 @@ namespace TestPharmacyManagement
             _proxyInstance.DeleteUser("farmacist2");
         }
 
-
+        /// <summary>
+        /// Function that tests  that the administrator account cannot be deleted, even
+        /// if the administrator tries to do so himself.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(PermissionDeniedException))]
         public void DeleteUserTestAdminClear()
@@ -164,6 +212,10 @@ namespace TestPharmacyManagement
             _proxyInstance.DeleteUser("admin");
         }
 
+        /// <summary>
+        /// Function that tests that an user different from admin can't queries to
+        /// find information about the other app users.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(PermissionDeniedException))]
         public void GetUserTest()
@@ -172,6 +224,9 @@ namespace TestPharmacyManagement
             _proxyInstance.GetUser(0);
         }
 
+        /// <summary>
+        /// Function that tests if the query of a non-existent user ID will throw a certain exception.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(RecordNotFoundException))]
         public void GetUserTest2()
@@ -181,6 +236,9 @@ namespace TestPharmacyManagement
            
         }
 
+        /// <summary>
+        /// Functions that tests that a regular user cannot view information about all other users
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(PermissionDeniedException))]
         public void GetUsersTest()
@@ -190,6 +248,9 @@ namespace TestPharmacyManagement
            
         }
 
+        /// <summary>
+        /// Function that tests whether or not a regular user has root access.
+        /// </summary>
         [TestMethod]
         public void RootAccessTest()
         {

@@ -3,8 +3,8 @@
  *  File:        Constants.cs                                             *
  *  Copyright:   (c) 2022, Gabriela Ursachi                               *
  *  E-mail:      gabriela.ursachi@student.tuiasi.ro                       *
- *  Description: This file maintains codes for different properties       *
- *               of application.                                          *
+ *  Description: This file deals with constant codes in app               *
+ *                  management.                                           *
  *                                                                        *
  *                                                                        *
  *  This program is free software; you can redistribute it and/or modify  *
@@ -23,7 +23,7 @@ using System.Text;
 namespace PharmacyManagementDLL
 {
     /// <summary>
-    /// Constant codes for different access rights.
+    /// This class is used to retain constant codes for different access rights.
     /// </summary>
     public class Constants
     {
