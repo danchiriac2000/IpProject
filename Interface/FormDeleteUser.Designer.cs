@@ -36,7 +36,7 @@ namespace Interface
             // 
             // textBoxDelete
             // 
-            this.textBoxDelete.Location = new System.Drawing.Point(275, 158);
+            this.textBoxDelete.Location = new System.Drawing.Point(306, 189);
             this.textBoxDelete.Name = "textBoxDelete";
             this.textBoxDelete.Size = new System.Drawing.Size(234, 22);
             this.textBoxDelete.TabIndex = 0;
@@ -45,7 +45,7 @@ namespace Interface
             // 
             this.labelNewUserName.AutoSize = true;
             this.labelNewUserName.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.labelNewUserName.Location = new System.Drawing.Point(171, 159);
+            this.labelNewUserName.Location = new System.Drawing.Point(202, 190);
             this.labelNewUserName.Name = "labelNewUserName";
             this.labelNewUserName.Size = new System.Drawing.Size(98, 21);
             this.labelNewUserName.TabIndex = 4;
@@ -53,7 +53,7 @@ namespace Interface
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(334, 199);
+            this.buttonDelete.Location = new System.Drawing.Point(365, 230);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
             this.buttonDelete.TabIndex = 5;
@@ -70,7 +70,7 @@ namespace Interface
             this.Controls.Add(this.labelNewUserName);
             this.Controls.Add(this.textBoxDelete);
             this.Name = "FormDeleteUser";
-            this.Text = "Form1";
+            this.Text = "Delete user:";
             this.ResumeLayout(false);
             this.PerformLayout();
 

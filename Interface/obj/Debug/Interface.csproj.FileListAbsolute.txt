@@ -54,7 +54,6 @@ C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.csproj.Assem
 C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.FormAddUser.resources
 C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.FormDeleteUser.resources
 C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.FormLogIn.resources
-C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.FormPaginaPrincipala.resources
 C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.FormUpdatePass.resources
 C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.Properties.Resources.resources
 C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.csproj.GenerateResource.cache
@@ -65,3 +64,4 @@ C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.pdb
 C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.FormAddProduct.resources
 C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.FormAddToStock.resources
 C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.FormSell.resources
+C:\Users\Iuliana\Desktop\ip\IpProject\Interface\obj\Debug\Interface.FormMenu.resources

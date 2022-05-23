@@ -13,9 +13,15 @@ namespace Interface
 {
     public partial class FormAddProduct : Form
     {
+        ValidProducts _validProducts = ValidProducts.GetInstance();
         public FormAddProduct()
         {
             InitializeComponent();
+            foreach (var entry in _validProducts.Products)
+            {
+                comboBoxCategory.Items.Add(entry.Key);
+            }
+
         }
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
@@ -25,15 +31,18 @@ namespace Interface
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*ValidProducts products = ValidProducts.GetInstance();
-            Dictionary<String, List<String>> elemente = products.Products;
-            foreach(KeyValuePair<String, List<String>> entry in elemente)
+
+
+        }
+
+        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string category = comboBoxCategory.SelectedItem.ToString();
+            List<string> products = _validProducts.Products[category];
+            foreach (string product in products)
             {
-                foreach(String drug in entry.Value)
-                {
-                    comboBox1.Items.Add(drug);
-                }
-            }*/
+                comboBoxProduct.Items.Add(product);
+            }
         }
     }
 }

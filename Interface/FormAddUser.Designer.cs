@@ -117,7 +117,7 @@ namespace Interface
             this.Controls.Add(this.textBoxNewUserName);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormAddUser";
-            this.Text = "Adaugare utilizator:";
+            this.Text = "Add new user:";
             this.ResumeLayout(false);
             this.PerformLayout();
 

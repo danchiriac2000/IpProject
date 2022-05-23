@@ -112,7 +112,7 @@ namespace Interface
             this.Controls.Add(this.textBoxOldPass);
             this.Controls.Add(this.textBoxUser);
             this.Name = "FormUpdatePass";
-            this.Text = "FormUpdatePass";
+            this.Text = "Update Password:";
             this.ResumeLayout(false);
             this.PerformLayout();
 

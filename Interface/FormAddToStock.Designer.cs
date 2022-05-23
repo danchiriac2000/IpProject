@@ -91,7 +91,7 @@ namespace Interface
             this.Controls.Add(this.textBoxQuantity);
             this.Controls.Add(this.textBoxBarcode);
             this.Name = "FormAddToStock";
-            this.Text = "FormAddToStock";
+            this.Text = "Add to stock:";
             this.ResumeLayout(false);
             this.PerformLayout();
 

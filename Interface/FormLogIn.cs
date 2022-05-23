@@ -37,7 +37,7 @@ namespace Interface
             
             if (_util.Login(username, password)==true){
 
-                Form pagina2 = new FormPaginaPrincipala();
+                Form pagina2 = new FormMenu();
                 this.Hide();
                 pagina2.Show();
             }

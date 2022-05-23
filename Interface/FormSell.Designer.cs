@@ -91,7 +91,7 @@ namespace Interface
             this.Controls.Add(this.textBoxQuantity);
             this.Controls.Add(this.textBoxBarcode);
             this.Name = "FormSell";
-            this.Text = "FormSell";
+            this.Text = "Sell product:";
             this.ResumeLayout(false);
             this.PerformLayout();
 

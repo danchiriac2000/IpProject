@@ -39,16 +39,6 @@ namespace Interface
             // comboBoxProduct
             // 
             this.comboBoxProduct.FormattingEnabled = true;
-            this.comboBoxProduct.Items.AddRange(new object[] {
-            "ValidProducts products = ValidProducts.GetInstance();",
-            "            Dictionary<String, List<String>> elemente = products.Products;",
-            "            foreach (KeyValuePair<String, List<String>> entry in elemente)",
-            "            {",
-            "                foreach (String drug in entry.Value)",
-            "                {",
-            "                    comboBox1.Items.Add(drug);",
-            "                }",
-            "            }"});
             this.comboBoxProduct.Location = new System.Drawing.Point(277, 216);
             this.comboBoxProduct.Name = "comboBoxProduct";
             this.comboBoxProduct.Size = new System.Drawing.Size(247, 24);
@@ -88,16 +78,6 @@ namespace Interface
             // comboBoxCategory
             // 
             this.comboBoxCategory.FormattingEnabled = true;
-            this.comboBoxCategory.Items.AddRange(new object[] {
-            "ValidProducts products = ValidProducts.GetInstance();",
-            "            Dictionary<String, List<String>> elemente = products.Products;",
-            "            foreach (KeyValuePair<String, List<String>> entry in elemente)",
-            "            {",
-            "                foreach (String drug in entry.Value)",
-            "                {",
-            "                    comboBox1.Items.Add(drug);",
-            "                }",
-            "            }"});
             this.comboBoxCategory.Location = new System.Drawing.Point(279, 170);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(247, 24);
@@ -114,7 +94,7 @@ namespace Interface
             this.Controls.Add(this.labelNewProduct);
             this.Controls.Add(this.comboBoxProduct);
             this.Name = "FormAddProduct";
-            this.Text = "FormAddProduct";
+            this.Text = "Add new product:";
             this.ResumeLayout(false);
             this.PerformLayout();
 

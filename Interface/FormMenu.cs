@@ -14,12 +14,12 @@ using System.Windows.Forms;
 
 namespace Interface
 {
-    public partial class FormPaginaPrincipala : Form
+    public partial class FormMenu : Form
     {
         private ProxyActionManager _util = ProxyActionManager.GetInstance();
 
 
-        public FormPaginaPrincipala()
+        public FormMenu()
         {
             InitializeComponent();
 
@@ -84,6 +84,11 @@ namespace Interface
         {
             List<User> users = _util.GetUsers();
             dataGridView.Columns.Clear();
+            //dataGridView.AutoResizeColumns();
+            //dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView.AutoResizeRows();
+            dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            
             dataGridView.Columns.Add("ID", "ID");
             dataGridView.Columns.Add("Username", "Username");
             dataGridView.Columns.Add("Rights", "Rights");
@@ -121,7 +126,19 @@ namespace Interface
         private void buttonProductList_Click(object sender, EventArgs e)
         {
             List<Product> products = _util.GetProducts();
-            
+            dataGridView.Columns.Clear();
+            dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+            dataGridView.Columns.Add("ID", "ID");
+            dataGridView.Columns.Add("Name", "Name");
+            dataGridView.Columns.Add("Category", "Category");
+            dataGridView.Columns.Add("Price", "Price");
+            dataGridView.Columns.Add("Stock", "Stock");
+            for (int i = 0; i < products.Count; i++)
+            {
+                dataGridView.Rows.Add(products[i].Id.ToString(), products[i].Name, products[i].Category, products[i].Price.ToString(),products[i].Stock.ToString());
+            }
+
         }
     }
 }

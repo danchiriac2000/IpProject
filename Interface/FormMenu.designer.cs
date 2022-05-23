@@ -1,7 +1,7 @@
 ﻿
 namespace Interface
 {
-    partial class FormPaginaPrincipala
+    partial class FormMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -166,6 +166,7 @@ namespace Interface
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView.Location = new System.Drawing.Point(16, 158);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
@@ -173,7 +174,7 @@ namespace Interface
             this.dataGridView.Size = new System.Drawing.Size(766, 279);
             this.dataGridView.TabIndex = 14;
             // 
-            // FormPaginaPrincipala
+            // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,8 +192,8 @@ namespace Interface
             this.Controls.Add(this.buttonProductList);
             this.Controls.Add(this.buttonAddStock);
             this.Controls.Add(this.buttonAddUser);
-            this.Name = "FormPaginaPrincipala";
-            this.Text = "Pagina principala:";
+            this.Name = "FormMenu";
+            this.Text = "Menu:";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
