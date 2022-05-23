@@ -35,7 +35,9 @@ namespace Interface
 
         }
 
-        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+     
+
+        private void comboBoxCategory_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             string category = comboBoxCategory.SelectedItem.ToString();
             List<string> products = _validProducts.Products[category];

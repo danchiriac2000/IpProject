@@ -39,9 +39,10 @@ namespace Interface
             // comboBoxProduct
             // 
             this.comboBoxProduct.FormattingEnabled = true;
-            this.comboBoxProduct.Location = new System.Drawing.Point(277, 216);
+            this.comboBoxProduct.Location = new System.Drawing.Point(208, 176);
+            this.comboBoxProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxProduct.Name = "comboBoxProduct";
-            this.comboBoxProduct.Size = new System.Drawing.Size(247, 24);
+            this.comboBoxProduct.Size = new System.Drawing.Size(186, 21);
             this.comboBoxProduct.TabIndex = 0;
             this.comboBoxProduct.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -49,17 +50,19 @@ namespace Interface
             // 
             this.labelNewProduct.AutoSize = true;
             this.labelNewProduct.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.labelNewProduct.Location = new System.Drawing.Point(183, 216);
+            this.labelNewProduct.Location = new System.Drawing.Point(137, 176);
+            this.labelNewProduct.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNewProduct.Name = "labelNewProduct";
-            this.labelNewProduct.Size = new System.Drawing.Size(79, 21);
+            this.labelNewProduct.Size = new System.Drawing.Size(60, 16);
             this.labelNewProduct.TabIndex = 6;
             this.labelNewProduct.Text = "Product:";
             // 
             // buttonAddProduct
             // 
-            this.buttonAddProduct.Location = new System.Drawing.Point(360, 259);
+            this.buttonAddProduct.Location = new System.Drawing.Point(270, 210);
+            this.buttonAddProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAddProduct.Name = "buttonAddProduct";
-            this.buttonAddProduct.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddProduct.Size = new System.Drawing.Size(56, 19);
             this.buttonAddProduct.TabIndex = 7;
             this.buttonAddProduct.Text = "Add!";
             this.buttonAddProduct.UseVisualStyleBackColor = true;
@@ -69,30 +72,34 @@ namespace Interface
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.label1.Location = new System.Drawing.Point(183, 170);
+            this.label1.Location = new System.Drawing.Point(137, 138);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 21);
+            this.label1.Size = new System.Drawing.Size(69, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Category:";
             // 
             // comboBoxCategory
             // 
             this.comboBoxCategory.FormattingEnabled = true;
-            this.comboBoxCategory.Location = new System.Drawing.Point(279, 170);
+            this.comboBoxCategory.Location = new System.Drawing.Point(209, 138);
+            this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(247, 24);
+            this.comboBoxCategory.Size = new System.Drawing.Size(186, 21);
             this.comboBoxCategory.TabIndex = 9;
+            this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategory_SelectedIndexChanged_1);
             // 
             // FormAddProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAddProduct);
             this.Controls.Add(this.labelNewProduct);
             this.Controls.Add(this.comboBoxProduct);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormAddProduct";
             this.Text = "Add new product:";
             this.ResumeLayout(false);
