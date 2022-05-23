@@ -1,4 +1,5 @@
-﻿using Exceptions.DataBaseExceptions;
+﻿using Exceptions.AccessRightsExceptions;
+using Exceptions.DataBaseExceptions;
 using PharmacyManagementDLL;
 using System;
 using System.Collections.Generic;
@@ -26,27 +27,34 @@ namespace Interface
             try
             {
                 int barcode = Convert.ToInt32(textBoxBarcode.Text);
-                int quantity = Convert.ToInt32(textBoxQuantity.Text);
-                if (barcode <=0)
-                {
-                    throw new RecordNotFoundException();
-                }
-                if (quantity <= 0)
-                {
-                    throw new InvalidStockException();
-                }
+                int quantity = Convert.ToInt32(numericUpDownQuantity.Value);
+                
+
                 _util.AddToStock(barcode, quantity);
+                this.Close();
+                MessageBox.Show("Stock was successfuly updated");
             }
-            catch(RecordNotFoundException exc)
+            catch (PermissionDeniedException exc)
             {
-                MessageBox.Show("Please insert a valid barcode!");
+                MessageBox.Show(exc.Message);
+            }
+            catch (FormatException exc)
+            {
+                MessageBox.Show("Please insert valid number for barcode.");
+            }
+            catch (RecordNotFoundException exc)
+            {
+                MessageBox.Show(exc.Message);
             }
             catch(InvalidStockException exc)
             {
-                MessageBox.Show("Please insert a valid quantity!");
-
+                MessageBox.Show(exc.Message);
+            }           
+            catch (OverflowException exc)
+            {
+                MessageBox.Show("Insert only numerical values in range (0-2147483647)");
             }
-            this.Close();
+            
 
         }
     }

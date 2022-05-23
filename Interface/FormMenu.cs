@@ -23,7 +23,10 @@ namespace Interface
         {
             InitializeComponent();
 
-            label1.Text = "" + _util.CurrentUser.Username.ToUpper(CultureInfo.CurrentCulture); 
+            //spatiul de afisare se initializeaza doar o singura data, la autentificare, 
+            //in functie de tipul de utilizator autentificat
+            InitializeDataGrid();
+            labelAuthenticatedUser.Text = "Welcome, " + _util.CurrentUser.Username.ToUpper(CultureInfo.CurrentCulture); 
             
             if (_util.RootAccess()){
                 buttonAddUser.Enabled = true;
@@ -34,6 +37,7 @@ namespace Interface
                 buttonAddStock.Enabled = false;
                 buttonProductList.Enabled = false;
                 buttonSellProduct.Enabled = false;
+                buttonUpdateProductPrice.Enabled = false;
             }
             else
             {
@@ -45,6 +49,7 @@ namespace Interface
                 buttonAddStock.Enabled = true;
                 buttonProductList.Enabled = true;
                 buttonSellProduct.Enabled = true;
+                buttonUpdateProductPrice.Enabled = true;
             }
         }
 
@@ -82,22 +87,9 @@ namespace Interface
 
         private void buttonUsersList_Click(object sender, EventArgs e)
         {
-            List<User> users = _util.GetUsers();
-            dataGridView.Columns.Clear();
-            //dataGridView.AutoResizeColumns();
-            //dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridView.AutoResizeRows();
-            dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            
-            dataGridView.Columns.Add("ID", "ID");
-            dataGridView.Columns.Add("Username", "Username");
-            dataGridView.Columns.Add("Rights", "Rights");
-
-            for(int i = 0; i < users.Count; i++)
-            {
-                dataGridView.Rows.Add(users[i].Id.ToString(), users[i].Username, users[i].Rights.ToString());
-            }
+            this.DisplayUsers();
         }
+
 
         private void buttonDeleteUser_Click(object sender, EventArgs e)
         {
@@ -125,20 +117,70 @@ namespace Interface
 
         private void buttonProductList_Click(object sender, EventArgs e)
         {
-            List<Product> products = _util.GetProducts();
-            dataGridView.Columns.Clear();
-            dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.DisplayProducts();
+        }
 
-            dataGridView.Columns.Add("ID", "ID");
-            dataGridView.Columns.Add("Name", "Name");
-            dataGridView.Columns.Add("Category", "Category");
-            dataGridView.Columns.Add("Price", "Price");
-            dataGridView.Columns.Add("Stock", "Stock");
+        private void InitializeDataGrid()
+        {
+            dataGridViewDBInfo.AllowUserToAddRows = false;
+            
+       
+            if (_util.RootAccess())
+            {
+                dataGridViewDBInfo.Columns.Clear();
+                //dataGridView.AutoResizeColumns();
+                //dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dataGridViewDBInfo.AutoResizeRows();
+                dataGridViewDBInfo.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+                dataGridViewDBInfo.Columns.Add("ID", "ID");
+                dataGridViewDBInfo.Columns.Add("Username", "Username");
+                dataGridViewDBInfo.Columns.Add("Rights", "Rights");
+            }
+            else
+            {
+                dataGridViewDBInfo.Columns.Clear();
+                dataGridViewDBInfo.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+                dataGridViewDBInfo.Columns.Add("Barcode", "Barcode");
+                dataGridViewDBInfo.Columns.Add("Name", "Name");
+                dataGridViewDBInfo.Columns.Add("Category", "Category");
+                dataGridViewDBInfo.Columns.Add("Price", "Price");
+                dataGridViewDBInfo.Columns.Add("Stock", "Stock");
+            }
+        }
+
+        private void DisplayProducts()
+        {
+            List<Product> products = _util.GetProducts();
+            dataGridViewDBInfo.Rows.Clear();
+
             for (int i = 0; i < products.Count; i++)
             {
-                dataGridView.Rows.Add(products[i].Id.ToString(), products[i].Name, products[i].Category, products[i].Price.ToString(),products[i].Stock.ToString());
+                dataGridViewDBInfo.Rows.Add(products[i].Id.ToString(), products[i].Name, products[i].Category, products[i].Price.ToString(), products[i].Stock.ToString());
             }
+        }
 
+        private void DisplayUsers()
+        {
+            List<User> users = _util.GetUsers();
+            dataGridViewDBInfo.Rows.Clear();
+
+            for (int i = 0; i < users.Count; i++)
+            {
+                dataGridViewDBInfo.Rows.Add(users[i].Id.ToString(), users[i].Username, users[i].Rights.ToString());
+            }
+        }
+
+        private void FormMenu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonUpdateProductPrice_Click(object sender, EventArgs e)
+        {
+            Form pagina9 = new FormUpdatePrice();
+            pagina9.Show();
         }
     }
 }

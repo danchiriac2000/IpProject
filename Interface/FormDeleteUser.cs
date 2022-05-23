@@ -1,4 +1,5 @@
-﻿using Exceptions.DataBaseExceptions;
+﻿using Exceptions.AccessRightsExceptions;
+using Exceptions.DataBaseExceptions;
 using PharmacyManagementDLL;
 using System;
 using System.Collections.Generic;
@@ -22,18 +23,33 @@ namespace Interface
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            string username= textBoxDelete.Text;
+            string username= textBoxDeletedUsername.Text;
+            if (username == "")
+            {
+                MessageBox.Show("Username field is mandatory!");
+                return;
+            }
+
             try
             {
                 _util.DeleteUser(username);
                 this.Close();
+                MessageBox.Show("Successfuly deleted user '" + username + "'");
             }
-            catch(RecordNotFoundException exc)
+            catch (PermissionDeniedException exc)
             {
                 MessageBox.Show(exc.Message);
             }
-            
-            
+            catch (RecordNotFoundException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+
+
+
+
+
         }
     }
 }

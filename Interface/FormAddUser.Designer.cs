@@ -29,108 +29,121 @@ namespace Interface
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxNewUserName = new System.Windows.Forms.TextBox();
-            this.textBoxNewUserPassword = new System.Windows.Forms.TextBox();
-            this.textBoxNewUserOccupation = new System.Windows.Forms.TextBox();
-            this.labelNewUserName = new System.Windows.Forms.Label();
-            this.labelNewUserPass = new System.Windows.Forms.Label();
-            this.labelNewUserOccupation = new System.Windows.Forms.Label();
             this.buttonAddNewUser = new System.Windows.Forms.Button();
+            this.groupBoxAddUser = new System.Windows.Forms.GroupBox();
+            this.labelNewUserOccupation = new System.Windows.Forms.Label();
+            this.labelNewUserPass = new System.Windows.Forms.Label();
+            this.labelNewUserName = new System.Windows.Forms.Label();
+            this.textBoxNewUserOccupation = new System.Windows.Forms.TextBox();
+            this.textBoxNewUserPassword = new System.Windows.Forms.TextBox();
+            this.textBoxNewUserName = new System.Windows.Forms.TextBox();
+            this.groupBoxAddUser.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBoxNewUserName
+            // buttonAddNewUser
             // 
-            this.textBoxNewUserName.Location = new System.Drawing.Point(279, 101);
-            this.textBoxNewUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxNewUserName.Name = "textBoxNewUserName";
-            this.textBoxNewUserName.Size = new System.Drawing.Size(246, 22);
-            this.textBoxNewUserName.TabIndex = 0;
+            this.buttonAddNewUser.Location = new System.Drawing.Point(756, 410);
+            this.buttonAddNewUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAddNewUser.Name = "buttonAddNewUser";
+            this.buttonAddNewUser.Size = new System.Drawing.Size(106, 29);
+            this.buttonAddNewUser.TabIndex = 6;
+            this.buttonAddNewUser.Text = "Add";
+            this.buttonAddNewUser.UseVisualStyleBackColor = true;
+            this.buttonAddNewUser.Click += new System.EventHandler(this.buttonAddNewUser_Click);
             // 
-            // textBoxNewUserPassword
+            // groupBoxAddUser
             // 
-            this.textBoxNewUserPassword.Location = new System.Drawing.Point(279, 148);
-            this.textBoxNewUserPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxNewUserPassword.Name = "textBoxNewUserPassword";
-            this.textBoxNewUserPassword.Size = new System.Drawing.Size(246, 22);
-            this.textBoxNewUserPassword.TabIndex = 1;
-            // 
-            // textBoxNewUserOccupation
-            // 
-            this.textBoxNewUserOccupation.Location = new System.Drawing.Point(279, 197);
-            this.textBoxNewUserOccupation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxNewUserOccupation.Name = "textBoxNewUserOccupation";
-            this.textBoxNewUserOccupation.Size = new System.Drawing.Size(246, 22);
-            this.textBoxNewUserOccupation.TabIndex = 2;
-            // 
-            // labelNewUserName
-            // 
-            this.labelNewUserName.AutoSize = true;
-            this.labelNewUserName.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.labelNewUserName.Location = new System.Drawing.Point(164, 101);
-            this.labelNewUserName.Name = "labelNewUserName";
-            this.labelNewUserName.Size = new System.Drawing.Size(98, 21);
-            this.labelNewUserName.TabIndex = 3;
-            this.labelNewUserName.Text = "Username:";
-            // 
-            // labelNewUserPass
-            // 
-            this.labelNewUserPass.AutoSize = true;
-            this.labelNewUserPass.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.labelNewUserPass.Location = new System.Drawing.Point(164, 148);
-            this.labelNewUserPass.Name = "labelNewUserPass";
-            this.labelNewUserPass.Size = new System.Drawing.Size(93, 21);
-            this.labelNewUserPass.TabIndex = 4;
-            this.labelNewUserPass.Text = "Password:";
+            this.groupBoxAddUser.Controls.Add(this.labelNewUserOccupation);
+            this.groupBoxAddUser.Controls.Add(this.labelNewUserPass);
+            this.groupBoxAddUser.Controls.Add(this.labelNewUserName);
+            this.groupBoxAddUser.Controls.Add(this.textBoxNewUserOccupation);
+            this.groupBoxAddUser.Controls.Add(this.textBoxNewUserPassword);
+            this.groupBoxAddUser.Controls.Add(this.textBoxNewUserName);
+            this.groupBoxAddUser.Location = new System.Drawing.Point(54, 32);
+            this.groupBoxAddUser.Name = "groupBoxAddUser";
+            this.groupBoxAddUser.Size = new System.Drawing.Size(808, 373);
+            this.groupBoxAddUser.TabIndex = 7;
+            this.groupBoxAddUser.TabStop = false;
+            this.groupBoxAddUser.Text = "ADD NEW USER";
             // 
             // labelNewUserOccupation
             // 
             this.labelNewUserOccupation.AutoSize = true;
             this.labelNewUserOccupation.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
-            this.labelNewUserOccupation.Location = new System.Drawing.Point(164, 198);
+            this.labelNewUserOccupation.Location = new System.Drawing.Point(172, 234);
             this.labelNewUserOccupation.Name = "labelNewUserOccupation";
-            this.labelNewUserOccupation.Size = new System.Drawing.Size(109, 21);
-            this.labelNewUserOccupation.TabIndex = 5;
-            this.labelNewUserOccupation.Text = "Occupation:";
+            this.labelNewUserOccupation.Size = new System.Drawing.Size(182, 25);
+            this.labelNewUserOccupation.TabIndex = 11;
+            this.labelNewUserOccupation.Text = "Occupation code:";
             // 
-            // buttonAddNewUser
+            // labelNewUserPass
             // 
-            this.buttonAddNewUser.Location = new System.Drawing.Point(343, 238);
-            this.buttonAddNewUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAddNewUser.Name = "buttonAddNewUser";
-            this.buttonAddNewUser.Size = new System.Drawing.Size(94, 23);
-            this.buttonAddNewUser.TabIndex = 6;
-            this.buttonAddNewUser.Text = "Add!";
-            this.buttonAddNewUser.UseVisualStyleBackColor = true;
-            this.buttonAddNewUser.Click += new System.EventHandler(this.buttonAddNewUser_Click);
+            this.labelNewUserPass.AutoSize = true;
+            this.labelNewUserPass.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.labelNewUserPass.Location = new System.Drawing.Point(201, 173);
+            this.labelNewUserPass.Name = "labelNewUserPass";
+            this.labelNewUserPass.Size = new System.Drawing.Size(110, 25);
+            this.labelNewUserPass.TabIndex = 10;
+            this.labelNewUserPass.Text = "Password:";
+            // 
+            // labelNewUserName
+            // 
+            this.labelNewUserName.AutoSize = true;
+            this.labelNewUserName.Font = new System.Drawing.Font("Mongolian Baiti", 12F);
+            this.labelNewUserName.Location = new System.Drawing.Point(201, 114);
+            this.labelNewUserName.Name = "labelNewUserName";
+            this.labelNewUserName.Size = new System.Drawing.Size(116, 25);
+            this.labelNewUserName.TabIndex = 9;
+            this.labelNewUserName.Text = "Username:";
+            // 
+            // textBoxNewUserOccupation
+            // 
+            this.textBoxNewUserOccupation.Location = new System.Drawing.Point(360, 233);
+            this.textBoxNewUserOccupation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNewUserOccupation.Name = "textBoxNewUserOccupation";
+            this.textBoxNewUserOccupation.Size = new System.Drawing.Size(276, 26);
+            this.textBoxNewUserOccupation.TabIndex = 8;
+            // 
+            // textBoxNewUserPassword
+            // 
+            this.textBoxNewUserPassword.Location = new System.Drawing.Point(360, 172);
+            this.textBoxNewUserPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNewUserPassword.Name = "textBoxNewUserPassword";
+            this.textBoxNewUserPassword.Size = new System.Drawing.Size(276, 26);
+            this.textBoxNewUserPassword.TabIndex = 7;
+            // 
+            // textBoxNewUserName
+            // 
+            this.textBoxNewUserName.Location = new System.Drawing.Point(360, 113);
+            this.textBoxNewUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNewUserName.Name = "textBoxNewUserName";
+            this.textBoxNewUserName.Size = new System.Drawing.Size(276, 26);
+            this.textBoxNewUserName.TabIndex = 6;
             // 
             // FormAddUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 360);
+            this.ClientSize = new System.Drawing.Size(900, 450);
+            this.Controls.Add(this.groupBoxAddUser);
             this.Controls.Add(this.buttonAddNewUser);
-            this.Controls.Add(this.labelNewUserOccupation);
-            this.Controls.Add(this.labelNewUserPass);
-            this.Controls.Add(this.labelNewUserName);
-            this.Controls.Add(this.textBoxNewUserOccupation);
-            this.Controls.Add(this.textBoxNewUserPassword);
-            this.Controls.Add(this.textBoxNewUserName);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormAddUser";
             this.Text = "Add new user:";
+            this.groupBoxAddUser.ResumeLayout(false);
+            this.groupBoxAddUser.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBoxNewUserName;
-        private System.Windows.Forms.TextBox textBoxNewUserPassword;
-        private System.Windows.Forms.TextBox textBoxNewUserOccupation;
-        private System.Windows.Forms.Label labelNewUserName;
-        private System.Windows.Forms.Label labelNewUserPass;
-        private System.Windows.Forms.Label labelNewUserOccupation;
         private System.Windows.Forms.Button buttonAddNewUser;
+        private System.Windows.Forms.GroupBox groupBoxAddUser;
+        private System.Windows.Forms.Label labelNewUserOccupation;
+        private System.Windows.Forms.Label labelNewUserPass;
+        private System.Windows.Forms.Label labelNewUserName;
+        private System.Windows.Forms.TextBox textBoxNewUserOccupation;
+        private System.Windows.Forms.TextBox textBoxNewUserPassword;
+        private System.Windows.Forms.TextBox textBoxNewUserName;
     }
 }

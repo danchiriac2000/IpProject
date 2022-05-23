@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,13 +36,10 @@ namespace Interface
                     throw new FormatException();
                 }
 
-                //se considera ca se pot adauga doar farmacisti si asistenti
-                if ((newOccupation != Constants.AssistantPharmacist) && (newOccupation != Constants.Pharmacist))
-                {
-                    throw new FormatException();
-                }
+                
                 _util.AddUser(newUsername, newPassword, newOccupation);
                 this.Close();
+                MessageBox.Show("Successfuly added new user '" + newUsername + "'");
             }
             catch (FormatException exc)
             {
@@ -57,7 +55,15 @@ namespace Interface
             {
                 MessageBox.Show(exc.Message);
             }
-            this.Close();
+            catch (InvalidDataException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            catch (OverflowException exc)
+            {
+                MessageBox.Show("Insert only numerical values in range (0-2147483647)");
+            }
+
         }
     }
 }

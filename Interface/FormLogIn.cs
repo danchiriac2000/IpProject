@@ -38,15 +38,23 @@ namespace Interface
             if (_util.Login(username, password)==true){
 
                 Form pagina2 = new FormMenu();
-                this.Hide();
                 pagina2.Show();
+                this.Hide();               
+               
             }
             else
             {
                 MessageBox.Show("Incorrect username or password!","ERROR");
+                textBoxUser.Clear();
+                textBoxPass.Clear();
             }
 
 
+        }
+
+        private void FormLogIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

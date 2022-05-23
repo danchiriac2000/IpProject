@@ -23,7 +23,7 @@ using System.Collections.Generic;
 using System.Text;
 using DataBaseManager;
 using Exceptions.DataBaseExceptions;
-
+using Exceptions.AccessRightsExceptions;
 
 namespace PharmacyManagementDLL
 {
@@ -68,7 +68,7 @@ namespace PharmacyManagementDLL
             }
             catch(ConstraintViolatedException exc)
             {
-                throw new ConstraintViolatedException("The product with given barcode already exists!");
+                throw new ConstraintViolatedException("The product with given barcode or name already exists!");
             }
             catch(InvalidStockException exc)
             {
@@ -94,10 +94,7 @@ namespace PharmacyManagementDLL
             }
             else
             {
-                if (quantity <= 0)
-                {
-                    throw new InvalidDataException("Quantity must be greater than zero.");
-                }
+                
                 int newStock = product.Stock - quantity;
                 Product updatedProduct = new Product(product.Id, product.Name, product.Category, product.Price, newStock);
 
@@ -131,10 +128,7 @@ namespace PharmacyManagementDLL
             }
             else
             {
-                if (quantity < 0)
-                {
-                    throw new InvalidDataException("Quantity must be greater than zero.");
-                }
+                
 
                 int newStock = product.Stock + quantity;
                 Product updatedProduct = new Product(product.Id, product.Name, product.Category, product.Price, newStock);
@@ -148,6 +142,34 @@ namespace PharmacyManagementDLL
                     throw exc;
                 }                
             }            
+        }
+
+        /// <summary>
+        /// Update product price in database .
+        /// </summary>
+        /// <param name="barcode">Unique identifier of product</param>
+        /// <param name="newPrice">Value to be updated for price attribute. </param>
+        public void UpdateProductPrice(int barcode, double newPrice)
+        {
+            //verify if database contains a product with the given barcode
+            Product product = _dbInstance.SelectProduct(barcode);
+            if (product == null)
+            {
+                throw new RecordNotFoundException("This product doesn' exist.Try to add a new product of this type.");
+            }
+            else
+            {
+                if (newPrice < 0)
+                {
+                    throw new InvalidDataException("Price must be greater than zero.");
+                }
+
+                
+                Product updatedProduct = new Product(product.Id, product.Name, product.Category, newPrice, product.Stock);
+               _dbInstance.Update(updatedProduct);
+                
+                
+            }
         }
 
         /// <summary>
@@ -204,7 +226,7 @@ namespace PharmacyManagementDLL
                 string oldPassEncrypted = Cryptography.HashString(oldPass);
                 if (oldPassEncrypted != existingUser.Password)
                 {
-                    throw new InvalidDataException("Wrong data inserted.");
+                    throw new InvalidDataException("Wrong old password inserted.");
                 }
                 else
                 {
@@ -226,10 +248,13 @@ namespace PharmacyManagementDLL
             {
                 throw new RecordNotFoundException("Inexistent user");
             }
-            else
+            if (deletedUser.Rights == -1)
             {
-                _dbInstance.DeleteUser(deletedUser.Id);
+                throw new PermissionDeniedException("Root account can't be deleted!");
             }
+            
+             _dbInstance.DeleteUser(deletedUser.Id);
+  
            
         }
 

@@ -105,7 +105,7 @@ namespace PharmacyManagementDLL
         /// <param name="newProduct">Product to be added</param>
         public void AddNewProduct(Product newProduct)
         {
-            bool hasAccess = true;
+            
             try
             {
                 //gives access only to thosewho are Pharmacists
@@ -115,7 +115,7 @@ namespace PharmacyManagementDLL
                 }
                 else
                 {
-                    hasAccess = false;
+                    throw new PermissionDeniedException();
                 }
             }
             //forwards exceptions for display a suggestive message on GUI
@@ -128,10 +128,6 @@ namespace PharmacyManagementDLL
                 throw exc;
             }
 
-            if (!hasAccess)
-            {
-                throw new PermissionDeniedException();
-            }
         }
 
         /// <summary>
@@ -141,7 +137,7 @@ namespace PharmacyManagementDLL
         /// <param name="quantity">Value to be added to the current stock. </param>   
         public void AddToStock(int barcode, int quantity)
         {
-            bool hasAccess = true;
+            
             try
             {
                 //gives access only to thosewho are Pharmacists
@@ -151,7 +147,7 @@ namespace PharmacyManagementDLL
                 }
                 else
                 {
-                    hasAccess = false;
+                    throw new PermissionDeniedException();
                 }
             }
             catch (RecordNotFoundException exc)
@@ -164,10 +160,33 @@ namespace PharmacyManagementDLL
             }
 
 
-            if (!hasAccess)
+        }
+
+        /// <summary>
+        /// Update product price in database .
+        /// </summary>
+        /// <param name="barcode">Unique identifier of product</param>
+        /// <param name="newPrice">Value to be updated for price attribute. </param>
+        public void UpdateProductPrice(int barcode, double newPrice)
+        {
+            try
             {
-                throw new PermissionDeniedException();
+                //gives access only to thosewho are Pharmacists
+                if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyProductsDBRight))
+                {
+                    _realActionManager.UpdateProductPrice(barcode, newPrice);
+                }
+                else
+                {
+                    throw new PermissionDeniedException();
+                }
             }
+            catch (RecordNotFoundException exc)
+            {
+                throw exc;
+            }
+          
+
         }
 
         /// <summary>
@@ -190,7 +209,7 @@ namespace PharmacyManagementDLL
         /// <param name="quantity">Product amount which will be sold. </param>
         public void SellProduct(int barcode, int quantity)
         {
-            bool hasAccess = true;
+         
             try
             {
                 if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.SellRight))
@@ -199,7 +218,7 @@ namespace PharmacyManagementDLL
                 }
                 else
                 {
-                    hasAccess = false;
+                    throw new PermissionDeniedException();
                 }
             }
             catch (RecordNotFoundException exc)
@@ -212,10 +231,6 @@ namespace PharmacyManagementDLL
             }
 
 
-            if (!hasAccess)
-            {
-                throw new PermissionDeniedException();
-            }
 
         }
 
@@ -227,27 +242,29 @@ namespace PharmacyManagementDLL
         /// /// <param name="occupationCode">A specific code given to the user's function in pharmacy</param>
         public void AddUser(string username, string password, int occupationCode)
         {
-            bool hasAccess = true;
+ 
             try
             {
-                if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight) && occupationCode!=Constants.Admin)
+                if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight) )
                 {
                     _realActionManager.AddUser(username, password, occupationCode);
                 }
                 else
                 {
-                    hasAccess = false;
+                    throw new PermissionDeniedException();
                 }
+
             }
             catch (ConstraintViolatedException exc)
             {
                 throw exc;
             }
-
-            if (!hasAccess)
+            catch(InvalidDataException exc)
             {
-                throw new PermissionDeniedException();
+                throw exc;
             }
+
+
         }
 
         /// <summary>
@@ -258,7 +275,7 @@ namespace PharmacyManagementDLL
         /// <param name="newPass">New password for this account.</param>
         public void UpdateUserPassword(string username, string oldPass, string newPass)
         {
-            bool hasAccess = true;
+     
             try
             {
                 if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight))
@@ -267,7 +284,7 @@ namespace PharmacyManagementDLL
                 }
                 else
                 {
-                    hasAccess = false;
+                    throw new PermissionDeniedException();
                 }
             }
             catch (RecordNotFoundException exc)
@@ -279,10 +296,6 @@ namespace PharmacyManagementDLL
                 throw exc;
             }
 
-            if (!hasAccess)
-            {
-                throw new PermissionDeniedException();
-            }
         }
 
         /// <summary>
@@ -291,22 +304,16 @@ namespace PharmacyManagementDLL
         /// <param name="username">username of the user we want to remove</param>
         public void DeleteUser(string username)
         {
-            bool hasAccess = true;
-
-            if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight) && username!="admin")
+            if (_permissions.RightsList(_currentUser.Rights).Contains(Constants.ModifyUsersDBRight))
             {
                 _realActionManager.DeleteUser(username);
             }
             else
             {
-                hasAccess = false;
-            }
-
-
-            if (!hasAccess)
-            {
                 throw new PermissionDeniedException();
             }
+
+
         }
 
         /// <summary>

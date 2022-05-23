@@ -1,4 +1,6 @@
-﻿using PharmacyManagementDLL;
+﻿using Exceptions.AccessRightsExceptions;
+using Exceptions.DataBaseExceptions;
+using PharmacyManagementDLL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,14 +32,27 @@ namespace Interface
                 string newPass = textBoxNewPass.Text;
                 if (username == "" || oldPass == "" || newPass == "")
                 {
-                    throw new InvalidDataException();
+                    MessageBox.Show("Please insert a valid data! \nAll fields are mandatory!");
                 }
-                _util.UpdateUserPassword(username, oldPass, newPass);
-                this.Close();
+                else
+                {
+                    _util.UpdateUserPassword(username, oldPass, newPass);
+                    this.Close();
+                    MessageBox.Show("Password was successfuly updated!");
+                }
+
+            }
+            catch (PermissionDeniedException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            catch (RecordNotFoundException exc)
+            {
+                MessageBox.Show(exc.Message);
             }
             catch (InvalidDataException exc)
             {
-                MessageBox.Show("Please insert a valid data!");
+                MessageBox.Show(exc.Message);
             }
 
         }

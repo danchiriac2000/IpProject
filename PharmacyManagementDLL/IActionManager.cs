@@ -47,7 +47,14 @@ namespace PharmacyManagementDLL
         /// </summary>
         /// <param name="barcode">Unique identifier of product</param>
         /// <param name="quantity">Value to be added to the current stock. </param>
-        void AddToStock(int barcode,int quantity);           
+        void AddToStock(int barcode,int quantity);
+
+        /// <summary>
+        /// Update product price in database .
+        /// </summary>
+        /// <param name="barcode">Unique identifier of product</param>
+        /// <param name="newPrice">Value to be updated for price attribute. </param>
+        void UpdateProductPrice(int barcode, double newPrice);
 
         /// <summary>
         /// Queries for obtain a list of all existing products.

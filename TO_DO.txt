@@ -1,9 +1,7 @@
 
 GENERAL:
--SRS
+
 -Doxygen
 -Help from GUI
--Diagrams
--Unit testing
 
  
