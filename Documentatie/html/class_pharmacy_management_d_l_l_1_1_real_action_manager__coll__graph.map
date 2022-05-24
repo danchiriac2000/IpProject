@@ -1,5 +1,0 @@
-<map id="PharmacyManagementDLL.RealActionManager" name="PharmacyManagementDLL.RealActionManager">
-<area shape="rect" id="node1" title="This class provides useful methods in the management of a pharmacy and its staff." alt="" coords="40,336,249,560"/>
-<area shape="rect" id="node2" href="$interface_pharmacy_management_d_l_l_1_1_i_action_manager.html" title="This interface contains specific methods for actions that can take place in a pharmacy ; these method..." alt="" coords="5,42,172,237"/>
-<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html" title="DB class. This is the sqlite database manager." alt="" coords="196,5,347,273"/>
-</map>

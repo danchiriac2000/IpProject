@@ -1,6 +1,0 @@
-<map id="PharmacyManagementDLL.ProxyActionManager.AddNewProduct" name="PharmacyManagementDLL.ProxyActionManager.AddNewProduct">
-<area shape="rect" id="node1" title="Adds a new product to the database only if registered user has this right." alt="" coords="5,39,223,80"/>
-<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a094dbfaedd50fc226b0a5a67b49e2532" title="Adds a new product to the database and returns operation status: succes(true) / failure(false) = prod..." alt="" coords="295,5,505,47"/>
-<area shape="rect" id="node4" href="$class_pharmacy_management_d_l_l_1_1_permissions.html#a99e2481e6c55f0c26f3d2e3ad1436f91" title="Returns a list of action rights depending on the position of each employee." alt="" coords="271,71,529,112"/>
-<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#a9192c0fd8471e823b58f82f72f7e224f" title="This method add a new user to the database. If the id or the username is already in database,..." alt="" coords="577,13,764,39"/>
-</map>

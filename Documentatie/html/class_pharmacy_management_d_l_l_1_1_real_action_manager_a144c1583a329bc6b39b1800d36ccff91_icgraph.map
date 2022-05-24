@@ -1,5 +1,0 @@
-<map id="PharmacyManagementDLL.RealActionManager.AddToStock" name="PharmacyManagementDLL.RealActionManager.AddToStock">
-<area shape="rect" id="node1" title="Update product stock in database and returns failure(false) if the new stock value is not allowed due..." alt="" coords="588,5,797,47"/>
-<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#a2703533a0cd7627cdb9fdaef70f84383" title="Lets only those who have modify access right to increase/decrease product stock." alt="" coords="323,5,540,47"/>
-<area shape="rect" id="node3" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a55d17aeb45e79cdc631bbe7de4558061" title=" " alt="" coords="5,5,275,47"/>
-</map>

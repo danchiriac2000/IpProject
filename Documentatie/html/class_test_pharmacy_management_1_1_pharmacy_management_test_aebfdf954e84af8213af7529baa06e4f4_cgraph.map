@@ -1,8 +1,0 @@
-<map id="TestPharmacyManagement.PharmacyManagementTest.GetInstanceTest" name="TestPharmacyManagement.PharmacyManagementTest.GetInstanceTest">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,249,76"/>
-<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#a95a9e5f8919130989da7cef9f3f00cf8" title="It creates a new instance of proxy only if it hasn&#39;t been already created." alt="" coords="297,35,515,76"/>
-<area shape="rect" id="node3" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#ae26fffd55100d2ed73673b751b9f2f70" title="Class constructor: it initializes all its members for later use" alt="" coords="563,35,797,76"/>
-<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#aa458477a799b93f16bd1b841bc4798df" title="Method to get the global instance of the class." alt="" coords="845,42,1071,69"/>
-<area shape="rect" id="node5" href="$class_data_base_manager_1_1_d_b.html#a9a408c7f41195dbe963f8c00212a1698" title="This method change the connection of the database instance." alt="" coords="1119,5,1317,47"/>
-<area shape="rect" id="node6" href="$class_data_base_manager_1_1_d_b.html#aae7eb147833c5296b0112d2f7ff60312" title="This is the constructor for the database manager. This initializes the connection and check if the da..." alt="" coords="1131,71,1305,98"/>
-</map>

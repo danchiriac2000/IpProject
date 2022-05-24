@@ -1,8 +1,0 @@
-<map id="PharmacyManagementDLL.ProxyActionManager.DeleteUser" name="PharmacyManagementDLL.ProxyActionManager.DeleteUser">
-<area shape="rect" id="node1" title="Lets only those with modify users db right to remove a user ;" alt="" coords="779,71,996,112"/>
-<area shape="rect" id="node2" href="$class_interface_1_1_form_delete_user.html#a2f4fe1807975207c47ae50f602202d5c" title=" " alt="" coords="485,5,694,47"/>
-<area shape="rect" id="node5" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a0af3476927f6f343ad1c2d4f7fd6983a" title=" " alt="" coords="467,71,711,112"/>
-<area shape="rect" id="node6" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a9afc883a29e11cef757aa04f863b2cc9" title=" " alt="" coords="448,136,731,177"/>
-<area shape="rect" id="node3" href="$class_interface_1_1_form_delete_user.html#ab3828a105e94209bd5f5bb485f0b03bd" title="Required method for Designer support &#45; do not modify the contents of this method with the code editor..." alt="" coords="227,5,400,47"/>
-<area shape="rect" id="node4" href="$class_interface_1_1_form_delete_user.html#a19eb7cb752a775b0e0a3d877d9659fce" title=" " alt="" coords="5,5,179,47"/>
-</map>

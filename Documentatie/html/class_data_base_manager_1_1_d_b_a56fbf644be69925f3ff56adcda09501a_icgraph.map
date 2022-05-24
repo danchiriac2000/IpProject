@@ -1,8 +1,0 @@
-<map id="DataBaseManager.DB.ClearProducts" name="DataBaseManager.DB.ClearProducts">
-<area shape="rect" id="node1" title="This method deletes all products from the database." alt="" coords="276,136,461,177"/>
-<area shape="rect" id="node2" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a2ff78637952ff48b12b39d62cecb4feb" title="This functions tests if all products are selected from the database. Some products needs to be insert..." alt="" coords="5,5,228,47"/>
-<area shape="rect" id="node3" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a75eabf775954a550dc8a68497cf4a31e" title="This function tests if the autoincrement works." alt="" coords="5,71,228,112"/>
-<area shape="rect" id="node4" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a1b585dc2d611daeb0cdc28b6e32eb2b5" title="This function tests if a product is updated." alt="" coords="5,136,228,177"/>
-<area shape="rect" id="node5" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a82942b64fd8d602d0e0deda70a717a8e" title="Test if Update method throw a InvalidStockException exception." alt="" coords="5,201,228,243"/>
-<area shape="rect" id="node6" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a7428852f4d9d7872897f2852193e6802" title="Test if Update method throw a RecordNotFoundException exception." alt="" coords="5,267,228,308"/>
-</map>

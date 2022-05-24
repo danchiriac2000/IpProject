@@ -1,6 +1,0 @@
-<map id="PharmacyManagementDLL.RealActionManager.GetUser" name="PharmacyManagementDLL.RealActionManager.GetUser">
-<area shape="rect" id="node1" title="Gets info about a user with the given id." alt="" coords="563,39,772,80"/>
-<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#a09db5a9a52d2a92e463147a5d6eb4ea9" title="Gets info about a user only to those who have view users right." alt="" coords="297,39,515,80"/>
-<area shape="rect" id="node3" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ab4e25a63ecd0519b520b1ae94ac5f477" title=" " alt="" coords="5,5,249,47"/>
-<area shape="rect" id="node4" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#aac3f063ccc5116a5535c968837238416" title=" " alt="" coords="5,71,249,112"/>
-</map>

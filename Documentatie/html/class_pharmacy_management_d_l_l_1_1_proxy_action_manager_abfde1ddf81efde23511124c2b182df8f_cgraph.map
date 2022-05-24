@@ -1,6 +1,0 @@
-<map id="PharmacyManagementDLL.ProxyActionManager.GetProducts" name="PharmacyManagementDLL.ProxyActionManager.GetProducts">
-<area shape="rect" id="node1" title="Transmit Product list only to those who have viewProducts right." alt="" coords="5,39,223,80"/>
-<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a37c946066bc3530ecb83b0542f891626" title="Queries database for obtain a list of all existing products." alt="" coords="295,5,505,47"/>
-<area shape="rect" id="node4" href="$class_pharmacy_management_d_l_l_1_1_permissions.html#a99e2481e6c55f0c26f3d2e3ad1436f91" title="Returns a list of action rights depending on the position of each employee." alt="" coords="271,71,529,112"/>
-<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#a904efedfd5523ae6cafbba7fc9061d97" title="This method is used to return all products from the database." alt="" coords="577,5,769,47"/>
-</map>

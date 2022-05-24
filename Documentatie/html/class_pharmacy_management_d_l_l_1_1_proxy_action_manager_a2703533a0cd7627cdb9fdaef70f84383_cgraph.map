@@ -1,7 +1,0 @@
-<map id="PharmacyManagementDLL.ProxyActionManager.AddToStock" name="PharmacyManagementDLL.ProxyActionManager.AddToStock">
-<area shape="rect" id="node1" title="Lets only those who have modify access right to increase/decrease product stock." alt="" coords="5,68,223,109"/>
-<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a144c1583a329bc6b39b1800d36ccff91" title="Update product stock in database and returns failure(false) if the new stock value is not allowed due..." alt="" coords="295,35,505,76"/>
-<area shape="rect" id="node5" href="$class_pharmacy_management_d_l_l_1_1_permissions.html#a99e2481e6c55f0c26f3d2e3ad1436f91" title="Returns a list of action rights depending on the position of each employee." alt="" coords="271,100,529,141"/>
-<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#aefb69276f8bb34f1d32baaeee29a6f28" title="This method returns a product with the given id. If the id is not found in the table,..." alt="" coords="579,5,771,47"/>
-<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#a90d337d555d84f241f46d69cf9acb337" title="This method will check if the user exists in the database. If it exists, it will update the record fr..." alt="" coords="577,71,773,98"/>
-</map>

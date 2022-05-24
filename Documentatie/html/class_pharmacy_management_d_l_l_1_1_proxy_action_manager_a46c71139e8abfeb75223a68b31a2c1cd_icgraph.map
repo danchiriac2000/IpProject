@@ -1,6 +1,0 @@
-<map id="PharmacyManagementDLL.ProxyActionManager.AddNewProduct" name="PharmacyManagementDLL.ProxyActionManager.AddNewProduct">
-<area shape="rect" id="node1" title="Adds a new product to the database only if registered user has this right." alt="" coords="380,71,597,112"/>
-<area shape="rect" id="node2" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a98ee5aa6a1da89d78a121b4b505f91dc" title=" " alt="" coords="28,5,309,47"/>
-<area shape="rect" id="node3" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a5abfcecba187cc615c0fe9696684bcef" title=" " alt="" coords="7,71,330,112"/>
-<area shape="rect" id="node4" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a31c1573c24526de6a851d9e612c409b1" title=" " alt="" coords="5,136,332,177"/>
-</map>

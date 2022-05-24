@@ -1,4 +1,0 @@
-<map id="PharmacyManagementDLL.ProxyActionManager" name="PharmacyManagementDLL.ProxyActionManager">
-<area shape="rect" id="node1" title="This class acts as a protection proxy between those who will use the application and the various acti..." alt="" coords="5,248,223,589"/>
-<area shape="rect" id="node2" href="$interface_pharmacy_management_d_l_l_1_1_i_action_manager.html" title="This interface contains specific methods for actions that can take place in a pharmacy ; these method..." alt="" coords="31,5,197,200"/>
-</map>

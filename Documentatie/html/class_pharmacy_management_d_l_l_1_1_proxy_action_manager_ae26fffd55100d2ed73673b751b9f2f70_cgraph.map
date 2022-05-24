@@ -1,6 +1,0 @@
-<map id="PharmacyManagementDLL.ProxyActionManager.ProxyActionManager" name="PharmacyManagementDLL.ProxyActionManager.ProxyActionManager">
-<area shape="rect" id="node1" title="Class constructor: it initializes all its members for later use" alt="" coords="5,35,240,76"/>
-<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#aa458477a799b93f16bd1b841bc4798df" title="Method to get the global instance of the class." alt="" coords="288,42,513,69"/>
-<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#a9a408c7f41195dbe963f8c00212a1698" title="This method change the connection of the database instance." alt="" coords="561,5,760,47"/>
-<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#aae7eb147833c5296b0112d2f7ff60312" title="This is the constructor for the database manager. This initializes the connection and check if the da..." alt="" coords="574,71,747,98"/>
-</map>

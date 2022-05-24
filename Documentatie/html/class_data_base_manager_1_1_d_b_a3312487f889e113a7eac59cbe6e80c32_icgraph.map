@@ -1,6 +1,0 @@
-<map id="DataBaseManager.DB.DeleteProduct" name="DataBaseManager.DB.DeleteProduct">
-<area shape="rect" id="node1" title="This method deletes a product from the database. if the id is not found, it will do nothing." alt="" coords="276,71,468,112"/>
-<area shape="rect" id="node2" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#abfc9afac794e5c8a2530c038413cb68c" title="This function tests if the ConstraintViolatedException is thrown if two products with the same id are..." alt="" coords="5,5,228,47"/>
-<area shape="rect" id="node3" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a21982f83a73676630a8c910df7366a97" title="This function tests if the ConstraintViolatedException is thrown if two products with the same name a..." alt="" coords="5,71,228,112"/>
-<area shape="rect" id="node4" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a4493012851f8fe94cb62ea71f2c095b4" title="To test the insert method, we must select the product from the database. This can be done with the Se..." alt="" coords="5,136,228,177"/>
-</map>

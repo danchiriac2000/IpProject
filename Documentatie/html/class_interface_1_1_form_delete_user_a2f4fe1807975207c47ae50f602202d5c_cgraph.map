@@ -1,8 +1,0 @@
-<map id="Interface.FormDeleteUser.buttonDelete_Click" name="Interface.FormDeleteUser.buttonDelete_Click">
-<area shape="rect" id="node1" title=" " alt="" coords="5,57,215,98"/>
-<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#abc11dc7a42337f3830c170c49082da1e" title="Lets only those with modify users db right to remove a user ;" alt="" coords="263,57,480,98"/>
-<area shape="rect" id="node3" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a6c8a11aa7682e6577b266c28e89b6be6" title="Removes a user only if it exists." alt="" coords="553,23,762,65"/>
-<area shape="rect" id="node6" href="$class_pharmacy_management_d_l_l_1_1_permissions.html#a99e2481e6c55f0c26f3d2e3ad1436f91" title="Returns a list of action rights depending on the position of each employee." alt="" coords="528,89,787,130"/>
-<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#a7badf05498c894a7b72b6ed9d7f2332f" title="This method deletes an user from the database. if the id is not found, it will do nothing." alt="" coords="835,5,1053,32"/>
-<area shape="rect" id="node5" href="$class_data_base_manager_1_1_d_b.html#a50d501d97ddfb4bfd741c162c498c722" title="This method returns an user with the given id. If the id is not found in the table,..." alt="" coords="835,56,1053,83"/>
-</map>

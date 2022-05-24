@@ -1,5 +1,0 @@
-<map id="PharmacyManagementDLL.RealActionManager.AddToStock" name="PharmacyManagementDLL.RealActionManager.AddToStock">
-<area shape="rect" id="node1" title="Update product stock in database and returns failure(false) if the new stock value is not allowed due..." alt="" coords="5,35,215,76"/>
-<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#aefb69276f8bb34f1d32baaeee29a6f28" title="This method returns a product with the given id. If the id is not found in the table,..." alt="" coords="265,5,457,47"/>
-<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#a90d337d555d84f241f46d69cf9acb337" title="This method will check if the user exists in the database. If it exists, it will update the record fr..." alt="" coords="263,71,459,98"/>
-</map>
