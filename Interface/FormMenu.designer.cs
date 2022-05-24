@@ -55,12 +55,12 @@ namespace Interface
             // 
             this.dataGridViewDBInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDBInfo.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewDBInfo.Location = new System.Drawing.Point(18, 198);
-            this.dataGridViewDBInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridViewDBInfo.Location = new System.Drawing.Point(12, 129);
+            this.dataGridViewDBInfo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataGridViewDBInfo.Name = "dataGridViewDBInfo";
             this.dataGridViewDBInfo.RowHeadersWidth = 51;
             this.dataGridViewDBInfo.RowTemplate.Height = 24;
-            this.dataGridViewDBInfo.Size = new System.Drawing.Size(1013, 349);
+            this.dataGridViewDBInfo.Size = new System.Drawing.Size(675, 227);
             this.dataGridViewDBInfo.TabIndex = 14;
             // 
             // groupBoxRootAccess
@@ -69,19 +69,21 @@ namespace Interface
             this.groupBoxRootAccess.Controls.Add(this.buttonUsersList);
             this.groupBoxRootAccess.Controls.Add(this.buttonPassUpdate);
             this.groupBoxRootAccess.Controls.Add(this.buttonAddUser);
-            this.groupBoxRootAccess.Location = new System.Drawing.Point(211, 13);
+            this.groupBoxRootAccess.Location = new System.Drawing.Point(141, 8);
+            this.groupBoxRootAccess.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxRootAccess.Name = "groupBoxRootAccess";
-            this.groupBoxRootAccess.Size = new System.Drawing.Size(339, 162);
+            this.groupBoxRootAccess.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxRootAccess.Size = new System.Drawing.Size(226, 105);
             this.groupBoxRootAccess.TabIndex = 16;
             this.groupBoxRootAccess.TabStop = false;
             // 
             // buttonDeleteUser
             // 
             this.buttonDeleteUser.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold);
-            this.buttonDeleteUser.Location = new System.Drawing.Point(172, 86);
-            this.buttonDeleteUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonDeleteUser.Location = new System.Drawing.Point(115, 56);
+            this.buttonDeleteUser.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonDeleteUser.Name = "buttonDeleteUser";
-            this.buttonDeleteUser.Size = new System.Drawing.Size(129, 68);
+            this.buttonDeleteUser.Size = new System.Drawing.Size(86, 44);
             this.buttonDeleteUser.TabIndex = 16;
             this.buttonDeleteUser.Text = "Delete user";
             this.buttonDeleteUser.UseVisualStyleBackColor = true;
@@ -90,10 +92,10 @@ namespace Interface
             // buttonUsersList
             // 
             this.buttonUsersList.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold);
-            this.buttonUsersList.Location = new System.Drawing.Point(172, 10);
-            this.buttonUsersList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonUsersList.Location = new System.Drawing.Point(115, 6);
+            this.buttonUsersList.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonUsersList.Name = "buttonUsersList";
-            this.buttonUsersList.Size = new System.Drawing.Size(129, 68);
+            this.buttonUsersList.Size = new System.Drawing.Size(86, 44);
             this.buttonUsersList.TabIndex = 15;
             this.buttonUsersList.Text = "Users";
             this.buttonUsersList.UseVisualStyleBackColor = true;
@@ -102,10 +104,10 @@ namespace Interface
             // buttonPassUpdate
             // 
             this.buttonPassUpdate.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold);
-            this.buttonPassUpdate.Location = new System.Drawing.Point(37, 86);
-            this.buttonPassUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonPassUpdate.Location = new System.Drawing.Point(25, 56);
+            this.buttonPassUpdate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonPassUpdate.Name = "buttonPassUpdate";
-            this.buttonPassUpdate.Size = new System.Drawing.Size(129, 68);
+            this.buttonPassUpdate.Size = new System.Drawing.Size(86, 44);
             this.buttonPassUpdate.TabIndex = 14;
             this.buttonPassUpdate.Text = "Update password";
             this.buttonPassUpdate.UseVisualStyleBackColor = true;
@@ -114,10 +116,10 @@ namespace Interface
             // buttonAddUser
             // 
             this.buttonAddUser.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold);
-            this.buttonAddUser.Location = new System.Drawing.Point(37, 9);
-            this.buttonAddUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonAddUser.Location = new System.Drawing.Point(25, 6);
+            this.buttonAddUser.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonAddUser.Name = "buttonAddUser";
-            this.buttonAddUser.Size = new System.Drawing.Size(129, 68);
+            this.buttonAddUser.Size = new System.Drawing.Size(86, 44);
             this.buttonAddUser.TabIndex = 13;
             this.buttonAddUser.Text = "Add user";
             this.buttonAddUser.UseVisualStyleBackColor = true;
@@ -130,19 +132,21 @@ namespace Interface
             this.groupBoxEmployeeAccess.Controls.Add(this.buttonSellProduct);
             this.groupBoxEmployeeAccess.Controls.Add(this.buttonProductList);
             this.groupBoxEmployeeAccess.Controls.Add(this.buttonAddStock);
-            this.groupBoxEmployeeAccess.Location = new System.Drawing.Point(566, 12);
+            this.groupBoxEmployeeAccess.Location = new System.Drawing.Point(377, 8);
+            this.groupBoxEmployeeAccess.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxEmployeeAccess.Name = "groupBoxEmployeeAccess";
-            this.groupBoxEmployeeAccess.Size = new System.Drawing.Size(465, 162);
+            this.groupBoxEmployeeAccess.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxEmployeeAccess.Size = new System.Drawing.Size(310, 105);
             this.groupBoxEmployeeAccess.TabIndex = 17;
             this.groupBoxEmployeeAccess.TabStop = false;
             // 
             // buttonUpdateProductPrice
             // 
             this.buttonUpdateProductPrice.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold);
-            this.buttonUpdateProductPrice.Location = new System.Drawing.Point(303, 9);
-            this.buttonUpdateProductPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonUpdateProductPrice.Location = new System.Drawing.Point(202, 6);
+            this.buttonUpdateProductPrice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonUpdateProductPrice.Name = "buttonUpdateProductPrice";
-            this.buttonUpdateProductPrice.Size = new System.Drawing.Size(129, 68);
+            this.buttonUpdateProductPrice.Size = new System.Drawing.Size(86, 44);
             this.buttonUpdateProductPrice.TabIndex = 25;
             this.buttonUpdateProductPrice.Text = "Update price";
             this.buttonUpdateProductPrice.UseVisualStyleBackColor = true;
@@ -151,10 +155,10 @@ namespace Interface
             // buttonAddNewProduct
             // 
             this.buttonAddNewProduct.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold);
-            this.buttonAddNewProduct.Location = new System.Drawing.Point(33, 10);
-            this.buttonAddNewProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonAddNewProduct.Location = new System.Drawing.Point(22, 6);
+            this.buttonAddNewProduct.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonAddNewProduct.Name = "buttonAddNewProduct";
-            this.buttonAddNewProduct.Size = new System.Drawing.Size(129, 68);
+            this.buttonAddNewProduct.Size = new System.Drawing.Size(86, 44);
             this.buttonAddNewProduct.TabIndex = 24;
             this.buttonAddNewProduct.Text = "Add new product";
             this.buttonAddNewProduct.UseVisualStyleBackColor = true;
@@ -163,10 +167,10 @@ namespace Interface
             // buttonSellProduct
             // 
             this.buttonSellProduct.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold);
-            this.buttonSellProduct.Location = new System.Drawing.Point(107, 86);
-            this.buttonSellProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonSellProduct.Location = new System.Drawing.Point(71, 56);
+            this.buttonSellProduct.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonSellProduct.Name = "buttonSellProduct";
-            this.buttonSellProduct.Size = new System.Drawing.Size(129, 68);
+            this.buttonSellProduct.Size = new System.Drawing.Size(86, 44);
             this.buttonSellProduct.TabIndex = 23;
             this.buttonSellProduct.Text = "Sell Product";
             this.buttonSellProduct.UseVisualStyleBackColor = true;
@@ -175,10 +179,10 @@ namespace Interface
             // buttonProductList
             // 
             this.buttonProductList.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold);
-            this.buttonProductList.Location = new System.Drawing.Point(242, 85);
-            this.buttonProductList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonProductList.Location = new System.Drawing.Point(161, 55);
+            this.buttonProductList.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonProductList.Name = "buttonProductList";
-            this.buttonProductList.Size = new System.Drawing.Size(129, 68);
+            this.buttonProductList.Size = new System.Drawing.Size(86, 44);
             this.buttonProductList.TabIndex = 22;
             this.buttonProductList.Text = "Product List";
             this.buttonProductList.UseVisualStyleBackColor = true;
@@ -187,10 +191,10 @@ namespace Interface
             // buttonAddStock
             // 
             this.buttonAddStock.Font = new System.Drawing.Font("Mongolian Baiti", 10.8F, System.Drawing.FontStyle.Bold);
-            this.buttonAddStock.Location = new System.Drawing.Point(168, 10);
-            this.buttonAddStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonAddStock.Location = new System.Drawing.Point(112, 6);
+            this.buttonAddStock.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonAddStock.Name = "buttonAddStock";
-            this.buttonAddStock.Size = new System.Drawing.Size(129, 68);
+            this.buttonAddStock.Size = new System.Drawing.Size(86, 44);
             this.buttonAddStock.TabIndex = 21;
             this.buttonAddStock.Text = "Add to stock";
             this.buttonAddStock.UseVisualStyleBackColor = true;
@@ -201,39 +205,43 @@ namespace Interface
             this.groupBoxLogin.Controls.Add(this.buttonHelp);
             this.groupBoxLogin.Controls.Add(this.labelAuthenticatedUser);
             this.groupBoxLogin.Controls.Add(this.buttonLogOut);
-            this.groupBoxLogin.Location = new System.Drawing.Point(5, 12);
+            this.groupBoxLogin.Location = new System.Drawing.Point(3, 8);
+            this.groupBoxLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxLogin.Name = "groupBoxLogin";
-            this.groupBoxLogin.Size = new System.Drawing.Size(200, 162);
+            this.groupBoxLogin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxLogin.Size = new System.Drawing.Size(133, 105);
             this.groupBoxLogin.TabIndex = 18;
             this.groupBoxLogin.TabStop = false;
             // 
             // buttonHelp
             // 
             this.buttonHelp.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold);
-            this.buttonHelp.Location = new System.Drawing.Point(36, 109);
-            this.buttonHelp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonHelp.Location = new System.Drawing.Point(24, 71);
+            this.buttonHelp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonHelp.Name = "buttonHelp";
-            this.buttonHelp.Size = new System.Drawing.Size(129, 39);
+            this.buttonHelp.Size = new System.Drawing.Size(86, 25);
             this.buttonHelp.TabIndex = 16;
             this.buttonHelp.Text = "Help";
             this.buttonHelp.UseVisualStyleBackColor = true;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
             // labelAuthenticatedUser
             // 
             this.labelAuthenticatedUser.AutoSize = true;
             this.labelAuthenticatedUser.Font = new System.Drawing.Font("Sitka Subheading", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.labelAuthenticatedUser.Location = new System.Drawing.Point(50, 5);
+            this.labelAuthenticatedUser.Location = new System.Drawing.Point(33, 3);
+            this.labelAuthenticatedUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAuthenticatedUser.Name = "labelAuthenticatedUser";
-            this.labelAuthenticatedUser.Size = new System.Drawing.Size(0, 32);
+            this.labelAuthenticatedUser.Size = new System.Drawing.Size(0, 21);
             this.labelAuthenticatedUser.TabIndex = 15;
             // 
             // buttonLogOut
             // 
             this.buttonLogOut.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold);
-            this.buttonLogOut.Location = new System.Drawing.Point(36, 59);
-            this.buttonLogOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonLogOut.Location = new System.Drawing.Point(24, 38);
+            this.buttonLogOut.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonLogOut.Name = "buttonLogOut";
-            this.buttonLogOut.Size = new System.Drawing.Size(129, 42);
+            this.buttonLogOut.Size = new System.Drawing.Size(86, 27);
             this.buttonLogOut.TabIndex = 14;
             this.buttonLogOut.Text = "Log Out";
             this.buttonLogOut.UseVisualStyleBackColor = true;
@@ -241,15 +249,15 @@ namespace Interface
             // 
             // FormMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1043, 561);
+            this.ClientSize = new System.Drawing.Size(695, 365);
             this.Controls.Add(this.groupBoxLogin);
             this.Controls.Add(this.groupBoxEmployeeAccess);
             this.Controls.Add(this.groupBoxRootAccess);
             this.Controls.Add(this.dataGridViewDBInfo);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "FormMenu";
             this.Text = "Menu:";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMenu_FormClosing);

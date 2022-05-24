@@ -16,3 +16,9 @@ D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\ItemsDll\Items\Items\obj\Deb
 D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\ItemsDll\Items\Items\obj\Debug\Items.dll
 D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\ItemsDll\Items\Items\obj\Debug\Items.pdb
 D:\__FACULTATE\AN_3\Sem2\IP\__Proiect\GIT\IpProject\ItemsDll\Items\Items\obj\Debug\Items.csproj.AssemblyReference.cache
+C:\Users\danco\Desktop\LastVersion\IpProject\ItemsDll\Items\Items\bin\Debug\Items.dll
+C:\Users\danco\Desktop\LastVersion\IpProject\ItemsDll\Items\Items\bin\Debug\Items.pdb
+C:\Users\danco\Desktop\LastVersion\IpProject\ItemsDll\Items\Items\obj\Debug\Items.csproj.AssemblyReference.cache
+C:\Users\danco\Desktop\LastVersion\IpProject\ItemsDll\Items\Items\obj\Debug\Items.csproj.CoreCompileInputs.cache
+C:\Users\danco\Desktop\LastVersion\IpProject\ItemsDll\Items\Items\obj\Debug\Items.dll
+C:\Users\danco\Desktop\LastVersion\IpProject\ItemsDll\Items\Items\obj\Debug\Items.pdb

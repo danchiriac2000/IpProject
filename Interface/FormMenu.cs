@@ -182,5 +182,10 @@ namespace Interface
             Form pagina9 = new FormUpdatePrice();
             pagina9.Show();
         }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "HelpPharmacy.chm");
+        }
     }
 }
