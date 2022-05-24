@@ -1,4 +1,14 @@
-﻿using Exceptions.AccessRightsExceptions;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        FormUpdatePass.cs                                        *
+ *  Copyright:   (c) 2022, Cuptor Iuliana-Stefania                        *
+ *  E-mail:      iuliana-stefania.cuptor@student.tuiasi.ro                *
+ *  Description: This file contains the implementation of Update Password *
+ *        Interface where the admin can change the password of an user    *               
+ *                                                                        *
+ **************************************************************************/
+
+using Exceptions.AccessRightsExceptions;
 using Exceptions.DataBaseExceptions;
 using PharmacyManagementDLL;
 using System;

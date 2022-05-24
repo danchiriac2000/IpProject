@@ -1,4 +1,14 @@
-﻿using Exceptions.AccessRightsExceptions;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        FormAddUser.cs                                           *
+ *  Copyright:   (c) 2022, Cuptor Iuliana-Stefania                        *
+ *  E-mail:      iuliana-stefania.cuptor@student.tuiasi.ro                *
+ *  Description: This file contains the implementation of Add New User    *
+ *   Interface where we can add username and password for a new user      *
+ *                                                                        *
+ **************************************************************************/
+
+using Exceptions.AccessRightsExceptions;
 using Exceptions.DataBaseExceptions;
 using PharmacyManagementDLL;
 using System;

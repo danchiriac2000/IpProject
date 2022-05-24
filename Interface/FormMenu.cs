@@ -1,4 +1,16 @@
-﻿using DataBaseManager;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        FormMenu.cs                                              *
+ *  Copyright:   (c) 2022, Cuptor Iuliana-Stefania                        *
+ *  E-mail:      iuliana-stefania.cuptor@student.tuiasi.ro                *
+ *  Description: This file contains the implementation of Menu Interface  *
+ *    in which we have all the functionalities, depending on users rights *
+ *                                                                        *
+ *                                                                        * 
+ **************************************************************************/
+
+
+using DataBaseManager;
 using Items.DataBaseObjects;
 using PharmacyManagementDLL;
 using System;
@@ -58,19 +70,6 @@ namespace Interface
             Form pagina = new FormLogIn();
             this.Hide();
             pagina.Show();
-        }
-
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            float scaleX = 1.30f;
-            float scaleY = 1.15f;
-           int size = 10;
-            for(int i = 0; i < size*size; i++)
-            {
-                int x = i % size;
-                int y = i / size;
-            }
         }
 
         private void buttonAddUser_Click(object sender, EventArgs e)
