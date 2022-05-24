@@ -1,0 +1,4 @@
+<map id="PharmacyManagementDLL.RealActionManager.GetUser" name="PharmacyManagementDLL.RealActionManager.GetUser">
+<area shape="rect" id="node1" title="Gets info about a user with the given id." alt="" coords="5,5,215,47"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#a50d501d97ddfb4bfd741c162c498c722" title="This method returns an user with the given id. If the id is not found in the table,..." alt="" coords="263,13,481,39"/>
+</map>

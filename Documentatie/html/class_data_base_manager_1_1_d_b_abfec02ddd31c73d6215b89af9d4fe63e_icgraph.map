@@ -1,0 +1,6 @@
+<map id="DataBaseManager.DB.CreateTables" name="DataBaseManager.DB.CreateTables">
+<area shape="rect" id="node1" title="This method creates the users and the products tables." alt="" coords="280,71,473,112"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#abcd038a1d0c985dfb70ea8b5f1e77842" title="Function that tests if the tables are created." alt="" coords="7,5,230,47"/>
+<area shape="rect" id="node3" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a5f20f6444bf0eab8bfcd04864077b389" title="Class constructor: sets database instance for later use in queries and database tables changes" alt="" coords="5,71,232,112"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a75eabf775954a550dc8a68497cf4a31e" title="This function tests if the autoincrement works." alt="" coords="7,136,230,177"/>
+</map>

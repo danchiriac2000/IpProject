@@ -1,0 +1,13 @@
+<map id="DataBaseManager.DB.SelectProduct" name="DataBaseManager.DB.SelectProduct">
+<area shape="rect" id="node1" title="This method returns a product with the given id. If the id is not found in the table,..." alt="" coords="876,136,1068,177"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a144c1583a329bc6b39b1800d36ccff91" title="Update product stock in database and returns failure(false) if the new stock value is not allowed due..." alt="" coords="612,5,821,47"/>
+<area shape="rect" id="node5" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a4493012851f8fe94cb62ea71f2c095b4" title="To test the insert method, we must select the product from the database. This can be done with the Se..." alt="" coords="605,71,828,112"/>
+<area shape="rect" id="node6" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a1a1ef6a5fe94d9cec61edba813c134f8" title="Sell product with the given barcode and returns failure(false) if the product doesn&#39;t exist or if it&#39;..." alt="" coords="612,136,821,177"/>
+<area shape="rect" id="node10" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a1b585dc2d611daeb0cdc28b6e32eb2b5" title="This function tests if a product is updated." alt="" coords="605,201,828,243"/>
+<area shape="rect" id="node11" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a7428852f4d9d7872897f2852193e6802" title="Test if Update method throw a RecordNotFoundException exception." alt="" coords="605,267,828,308"/>
+<area shape="rect" id="node3" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#a2703533a0cd7627cdb9fdaef70f84383" title="Lets only those who have modify access right to increase/decrease product stock." alt="" coords="340,5,557,47"/>
+<area shape="rect" id="node4" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a55d17aeb45e79cdc631bbe7de4558061" title=" " alt="" coords="14,5,283,47"/>
+<area shape="rect" id="node7" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#ab33f4a996d68d98af158fa4b915a490b" title="Gives access to sell products only to those who have SellRight." alt="" coords="340,136,557,177"/>
+<area shape="rect" id="node8" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a7a59e994ba64896fb351b9b5cad3b505" title=" " alt="" coords="21,103,276,144"/>
+<area shape="rect" id="node9" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a3ef5a72254eba475207096307c624883" title=" " alt="" coords="5,168,292,209"/>
+</map>

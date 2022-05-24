@@ -1,0 +1,7 @@
+<map id="PharmacyManagementDLL.ProxyActionManager.DeleteUser" name="PharmacyManagementDLL.ProxyActionManager.DeleteUser">
+<area shape="rect" id="node1" title="Lets only those with modify users db right to remove a user ;" alt="" coords="5,57,223,98"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a6c8a11aa7682e6577b266c28e89b6be6" title="Removes a user only if it exists." alt="" coords="295,23,505,65"/>
+<area shape="rect" id="node5" href="$class_pharmacy_management_d_l_l_1_1_permissions.html#a99e2481e6c55f0c26f3d2e3ad1436f91" title="Returns a list of action rights depending on the position of each employee." alt="" coords="271,89,529,130"/>
+<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#a7badf05498c894a7b72b6ed9d7f2332f" title="This method deletes an user from the database. if the id is not found, it will do nothing." alt="" coords="577,5,796,32"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#a50d501d97ddfb4bfd741c162c498c722" title="This method returns an user with the given id. If the id is not found in the table,..." alt="" coords="577,56,796,83"/>
+</map>

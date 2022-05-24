@@ -1,0 +1,6 @@
+<map id="PharmacyManagementDLL.RealActionManager.AddUser" name="PharmacyManagementDLL.RealActionManager.AddUser">
+<area shape="rect" id="node1" title="Add new employee profile to database." alt="" coords="5,71,215,112"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#a80982de3f0bbdf8af1784e17d7faca65" title="This method is used to get max id from users table. It is used for autoincrement: new User(GetLastUse..." alt="" coords="263,5,465,47"/>
+<area shape="rect" id="node3" href="$class_items_1_1_commons_1_1_cryptography.html#a7ac01c0227e9bf3ce4ecb6480cab1441" title="Returns the hash of a string" alt="" coords="263,71,465,112"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#a9192c0fd8471e823b58f82f72f7e224f" title="This method add a new user to the database. If the id or the username is already in database,..." alt="" coords="271,137,457,163"/>
+</map>

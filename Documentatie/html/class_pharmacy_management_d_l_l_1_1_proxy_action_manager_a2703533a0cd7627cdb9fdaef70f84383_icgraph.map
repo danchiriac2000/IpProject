@@ -1,0 +1,4 @@
+<map id="PharmacyManagementDLL.ProxyActionManager.AddToStock" name="PharmacyManagementDLL.ProxyActionManager.AddToStock">
+<area shape="rect" id="node1" title="Lets only those who have modify access right to increase/decrease product stock." alt="" coords="323,5,540,47"/>
+<area shape="rect" id="node2" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a55d17aeb45e79cdc631bbe7de4558061" title=" " alt="" coords="5,5,275,47"/>
+</map>

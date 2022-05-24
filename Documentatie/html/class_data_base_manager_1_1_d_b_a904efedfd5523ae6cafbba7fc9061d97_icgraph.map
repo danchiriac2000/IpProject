@@ -1,0 +1,7 @@
+<map id="DataBaseManager.DB.SelectAllProducts" name="DataBaseManager.DB.SelectAllProducts">
+<area shape="rect" id="node1" title="This method is used to return all products from the database." alt="" coords="885,39,1077,80"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a37c946066bc3530ecb83b0542f891626" title="Queries database for obtain a list of all existing products." alt="" coords="621,5,831,47"/>
+<area shape="rect" id="node5" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a75eabf775954a550dc8a68497cf4a31e" title="This function tests if the autoincrement works." alt="" coords="615,71,837,112"/>
+<area shape="rect" id="node3" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#abfde1ddf81efde23511124c2b182df8f" title="Transmit Product list only to those who have viewProducts right." alt="" coords="349,5,567,47"/>
+<area shape="rect" id="node4" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ace66c9eb04e7dbf21dd09703d78915e0" title=" " alt="" coords="5,5,301,47"/>
+</map>

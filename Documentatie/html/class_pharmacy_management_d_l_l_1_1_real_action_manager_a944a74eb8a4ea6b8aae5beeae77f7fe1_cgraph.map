@@ -1,0 +1,6 @@
+<map id="PharmacyManagementDLL.RealActionManager.UpdateUserPassword" name="PharmacyManagementDLL.RealActionManager.UpdateUserPassword">
+<area shape="rect" id="node1" title="Modifies user password in database." alt="" coords="5,64,244,105"/>
+<area shape="rect" id="node2" href="$class_items_1_1_commons_1_1_cryptography.html#a7ac01c0227e9bf3ce4ecb6480cab1441" title="Returns the hash of a string" alt="" coords="300,5,503,47"/>
+<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#a50d501d97ddfb4bfd741c162c498c722" title="This method returns an user with the given id. If the id is not found in the table,..." alt="" coords="292,71,511,98"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#a90d337d555d84f241f46d69cf9acb337" title="This method will check if the user exists in the database. If it exists, it will update the record fr..." alt="" coords="303,122,499,149"/>
+</map>

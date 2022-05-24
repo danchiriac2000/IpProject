@@ -1,0 +1,4 @@
+<map id="DataBaseManager.DB.GetLastProductID" name="DataBaseManager.DB.GetLastProductID">
+<area shape="rect" id="node1" title="This method is used to get max id from products table. It is used for autoincrement: new Product(GetL..." alt="" coords="276,5,477,47"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a75eabf775954a550dc8a68497cf4a31e" title="This function tests if the autoincrement works." alt="" coords="5,5,228,47"/>
+</map>

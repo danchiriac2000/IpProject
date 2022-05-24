@@ -1,0 +1,11 @@
+<map id="TestPharmacyManagement.PharmacyManagementTest.UpdateUserPasswordTestPharmacistAttempt" name="TestPharmacyManagement.PharmacyManagementTest.UpdateUserPasswordTestPharmacistAttempt">
+<area shape="rect" id="node1" title=" " alt="" coords="5,52,281,108"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#aa59798df45d331d93500529ad520188b" title="Verifies username and password and provides access to app only to those who are registered in the use..." alt="" coords="340,26,557,68"/>
+<area shape="rect" id="node5" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#a33ba89156d91beb4908c3986cf9a1d2e" title="Lets only those with modify users db right to modify user password in database" alt="" coords="329,92,568,133"/>
+<area shape="rect" id="node3" href="$class_items_1_1_commons_1_1_cryptography.html#a7ac01c0227e9bf3ce4ecb6480cab1441" title="Returns the hash of a string" alt="" coords="931,21,1133,62"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#abc3b8ce47235d9c72a0fe7b65bbc24cc" title="This method is used to return all users from the database." alt="" coords="649,26,841,68"/>
+<area shape="rect" id="node6" href="$class_pharmacy_management_d_l_l_1_1_permissions.html#a99e2481e6c55f0c26f3d2e3ad1436f91" title="Returns a list of action rights depending on the position of each employee." alt="" coords="616,92,875,133"/>
+<area shape="rect" id="node7" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a944a74eb8a4ea6b8aae5beeae77f7fe1" title="Modifies user password in database." alt="" coords="626,157,865,198"/>
+<area shape="rect" id="node8" href="$class_data_base_manager_1_1_d_b.html#a50d501d97ddfb4bfd741c162c498c722" title="This method returns an user with the given id. If the id is not found in the table,..." alt="" coords="923,139,1141,166"/>
+<area shape="rect" id="node9" href="$class_data_base_manager_1_1_d_b.html#a90d337d555d84f241f46d69cf9acb337" title="This method will check if the user exists in the database. If it exists, it will update the record fr..." alt="" coords="934,190,1130,216"/>
+</map>

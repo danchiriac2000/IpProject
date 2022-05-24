@@ -1,0 +1,4 @@
+<map id="PharmacyManagementDLL.RealActionManager.GetUsers" name="PharmacyManagementDLL.RealActionManager.GetUsers">
+<area shape="rect" id="node1" title="Queries database to display all existing users." alt="" coords="5,5,215,47"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#abc3b8ce47235d9c72a0fe7b65bbc24cc" title="This method is used to return all users from the database." alt="" coords="263,5,455,47"/>
+</map>

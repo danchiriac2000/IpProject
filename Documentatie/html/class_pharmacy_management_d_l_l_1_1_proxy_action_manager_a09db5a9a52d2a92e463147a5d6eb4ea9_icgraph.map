@@ -1,0 +1,5 @@
+<map id="PharmacyManagementDLL.ProxyActionManager.GetUser" name="PharmacyManagementDLL.ProxyActionManager.GetUser">
+<area shape="rect" id="node1" title="Gets info about a user only to those who have view users right." alt="" coords="297,39,515,80"/>
+<area shape="rect" id="node2" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ab4e25a63ecd0519b520b1ae94ac5f477" title=" " alt="" coords="5,5,249,47"/>
+<area shape="rect" id="node3" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#aac3f063ccc5116a5535c968837238416" title=" " alt="" coords="5,71,249,112"/>
+</map>

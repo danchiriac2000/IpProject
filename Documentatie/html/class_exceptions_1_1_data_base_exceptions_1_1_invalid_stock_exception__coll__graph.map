@@ -1,0 +1,4 @@
+<map id="Exceptions.DataBaseExceptions.InvalidStockException" name="Exceptions.DataBaseExceptions.InvalidStockException">
+<area shape="rect" id="node1" title="This class inherits the Exception base class. If the stock from products table is less than 0,..." alt="" coords="5,131,223,252"/>
+<area shape="rect" id="node2" title=" " alt="" coords="74,5,154,83"/>
+</map>

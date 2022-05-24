@@ -1,0 +1,4 @@
+<map id="PharmacyManagementDLL.RealActionManager.AddNewProduct" name="PharmacyManagementDLL.RealActionManager.AddNewProduct">
+<area shape="rect" id="node1" title="Adds a new product to the database and returns operation status: succes(true) / failure(false) = prod..." alt="" coords="5,5,215,47"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#a9192c0fd8471e823b58f82f72f7e224f" title="This method add a new user to the database. If the id or the username is already in database,..." alt="" coords="263,13,449,39"/>
+</map>

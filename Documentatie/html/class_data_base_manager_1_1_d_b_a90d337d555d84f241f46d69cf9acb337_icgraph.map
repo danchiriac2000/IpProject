@@ -1,0 +1,18 @@
+<map id="DataBaseManager.DB.Update" name="DataBaseManager.DB.Update">
+<area shape="rect" id="node1" title="This method will check if the user exists in the database. If it exists, it will update the record fr..." alt="" coords="913,209,1109,235"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a144c1583a329bc6b39b1800d36ccff91" title="Update product stock in database and returns failure(false) if the new stock value is not allowed due..." alt="" coords="641,5,851,47"/>
+<area shape="rect" id="node5" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a1a1ef6a5fe94d9cec61edba813c134f8" title="Sell product with the given barcode and returns failure(false) if the product doesn&#39;t exist or if it&#39;..." alt="" coords="641,71,851,112"/>
+<area shape="rect" id="node9" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a1b585dc2d611daeb0cdc28b6e32eb2b5" title="This function tests if a product is updated." alt="" coords="635,136,857,177"/>
+<area shape="rect" id="node10" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a82942b64fd8d602d0e0deda70a717a8e" title="Test if Update method throw a InvalidStockException exception." alt="" coords="635,201,857,243"/>
+<area shape="rect" id="node11" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a7428852f4d9d7872897f2852193e6802" title="Test if Update method throw a RecordNotFoundException exception." alt="" coords="635,267,857,308"/>
+<area shape="rect" id="node12" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a944a74eb8a4ea6b8aae5beeae77f7fe1" title="Modifies user password in database." alt="" coords="627,332,865,373"/>
+<area shape="rect" id="node16" href="$class_data_base_manager_1_1_tests_1_1_d_b_tests.html#a1e25a2835173e449788d16048dfc59f8" title="This function tests if an user is updated." alt="" coords="635,397,857,439"/>
+<area shape="rect" id="node3" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#a2703533a0cd7627cdb9fdaef70f84383" title="Lets only those who have modify access right to increase/decrease product stock." alt="" coords="351,5,568,47"/>
+<area shape="rect" id="node4" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a55d17aeb45e79cdc631bbe7de4558061" title=" " alt="" coords="14,5,283,47"/>
+<area shape="rect" id="node6" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#ab33f4a996d68d98af158fa4b915a490b" title="Gives access to sell products only to those who have SellRight." alt="" coords="351,71,568,112"/>
+<area shape="rect" id="node7" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a7a59e994ba64896fb351b9b5cad3b505" title=" " alt="" coords="21,71,276,112"/>
+<area shape="rect" id="node8" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a3ef5a72254eba475207096307c624883" title=" " alt="" coords="5,136,292,177"/>
+<area shape="rect" id="node13" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#a33ba89156d91beb4908c3986cf9a1d2e" title="Lets only those with modify users db right to modify user password in database" alt="" coords="340,332,579,373"/>
+<area shape="rect" id="node14" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ad8fa7998b73a6d3aa93549fb5f18913e" title=" " alt="" coords="11,285,287,341"/>
+<area shape="rect" id="node15" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a44fa48ca4cc9a43a460ee5ccda879878" title=" " alt="" coords="11,365,287,421"/>
+</map>

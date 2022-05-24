@@ -1,0 +1,7 @@
+<map id="TestPharmacyManagement.PharmacyManagementTest.RootAccessTest" name="TestPharmacyManagement.PharmacyManagementTest.RootAccessTest">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,249,112"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#aa59798df45d331d93500529ad520188b" title="Verifies username and password and provides access to app only to those who are registered in the use..." alt="" coords="297,37,515,79"/>
+<area shape="rect" id="node5" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#a3198fce1932ba57c918c5cbaeb717765" title="Transmits information about the current status of the user." alt="" coords="297,103,515,144"/>
+<area shape="rect" id="node3" href="$class_items_1_1_commons_1_1_cryptography.html#a7ac01c0227e9bf3ce4ecb6480cab1441" title="Returns the hash of a string" alt="" coords="563,5,765,47"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#abc3b8ce47235d9c72a0fe7b65bbc24cc" title="This method is used to return all users from the database." alt="" coords="568,71,760,112"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="DataBaseManager.Tests.DBTests.InsertSelectDeleteUserTest" name="DataBaseManager.Tests.DBTests.InsertSelectDeleteUserTest">
+<area shape="rect" id="node1" title="To test the insert method, we must select the user from the database. This can be done with the Selec..." alt="" coords="5,74,228,115"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#a7badf05498c894a7b72b6ed9d7f2332f" title="This method deletes an user from the database. if the id is not found, it will do nothing." alt="" coords="279,5,498,32"/>
+<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#aa458477a799b93f16bd1b841bc4798df" title="Method to get the global instance of the class." alt="" coords="276,56,501,83"/>
+<area shape="rect" id="node6" href="$class_data_base_manager_1_1_d_b.html#a9192c0fd8471e823b58f82f72f7e224f" title="This method add a new user to the database. If the id or the username is already in database,..." alt="" coords="295,107,482,133"/>
+<area shape="rect" id="node7" href="$class_data_base_manager_1_1_d_b.html#a50d501d97ddfb4bfd741c162c498c722" title="This method returns an user with the given id. If the id is not found in the table,..." alt="" coords="279,157,498,184"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#a9a408c7f41195dbe963f8c00212a1698" title="This method change the connection of the database instance." alt="" coords="549,19,748,61"/>
+<area shape="rect" id="node5" href="$class_data_base_manager_1_1_d_b.html#aae7eb147833c5296b0112d2f7ff60312" title="This is the constructor for the database manager. This initializes the connection and check if the da..." alt="" coords="562,85,735,112"/>
+</map>

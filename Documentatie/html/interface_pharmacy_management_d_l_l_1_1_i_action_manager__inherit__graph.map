@@ -1,0 +1,5 @@
+<map id="PharmacyManagementDLL.IActionManager" name="PharmacyManagementDLL.IActionManager">
+<area shape="rect" id="node1" title="This interface contains specific methods for actions that can take place in a pharmacy ; these method..." alt="" coords="121,5,344,215"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html" title="This class acts as a protection proxy between those who will use the application and the various acti..." alt="" coords="5,263,223,604"/>
+<area shape="rect" id="node3" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html" title="This class provides useful methods in the management of a pharmacy and its staff." alt="" coords="247,321,456,545"/>
+</map>

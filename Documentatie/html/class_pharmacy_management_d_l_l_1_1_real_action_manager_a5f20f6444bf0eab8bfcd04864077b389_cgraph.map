@@ -1,0 +1,7 @@
+<map id="PharmacyManagementDLL.RealActionManager.RealActionManager" name="PharmacyManagementDLL.RealActionManager.RealActionManager">
+<area shape="rect" id="node1" title="Class constructor: sets database instance for later use in queries and database tables changes" alt="" coords="5,35,232,76"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#abfec02ddd31c73d6215b89af9d4fe63e" title="This method creates the users and the products tables." alt="" coords="296,5,489,47"/>
+<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#aa458477a799b93f16bd1b841bc4798df" title="Method to get the global instance of the class." alt="" coords="280,71,505,98"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#a9a408c7f41195dbe963f8c00212a1698" title="This method change the connection of the database instance." alt="" coords="553,35,752,76"/>
+<area shape="rect" id="node5" href="$class_data_base_manager_1_1_d_b.html#aae7eb147833c5296b0112d2f7ff60312" title="This is the constructor for the database manager. This initializes the connection and check if the da..." alt="" coords="566,101,739,127"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="PharmacyManagementDLL.ProxyActionManager.GetUsers" name="PharmacyManagementDLL.ProxyActionManager.GetUsers">
+<area shape="rect" id="node1" title="Queries database to display all existing users only if current user has &#39;view users right&#39;" alt="" coords="297,5,515,47"/>
+<area shape="rect" id="node2" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a4d51b6f4f6eec75d7a796dd4ae0acd63" title=" " alt="" coords="5,5,249,47"/>
+</map>

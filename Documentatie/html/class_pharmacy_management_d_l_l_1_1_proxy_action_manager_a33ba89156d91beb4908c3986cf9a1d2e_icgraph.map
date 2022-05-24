@@ -1,0 +1,5 @@
+<map id="PharmacyManagementDLL.ProxyActionManager.UpdateUserPassword" name="PharmacyManagementDLL.ProxyActionManager.UpdateUserPassword">
+<area shape="rect" id="node1" title="Lets only those with modify users db right to modify user password in database" alt="" coords="329,53,568,94"/>
+<area shape="rect" id="node2" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ad8fa7998b73a6d3aa93549fb5f18913e" title=" " alt="" coords="5,5,281,61"/>
+<area shape="rect" id="node3" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a44fa48ca4cc9a43a460ee5ccda879878" title=" " alt="" coords="5,85,281,141"/>
+</map>

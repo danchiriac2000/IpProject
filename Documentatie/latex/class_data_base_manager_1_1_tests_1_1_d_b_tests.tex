@@ -1,0 +1,709 @@
+\hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests}{}\doxysection{Data\+Base\+Manager.\+Tests.\+DBTests Class Reference}
+\label{class_data_base_manager_1_1_tests_1_1_d_b_tests}\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+
+
+Collaboration diagram for Data\+Base\+Manager.\+Tests.\+DBTests\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_aed8b3eb67514480d158117c46ddd62f0}{Get\+Instance\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Function that tests if the Invalid\+Extension\+Exception is thrown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_aa2cea3e8fca9b2f1ace52391baf87a48}{Get\+Instance\+Test2}} ()
+\begin{DoxyCompactList}\small\item\em Function that tests if the database is created, if the Get\+Instance function is called with the right parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_abcd038a1d0c985dfb70ea8b5f1e77842}{Create\+Tables\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Function that tests if the tables are created. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_acebb2c5cc9498fa446540fdb5c754cb0}{Insert\+Select\+Delete\+User\+Test}} ()
+\begin{DoxyCompactList}\small\item\em To test the insert method, we must select the user from the database. This can be done with the Select method. Also, in order to not overwrite the id, the user is deleted first. In conclusion, all three of these functions can be tested in the same test method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_a710d48acbfaa13dc864f6fd6cdcd083d}{Insert\+Exception\+Test}} ()
+\begin{DoxyCompactList}\small\item\em This function tests if the Constraint\+Violated\+Exception is thrown if two users with the same id are inserted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_a8a8631b953de94172c47edf3057b7a33}{Insert\+Exception\+Test2}} ()
+\begin{DoxyCompactList}\small\item\em This function tests if the Constraint\+Violated\+Exception is thrown if two users with the same username are inserted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_a4493012851f8fe94cb62ea71f2c095b4}{Insert\+Select\+Delete\+Product\+Test}} ()
+\begin{DoxyCompactList}\small\item\em To test the insert method, we must select the product from the database. This can be done with the Select method. Also, in order to not overwrite the id, the product is deleted first. In conclusion, all three of these functions can be tested in the same test method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_abfc9afac794e5c8a2530c038413cb68c}{Insert\+Exception\+Test3}} ()
+\begin{DoxyCompactList}\small\item\em This function tests if the Constraint\+Violated\+Exception is thrown if two products with the same id are inserted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_a21982f83a73676630a8c910df7366a97}{Insert\+Exception\+Test4}} ()
+\begin{DoxyCompactList}\small\item\em This function tests if the Constraint\+Violated\+Exception is thrown if two products with the same name are inserted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_a23e20a868d413818df014aff5a41c75b}{Select\+Clear\+All\+Users\+Test}} ()
+\begin{DoxyCompactList}\small\item\em This functions tests if all users are selected from the database. Some users needs to be inserted, but first, the users table must be cleared to not overwrite the id or the username, so Clear\+Users is tested to. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_a2ff78637952ff48b12b39d62cecb4feb}{Select\+Clear\+All\+Products\+Test}} ()
+\begin{DoxyCompactList}\small\item\em This functions tests if all products are selected from the database. Some products needs to be inserted, but first, the products table must be cleared to not overwrite the id or the name, so Clear\+Products is tested to. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_a1e25a2835173e449788d16048dfc59f8}{Update\+User\+Test}} ()
+\begin{DoxyCompactList}\small\item\em This function tests if an user is updated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_a1b585dc2d611daeb0cdc28b6e32eb2b5}{Update\+Product\+Test}} ()
+\begin{DoxyCompactList}\small\item\em This function tests if a product is updated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_a7428852f4d9d7872897f2852193e6802}{Update\+Test\+Record\+Not\+Found}} ()
+\begin{DoxyCompactList}\small\item\em Test if Update method throw a Record\+Not\+Found\+Exception exception. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_a82942b64fd8d602d0e0deda70a717a8e}{Update\+Test\+Invalid\+Stock}} ()
+\begin{DoxyCompactList}\small\item\em Test if Update method throw a Invalid\+Stock\+Exception exception. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_tests_1_1_d_b_tests_a75eabf775954a550dc8a68497cf4a31e}{Test\+Auto\+Increment}} ()
+\begin{DoxyCompactList}\small\item\em This function tests if the autoincrement works. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_abcd038a1d0c985dfb70ea8b5f1e77842}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_abcd038a1d0c985dfb70ea8b5f1e77842}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!CreateTablesTest@{CreateTablesTest}}
+\index{CreateTablesTest@{CreateTablesTest}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{CreateTablesTest()}{CreateTablesTest()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Create\+Tables\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that tests if the tables are created. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00059}{59}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060         \{}
+\DoxyCodeLine{00061             \textcolor{keywordtype}{bool} ok = \textcolor{keyword}{true};}
+\DoxyCodeLine{00062             File.Delete(\textcolor{stringliteral}{"{}randomDataBase.db"{}});}
+\DoxyCodeLine{00063             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase.db"{}});}
+\DoxyCodeLine{00064             \textcolor{comment}{//Call CreateTable method.}}
+\DoxyCodeLine{00065             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_abfec02ddd31c73d6215b89af9d4fe63e}{CreateTables}}();}
+\DoxyCodeLine{00066             SQLiteConnection conn = dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a73de071f49118cf24d6fc701dd5ecf24}{Connection}};}
+\DoxyCodeLine{00067             SQLiteCommand command = conn.CreateCommand();}
+\DoxyCodeLine{00068             command.CommandText = \textcolor{stringliteral}{"{}SELECT name FROM sqlite\_master WHERE type='table' AND name='USERS'"{}};}
+\DoxyCodeLine{00069             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00070             \textcolor{keywordtype}{string} userTableName = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00071             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00072             \{}
+\DoxyCodeLine{00073                 \textcolor{keywordtype}{string} myreader = sqlite\_datareader.GetString(0);}
+\DoxyCodeLine{00074                 userTableName += myreader;}
+\DoxyCodeLine{00075             \}}
+\DoxyCodeLine{00076             \textcolor{keywordflow}{if} (userTableName == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00077             \{}
+\DoxyCodeLine{00078                 ok = \textcolor{keyword}{false};}
+\DoxyCodeLine{00079             \}}
+\DoxyCodeLine{00080             command = conn.CreateCommand();}
+\DoxyCodeLine{00081             command.CommandText = \textcolor{stringliteral}{"{}SELECT name FROM sqlite\_master WHERE type='table' AND name='PRODUCTS'"{}};}
+\DoxyCodeLine{00082             sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00083             \textcolor{keywordtype}{string} productTableName = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00084             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00085             \{}
+\DoxyCodeLine{00086                 \textcolor{keywordtype}{string} myreader = sqlite\_datareader.GetString(0);}
+\DoxyCodeLine{00087                 productTableName += myreader;}
+\DoxyCodeLine{00088             \}}
+\DoxyCodeLine{00089             \textcolor{keywordflow}{if} (productTableName == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00090             \{}
+\DoxyCodeLine{00091                 ok = \textcolor{keyword}{false};}
+\DoxyCodeLine{00092             \}}
+\DoxyCodeLine{00093             Assert.AreEqual(ok, \textcolor{keyword}{true});}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_abcd038a1d0c985dfb70ea8b5f1e77842_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_aed8b3eb67514480d158117c46ddd62f0}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_aed8b3eb67514480d158117c46ddd62f0}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!GetInstanceTest@{GetInstanceTest}}
+\index{GetInstanceTest@{GetInstanceTest}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{GetInstanceTest()}{GetInstanceTest()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Get\+Instance\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that tests if the Invalid\+Extension\+Exception is thrown. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037         \{}
+\DoxyCodeLine{00038             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}nume.dbb"{}});}
+\DoxyCodeLine{00039         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_aed8b3eb67514480d158117c46ddd62f0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_aa2cea3e8fca9b2f1ace52391baf87a48}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_aa2cea3e8fca9b2f1ace52391baf87a48}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!GetInstanceTest2@{GetInstanceTest2}}
+\index{GetInstanceTest2@{GetInstanceTest2}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{GetInstanceTest2()}{GetInstanceTest2()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Get\+Instance\+Test2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that tests if the database is created, if the Get\+Instance function is called with the right parameters. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045         \{}
+\DoxyCodeLine{00046             \textcolor{keywordtype}{bool} exist = \textcolor{keyword}{false};}
+\DoxyCodeLine{00047             File.Delete(\textcolor{stringliteral}{"{}randomDataBase1.db"{}});}
+\DoxyCodeLine{00048             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase1.db"{}});}
+\DoxyCodeLine{00049             \textcolor{keywordflow}{if} (File.Exists(\textcolor{stringliteral}{"{}randomDataBase1.db"{}}))\{}
+\DoxyCodeLine{00050                 exist = \textcolor{keyword}{true};}
+\DoxyCodeLine{00051             \}}
+\DoxyCodeLine{00052             Assert.AreEqual(exist, \textcolor{keyword}{true});}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_aa2cea3e8fca9b2f1ace52391baf87a48_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_a710d48acbfaa13dc864f6fd6cdcd083d}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_a710d48acbfaa13dc864f6fd6cdcd083d}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!InsertExceptionTest@{InsertExceptionTest}}
+\index{InsertExceptionTest@{InsertExceptionTest}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{InsertExceptionTest()}{InsertExceptionTest()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Insert\+Exception\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function tests if the Constraint\+Violated\+Exception is thrown if two users with the same id are inserted. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00125}{125}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00126         \{}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00129             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a7badf05498c894a7b72b6ed9d7f2332f}{DeleteUser}}(0);}
+\DoxyCodeLine{00130             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(0, \textcolor{stringliteral}{"{}user1000"{}}, \textcolor{stringliteral}{"{}123"{}}, 0));}
+\DoxyCodeLine{00131             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(0, \textcolor{stringliteral}{"{}user2000"{}}, \textcolor{stringliteral}{"{}123"{}}, 0));}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_a710d48acbfaa13dc864f6fd6cdcd083d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_a8a8631b953de94172c47edf3057b7a33}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_a8a8631b953de94172c47edf3057b7a33}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!InsertExceptionTest2@{InsertExceptionTest2}}
+\index{InsertExceptionTest2@{InsertExceptionTest2}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{InsertExceptionTest2()}{InsertExceptionTest2()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Insert\+Exception\+Test2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function tests if the Constraint\+Violated\+Exception is thrown if two users with the same username are inserted. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00139}{139}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00140         \{}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00143             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a7badf05498c894a7b72b6ed9d7f2332f}{DeleteUser}}(100);}
+\DoxyCodeLine{00144             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a7badf05498c894a7b72b6ed9d7f2332f}{DeleteUser}}(101);}
+\DoxyCodeLine{00145             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(100, \textcolor{stringliteral}{"{}user1000"{}}, \textcolor{stringliteral}{"{}123"{}}, 0));}
+\DoxyCodeLine{00146             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(101, \textcolor{stringliteral}{"{}user1000"{}}, \textcolor{stringliteral}{"{}123"{}}, 0));}
+\DoxyCodeLine{00147 }
+\DoxyCodeLine{00148         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_a8a8631b953de94172c47edf3057b7a33_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_abfc9afac794e5c8a2530c038413cb68c}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_abfc9afac794e5c8a2530c038413cb68c}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!InsertExceptionTest3@{InsertExceptionTest3}}
+\index{InsertExceptionTest3@{InsertExceptionTest3}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{InsertExceptionTest3()}{InsertExceptionTest3()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Insert\+Exception\+Test3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function tests if the Constraint\+Violated\+Exception is thrown if two products with the same id are inserted. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00176}{176}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00177         \{}
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{00179             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00180             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3312487f889e113a7eac59cbe6e80c32}{DeleteProduct}}(0);}
+\DoxyCodeLine{00181             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(0, \textcolor{stringliteral}{"{}prod2"{}}, \textcolor{stringliteral}{"{}antibiotics"{}}, 100,101));}
+\DoxyCodeLine{00182             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(0, \textcolor{stringliteral}{"{}prod200"{}}, \textcolor{stringliteral}{"{}antibiotics"{}}, 100, 101));}
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00184         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_abfc9afac794e5c8a2530c038413cb68c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_a21982f83a73676630a8c910df7366a97}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_a21982f83a73676630a8c910df7366a97}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!InsertExceptionTest4@{InsertExceptionTest4}}
+\index{InsertExceptionTest4@{InsertExceptionTest4}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{InsertExceptionTest4()}{InsertExceptionTest4()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Insert\+Exception\+Test4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function tests if the Constraint\+Violated\+Exception is thrown if two products with the same name are inserted. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00190}{190}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00191         \{}
+\DoxyCodeLine{00192 }
+\DoxyCodeLine{00193             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00194             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3312487f889e113a7eac59cbe6e80c32}{DeleteProduct}}(100);}
+\DoxyCodeLine{00195             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3312487f889e113a7eac59cbe6e80c32}{DeleteProduct}}(101);}
+\DoxyCodeLine{00196             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(100, \textcolor{stringliteral}{"{}prod2"{}}, \textcolor{stringliteral}{"{}antibiotics"{}}, 100, 101));}
+\DoxyCodeLine{00197             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(101, \textcolor{stringliteral}{"{}prod2"{}}, \textcolor{stringliteral}{"{}antibiotics"{}}, 100, 101));}
+\DoxyCodeLine{00198         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_a21982f83a73676630a8c910df7366a97_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_a4493012851f8fe94cb62ea71f2c095b4}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_a4493012851f8fe94cb62ea71f2c095b4}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!InsertSelectDeleteProductTest@{InsertSelectDeleteProductTest}}
+\index{InsertSelectDeleteProductTest@{InsertSelectDeleteProductTest}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{InsertSelectDeleteProductTest()}{InsertSelectDeleteProductTest()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Insert\+Select\+Delete\+Product\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+To test the insert method, we must select the product from the database. This can be done with the Select method. Also, in order to not overwrite the id, the product is deleted first. In conclusion, all three of these functions can be tested in the same test method. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00155}{155}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156         \{}
+\DoxyCodeLine{00157 }
+\DoxyCodeLine{00158             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00159             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3312487f889e113a7eac59cbe6e80c32}{DeleteProduct}}(0);}
+\DoxyCodeLine{00160             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} p1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(0,\textcolor{stringliteral}{"{}product1"{}},\textcolor{stringliteral}{"{}antibiotics"{}},100,100);}
+\DoxyCodeLine{00161             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(p1);}
+\DoxyCodeLine{00162             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} p2 = dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aefb69276f8bb34f1d32baaeee29a6f28}{SelectProduct}}(0);}
+\DoxyCodeLine{00163             \textcolor{keywordtype}{bool} ok = \textcolor{keyword}{false};}
+\DoxyCodeLine{00164             \textcolor{keywordflow}{if} (p1.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a8f2bcb2fe32bfa0dd4e2735db324298e}{Id}} == p2.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a8f2bcb2fe32bfa0dd4e2735db324298e}{Id}} \&\& p1.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a9db429b8933506ece8be2583669750e2}{Name}} == p2.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a9db429b8933506ece8be2583669750e2}{Name}} \&\& p1.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a3136011320ffe6bf1c0c391d03209fac}{Category}} == p2.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a3136011320ffe6bf1c0c391d03209fac}{Category}} \&\& p1.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a55eb36b2f3160ce3daedb2f97c489c9a}{Price}} == p2.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a55eb36b2f3160ce3daedb2f97c489c9a}{Price}} \&\& p1.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_abfa57938ae1d47f617dfd0722d733f43}{Stock}}==p2.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_abfa57938ae1d47f617dfd0722d733f43}{Stock}})}
+\DoxyCodeLine{00165             \{}
+\DoxyCodeLine{00166                 ok = \textcolor{keyword}{true};}
+\DoxyCodeLine{00167             \}}
+\DoxyCodeLine{00168             Assert.AreEqual(\textcolor{keyword}{true}, ok);}
+\DoxyCodeLine{00169 }
+\DoxyCodeLine{00170         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_a4493012851f8fe94cb62ea71f2c095b4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_acebb2c5cc9498fa446540fdb5c754cb0}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_acebb2c5cc9498fa446540fdb5c754cb0}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!InsertSelectDeleteUserTest@{InsertSelectDeleteUserTest}}
+\index{InsertSelectDeleteUserTest@{InsertSelectDeleteUserTest}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{InsertSelectDeleteUserTest()}{InsertSelectDeleteUserTest()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Insert\+Select\+Delete\+User\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+To test the insert method, we must select the user from the database. This can be done with the Select method. Also, in order to not overwrite the id, the user is deleted first. In conclusion, all three of these functions can be tested in the same test method. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00103}{103}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104         \{}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00107             \textcolor{comment}{//Delete user with the id first.}}
+\DoxyCodeLine{00108             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a7badf05498c894a7b72b6ed9d7f2332f}{DeleteUser}}(0);}
+\DoxyCodeLine{00109             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} u1 = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(0, \textcolor{stringliteral}{"{}user2000"{}}, \textcolor{stringliteral}{"{}1234"{}}, 0);}
+\DoxyCodeLine{00110             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(u1);}
+\DoxyCodeLine{00111             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} u2 = dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a50d501d97ddfb4bfd741c162c498c722}{SelectUser}}(0);}
+\DoxyCodeLine{00112             \textcolor{keywordtype}{bool} ok = \textcolor{keyword}{false};}
+\DoxyCodeLine{00113             \textcolor{keywordflow}{if}(u1.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a9138535e5bac7515e0b683004f8173c8}{Id}}==u2.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a9138535e5bac7515e0b683004f8173c8}{Id}} \&\& u1.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a1986ae3c7630ce95709cb6adaedfc2bf}{Username}}==u2.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a1986ae3c7630ce95709cb6adaedfc2bf}{Username}} \&\& u1.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a3779f8a7a0515674cc45174ba00f3959}{Password}}==u2.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a3779f8a7a0515674cc45174ba00f3959}{Password}} \&\& u1.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_ae62df27867676b0909c00a8e85ea3744}{Rights}} == u2.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_ae62df27867676b0909c00a8e85ea3744}{Rights}})}
+\DoxyCodeLine{00114             \{}
+\DoxyCodeLine{00115                 ok = \textcolor{keyword}{true};}
+\DoxyCodeLine{00116             \}}
+\DoxyCodeLine{00117             Assert.AreEqual(\textcolor{keyword}{true}, ok);}
+\DoxyCodeLine{00118             }
+\DoxyCodeLine{00119         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_acebb2c5cc9498fa446540fdb5c754cb0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_a2ff78637952ff48b12b39d62cecb4feb}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_a2ff78637952ff48b12b39d62cecb4feb}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!SelectClearAllProductsTest@{SelectClearAllProductsTest}}
+\index{SelectClearAllProductsTest@{SelectClearAllProductsTest}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{SelectClearAllProductsTest()}{SelectClearAllProductsTest()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Select\+Clear\+All\+Products\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This functions tests if all products are selected from the database. Some products needs to be inserted, but first, the products table must be cleared to not overwrite the id or the name, so Clear\+Products is tested to. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00237}{237}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00238         \{}
+\DoxyCodeLine{00239             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00240             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a56fbf644be69925f3ff56adcda09501a}{ClearProducts}}();}
+\DoxyCodeLine{00241             List<Product> products = \textcolor{keyword}{new} List<Product>();}
+\DoxyCodeLine{00242             products.Add(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(100, \textcolor{stringliteral}{"{}prod0"{}}, \textcolor{stringliteral}{"{}antibiotics"{}}, 100, 101));}
+\DoxyCodeLine{00243             products.Add(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(101, \textcolor{stringliteral}{"{}prod1"{}}, \textcolor{stringliteral}{"{}antibiotics"{}}, 100, 101));}
+\DoxyCodeLine{00244             products.Add(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(102, \textcolor{stringliteral}{"{}prod2"{}}, \textcolor{stringliteral}{"{}antibiotics"{}}, 100, 101));}
+\DoxyCodeLine{00245             \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} p \textcolor{keywordflow}{in} products)}
+\DoxyCodeLine{00246             \{}
+\DoxyCodeLine{00247                 dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(p);}
+\DoxyCodeLine{00248             \}}
+\DoxyCodeLine{00249             List<Product> productsFromDb = dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a904efedfd5523ae6cafbba7fc9061d97}{SelectAllProducts}}();}
+\DoxyCodeLine{00250             \textcolor{keywordtype}{bool} ok = \textcolor{keyword}{true};}
+\DoxyCodeLine{00251             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < products.Count; i++)}
+\DoxyCodeLine{00252             \{}
+\DoxyCodeLine{00253                 \textcolor{keywordflow}{if} (products[i].Id != productsFromDb[i].Id || products[i].Name != productsFromDb[i].Name || products[i].Category != productsFromDb[i].Category}
+\DoxyCodeLine{00254                  || products[i].Price != productsFromDb[i].Price || products[i].Stock!=productsFromDb[i].Stock)}
+\DoxyCodeLine{00255                 \{}
+\DoxyCodeLine{00256                     ok = \textcolor{keyword}{false};}
+\DoxyCodeLine{00257                 \}}
+\DoxyCodeLine{00258             \}}
+\DoxyCodeLine{00259             Assert.AreEqual(ok, \textcolor{keyword}{true});}
+\DoxyCodeLine{00260         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_a2ff78637952ff48b12b39d62cecb4feb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_a23e20a868d413818df014aff5a41c75b}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_a23e20a868d413818df014aff5a41c75b}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!SelectClearAllUsersTest@{SelectClearAllUsersTest}}
+\index{SelectClearAllUsersTest@{SelectClearAllUsersTest}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{SelectClearAllUsersTest()}{SelectClearAllUsersTest()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Select\+Clear\+All\+Users\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This functions tests if all users are selected from the database. Some users needs to be inserted, but first, the users table must be cleared to not overwrite the id or the username, so Clear\+Users is tested to. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00205}{205}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00206         \{}
+\DoxyCodeLine{00207             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00208             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a77b1b12695b9eea513beb8effe8fcbf9}{ClearUsers}}();}
+\DoxyCodeLine{00209             List<User> users = \textcolor{keyword}{new} List<User>();}
+\DoxyCodeLine{00210             users.Add(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(0, \textcolor{stringliteral}{"{}user0"{}}, \textcolor{stringliteral}{"{}1234"{}}, 0));}
+\DoxyCodeLine{00211             users.Add(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(1, \textcolor{stringliteral}{"{}user1"{}}, \textcolor{stringliteral}{"{}1234"{}}, 0));}
+\DoxyCodeLine{00212             users.Add(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(2, \textcolor{stringliteral}{"{}user2"{}}, \textcolor{stringliteral}{"{}1234"{}}, 0));}
+\DoxyCodeLine{00213             \textcolor{keywordflow}{foreach}(\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} u \textcolor{keywordflow}{in} users)}
+\DoxyCodeLine{00214             \{}
+\DoxyCodeLine{00215                 dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(u);}
+\DoxyCodeLine{00216             \}}
+\DoxyCodeLine{00217             List<User> usersFromDb = dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_abc3b8ce47235d9c72a0fe7b65bbc24cc}{SelectAllUsers}}();}
+\DoxyCodeLine{00218             \textcolor{keywordtype}{bool} ok = \textcolor{keyword}{true};}
+\DoxyCodeLine{00219             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < users.Count; i++)}
+\DoxyCodeLine{00220             \{}
+\DoxyCodeLine{00221                 \textcolor{keywordflow}{if}(users[i].Id!=usersFromDb[i].Id || users[i].Username!=usersFromDb[i].Username || users[i].Password!=usersFromDb[i].Password}
+\DoxyCodeLine{00222                  || users[i].Rights != usersFromDb[i].Rights)}
+\DoxyCodeLine{00223                 \{}
+\DoxyCodeLine{00224                     ok = \textcolor{keyword}{false};}
+\DoxyCodeLine{00225                 \}}
+\DoxyCodeLine{00226             \}}
+\DoxyCodeLine{00227             Assert.AreEqual(ok, \textcolor{keyword}{true});}
+\DoxyCodeLine{00228             }
+\DoxyCodeLine{00229 }
+\DoxyCodeLine{00230         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_a23e20a868d413818df014aff5a41c75b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_a75eabf775954a550dc8a68497cf4a31e}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_a75eabf775954a550dc8a68497cf4a31e}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!TestAutoIncrement@{TestAutoIncrement}}
+\index{TestAutoIncrement@{TestAutoIncrement}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{TestAutoIncrement()}{TestAutoIncrement()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Test\+Auto\+Increment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function tests if the autoincrement works. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00357}{357}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00358         \{}
+\DoxyCodeLine{00359             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase3.db"{}});}
+\DoxyCodeLine{00360             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_abfec02ddd31c73d6215b89af9d4fe63e}{CreateTables}}();}
+\DoxyCodeLine{00361             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a56fbf644be69925f3ff56adcda09501a}{ClearProducts}}();}
+\DoxyCodeLine{00362             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a77b1b12695b9eea513beb8effe8fcbf9}{ClearUsers}}();}
+\DoxyCodeLine{00363             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a80982de3f0bbdf8af1784e17d7faca65}{GetLastUserID}}() + 1, \textcolor{stringliteral}{"{}user1"{}}, \textcolor{stringliteral}{"{}1234"{}}, -\/1));}
+\DoxyCodeLine{00364             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a80982de3f0bbdf8af1784e17d7faca65}{GetLastUserID}}() + 1, \textcolor{stringliteral}{"{}user2"{}}, \textcolor{stringliteral}{"{}1234"{}}, -\/1));}
+\DoxyCodeLine{00365             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a08de6396d620f6eb5cd470a900f6fe94}{GetLastProductID}}() + 1, \textcolor{stringliteral}{"{}prod1"{}}, \textcolor{stringliteral}{"{}antibiotics"{}},100,101));}
+\DoxyCodeLine{00366             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a08de6396d620f6eb5cd470a900f6fe94}{GetLastProductID}}() + 1, \textcolor{stringliteral}{"{}prod2"{}}, \textcolor{stringliteral}{"{}antibiotics"{}}, 100, 101));}
+\DoxyCodeLine{00367             List<User> users = dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_abc3b8ce47235d9c72a0fe7b65bbc24cc}{SelectAllUsers}}();}
+\DoxyCodeLine{00368             List<Product> products = dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a904efedfd5523ae6cafbba7fc9061d97}{SelectAllProducts}}();}
+\DoxyCodeLine{00369             Assert.AreEqual(users[0].Id, 0);}
+\DoxyCodeLine{00370             Assert.AreEqual(users[1].Id, 1);}
+\DoxyCodeLine{00371             Assert.AreEqual(products[0].Id, 0);}
+\DoxyCodeLine{00372             Assert.AreEqual(products[1].Id, 1);}
+\DoxyCodeLine{00373 }
+\DoxyCodeLine{00374 }
+\DoxyCodeLine{00375         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_a75eabf775954a550dc8a68497cf4a31e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_a1b585dc2d611daeb0cdc28b6e32eb2b5}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_a1b585dc2d611daeb0cdc28b6e32eb2b5}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!UpdateProductTest@{UpdateProductTest}}
+\index{UpdateProductTest@{UpdateProductTest}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{UpdateProductTest()}{UpdateProductTest()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Update\+Product\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function tests if a product is updated. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00288}{288}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00289         \{}
+\DoxyCodeLine{00290             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00291             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a56fbf644be69925f3ff56adcda09501a}{ClearProducts}}();}
+\DoxyCodeLine{00292             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} p = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(0, \textcolor{stringliteral}{"{}Aulin"{}}, \textcolor{stringliteral}{"{}Dont Know"{}}, 100, 101) ;}
+\DoxyCodeLine{00293             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(p);}
+\DoxyCodeLine{00294             p.Name = \textcolor{stringliteral}{"{}Paracetamol"{}};}
+\DoxyCodeLine{00295             \textcolor{keywordtype}{int} oldStock = p.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_abfa57938ae1d47f617dfd0722d733f43}{Stock}};}
+\DoxyCodeLine{00296             p.Stock = p.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_abfa57938ae1d47f617dfd0722d733f43}{Stock}}+100; }
+\DoxyCodeLine{00297             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a90d337d555d84f241f46d69cf9acb337}{Update}}(p);}
+\DoxyCodeLine{00298             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} selectedProduct = dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aefb69276f8bb34f1d32baaeee29a6f28}{SelectProduct}}(0);}
+\DoxyCodeLine{00299             \textcolor{keywordtype}{bool} ok = \textcolor{keyword}{false};}
+\DoxyCodeLine{00300             \textcolor{keywordflow}{if} (selectedProduct.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a8f2bcb2fe32bfa0dd4e2735db324298e}{Id}} == 0 \&\& selectedProduct.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a9db429b8933506ece8be2583669750e2}{Name}} == \textcolor{stringliteral}{"{}Paracetamol"{}} \&\& selectedProduct.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a3136011320ffe6bf1c0c391d03209fac}{Category}} == \textcolor{stringliteral}{"{}Dont Know"{}} \&\& selectedProduct.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a55eb36b2f3160ce3daedb2f97c489c9a}{Price}} == 100\&\&}
+\DoxyCodeLine{00301                 selectedProduct.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_abfa57938ae1d47f617dfd0722d733f43}{Stock}}==oldStock+100)}
+\DoxyCodeLine{00302             \{}
+\DoxyCodeLine{00303                 ok = \textcolor{keyword}{true};}
+\DoxyCodeLine{00304             \}}
+\DoxyCodeLine{00305             Assert.AreEqual(ok, \textcolor{keyword}{true});}
+\DoxyCodeLine{00306 }
+\DoxyCodeLine{00307         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_a1b585dc2d611daeb0cdc28b6e32eb2b5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_a82942b64fd8d602d0e0deda70a717a8e}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_a82942b64fd8d602d0e0deda70a717a8e}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!UpdateTestInvalidStock@{UpdateTestInvalidStock}}
+\index{UpdateTestInvalidStock@{UpdateTestInvalidStock}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{UpdateTestInvalidStock()}{UpdateTestInvalidStock()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Update\+Test\+Invalid\+Stock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test if Update method throw a Invalid\+Stock\+Exception exception. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00340}{340}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00341         \{}
+\DoxyCodeLine{00342             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00343             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a56fbf644be69925f3ff56adcda09501a}{ClearProducts}}();}
+\DoxyCodeLine{00344             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} p = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(0, \textcolor{stringliteral}{"{}Aulin"{}}, \textcolor{stringliteral}{"{}Dont Know"{}}, 100, 101);}
+\DoxyCodeLine{00345             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(p);}
+\DoxyCodeLine{00346             p.Name = \textcolor{stringliteral}{"{}Paracetamol"{}};}
+\DoxyCodeLine{00347             \textcolor{comment}{//Cause exception}}
+\DoxyCodeLine{00348             p.Stock = p.Stock -\/102;}
+\DoxyCodeLine{00349             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a90d337d555d84f241f46d69cf9acb337}{Update}}(p);}
+\DoxyCodeLine{00350 }
+\DoxyCodeLine{00351         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_a82942b64fd8d602d0e0deda70a717a8e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_a7428852f4d9d7872897f2852193e6802}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_a7428852f4d9d7872897f2852193e6802}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!UpdateTestRecordNotFound@{UpdateTestRecordNotFound}}
+\index{UpdateTestRecordNotFound@{UpdateTestRecordNotFound}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{UpdateTestRecordNotFound()}{UpdateTestRecordNotFound()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Update\+Test\+Record\+Not\+Found (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test if Update method throw a Record\+Not\+Found\+Exception exception. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00313}{313}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00314         \{}
+\DoxyCodeLine{00315             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00316             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a56fbf644be69925f3ff56adcda09501a}{ClearProducts}}();}
+\DoxyCodeLine{00317             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} p = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(0, \textcolor{stringliteral}{"{}Aulin"{}}, \textcolor{stringliteral}{"{}Dont Know"{}}, 100, 101);}
+\DoxyCodeLine{00318             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(p);}
+\DoxyCodeLine{00319             p.Name = \textcolor{stringliteral}{"{}Paracetamol"{}};}
+\DoxyCodeLine{00320             \textcolor{keywordtype}{int} oldStock = p.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_abfa57938ae1d47f617dfd0722d733f43}{Stock}};}
+\DoxyCodeLine{00321             p.Stock = p.Stock + 100;}
+\DoxyCodeLine{00322             \textcolor{comment}{//Cause exception.}}
+\DoxyCodeLine{00323             p.Id = 100;}
+\DoxyCodeLine{00324             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a90d337d555d84f241f46d69cf9acb337}{Update}}(p);}
+\DoxyCodeLine{00325             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} selectedProduct = dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aefb69276f8bb34f1d32baaeee29a6f28}{SelectProduct}}(0);}
+\DoxyCodeLine{00326             \textcolor{keywordtype}{bool} ok = \textcolor{keyword}{false};}
+\DoxyCodeLine{00327             \textcolor{keywordflow}{if} (selectedProduct.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a8f2bcb2fe32bfa0dd4e2735db324298e}{Id}} == 0 \&\& selectedProduct.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a9db429b8933506ece8be2583669750e2}{Name}} == \textcolor{stringliteral}{"{}Paracetamol"{}} \&\& selectedProduct.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a3136011320ffe6bf1c0c391d03209fac}{Category}} == \textcolor{stringliteral}{"{}Dont Know"{}} \&\& selectedProduct.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a55eb36b2f3160ce3daedb2f97c489c9a}{Price}} == 100 \&\&}
+\DoxyCodeLine{00328                 selectedProduct.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_abfa57938ae1d47f617dfd0722d733f43}{Stock}} == oldStock + 100)}
+\DoxyCodeLine{00329             \{}
+\DoxyCodeLine{00330                 ok = \textcolor{keyword}{true};}
+\DoxyCodeLine{00331             \}}
+\DoxyCodeLine{00332             Assert.AreEqual(ok, \textcolor{keyword}{true});}
+\DoxyCodeLine{00333 }
+\DoxyCodeLine{00334         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_a7428852f4d9d7872897f2852193e6802_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_tests_1_1_d_b_tests_a1e25a2835173e449788d16048dfc59f8}\label{class_data_base_manager_1_1_tests_1_1_d_b_tests_a1e25a2835173e449788d16048dfc59f8}} 
+\index{DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}!UpdateUserTest@{UpdateUserTest}}
+\index{UpdateUserTest@{UpdateUserTest}!DataBaseManager.Tests.DBTests@{DataBaseManager.Tests.DBTests}}
+\doxysubsubsection{\texorpdfstring{UpdateUserTest()}{UpdateUserTest()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+Tests.\+DBTests.\+Update\+User\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function tests if an user is updated. 
+
+
+
+Definition at line \mbox{\hyperlink{_d_b_tests_8cs_source_l00265}{265}} of file \mbox{\hyperlink{_d_b_tests_8cs_source}{DBTests.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00266         \{}
+\DoxyCodeLine{00267             \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} dataBaseObject = \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{GetInstance}}(\textcolor{stringliteral}{"{}randomDataBase2.db"{}});}
+\DoxyCodeLine{00268             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a77b1b12695b9eea513beb8effe8fcbf9}{ClearUsers}}();}
+\DoxyCodeLine{00269             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} u = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(0, \textcolor{stringliteral}{"{}UserName"{}}, \textcolor{stringliteral}{"{}1234"{}}, 1);}
+\DoxyCodeLine{00270             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}}(u);}
+\DoxyCodeLine{00271             u.Username = \textcolor{stringliteral}{"{}Dani"{}};}
+\DoxyCodeLine{00272             u.Password = \textcolor{stringliteral}{"{}5678"{}};}
+\DoxyCodeLine{00273             dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a90d337d555d84f241f46d69cf9acb337}{Update}}(u);}
+\DoxyCodeLine{00274             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} selectedUser = dataBaseObject.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a50d501d97ddfb4bfd741c162c498c722}{SelectUser}}(0);}
+\DoxyCodeLine{00275             \textcolor{keywordtype}{bool} ok = \textcolor{keyword}{false};}
+\DoxyCodeLine{00276             \textcolor{keywordflow}{if}(selectedUser.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a9138535e5bac7515e0b683004f8173c8}{Id}}==0 \&\& selectedUser.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a1986ae3c7630ce95709cb6adaedfc2bf}{Username}}==\textcolor{stringliteral}{"{}Dani"{}} \&\& selectedUser.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a3779f8a7a0515674cc45174ba00f3959}{Password}}==\textcolor{stringliteral}{"{}5678"{}} \&\& selectedUser.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_ae62df27867676b0909c00a8e85ea3744}{Rights}} == 1)}
+\DoxyCodeLine{00277             \{}
+\DoxyCodeLine{00278                 ok = \textcolor{keyword}{true};}
+\DoxyCodeLine{00279             \}}
+\DoxyCodeLine{00280             Assert.AreEqual(ok, \textcolor{keyword}{true});}
+\DoxyCodeLine{00281             }
+\DoxyCodeLine{00282            }
+\DoxyCodeLine{00283         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_tests_1_1_d_b_tests_a1e25a2835173e449788d16048dfc59f8_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Base\+Dll/\+Data\+Base\+Manager\+DBUnit\+Testing/\mbox{\hyperlink{_d_b_tests_8cs}{DBTests.\+cs}}\end{DoxyCompactItemize}

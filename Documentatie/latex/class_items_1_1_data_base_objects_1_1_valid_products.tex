@@ -1,0 +1,165 @@
+\hypertarget{class_items_1_1_data_base_objects_1_1_valid_products}{}\doxysection{Items.\+Data\+Base\+Objects.\+Valid\+Products Class Reference}
+\label{class_items_1_1_data_base_objects_1_1_valid_products}\index{Items.DataBaseObjects.ValidProducts@{Items.DataBaseObjects.ValidProducts}}
+
+
+Collaboration diagram for Items.\+Data\+Base\+Objects.\+Valid\+Products\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_items_1_1_data_base_objects_1_1_valid_products__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products}{Valid\+Products}} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_ab9b74ec4f9b8fc7915cc6c79f4c5275f}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ String, List$<$ String $>$ $>$ \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a5d2e8e11846429b6a87d945cd13f8352}{Products}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a847fe59be92fa30375d451011dc943d2}{Valid\+Products}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ String, List$<$ String $>$ $>$ \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_ab5a515b7ac70462373c62d0290d9a969}{\+\_\+products}} = new Dictionary$<$String, List$<$String$>$$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products}{Valid\+Products}} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a1ef57b368f5e9ff322a85079b1ddc187}{\+\_\+instance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_valid_products_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_valid_products_8cs_source}{Valid\+Products.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_items_1_1_data_base_objects_1_1_valid_products_a847fe59be92fa30375d451011dc943d2}\label{class_items_1_1_data_base_objects_1_1_valid_products_a847fe59be92fa30375d451011dc943d2}} 
+\index{Items.DataBaseObjects.ValidProducts@{Items.DataBaseObjects.ValidProducts}!ValidProducts@{ValidProducts}}
+\index{ValidProducts@{ValidProducts}!Items.DataBaseObjects.ValidProducts@{Items.DataBaseObjects.ValidProducts}}
+\doxysubsubsection{\texorpdfstring{ValidProducts()}{ValidProducts()}}
+{\footnotesize\ttfamily Items.\+Data\+Base\+Objects.\+Valid\+Products.\+Valid\+Products (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_valid_products_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_valid_products_8cs_source}{Valid\+Products.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016         \{}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018             String[] lines = System.IO.File.ReadAllLines(\textcolor{stringliteral}{@"{}ValidProducts.txt"{}});}
+\DoxyCodeLine{00019             \textcolor{keywordflow}{foreach}(String line \textcolor{keywordflow}{in} lines)}
+\DoxyCodeLine{00020             \{}
+\DoxyCodeLine{00021                 String[] elements = line.Split(\textcolor{charliteral}{':'});}
+\DoxyCodeLine{00022                 String category = elements[0];}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024                 String[] products = elements[1].Split(\textcolor{charliteral}{','});}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026                 \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_ab5a515b7ac70462373c62d0290d9a969}{\_products}}.Add(category, products.ToList());}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028             \}}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_items_1_1_data_base_objects_1_1_valid_products_a847fe59be92fa30375d451011dc943d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_items_1_1_data_base_objects_1_1_valid_products_ab9b74ec4f9b8fc7915cc6c79f4c5275f}\label{class_items_1_1_data_base_objects_1_1_valid_products_ab9b74ec4f9b8fc7915cc6c79f4c5275f}} 
+\index{Items.DataBaseObjects.ValidProducts@{Items.DataBaseObjects.ValidProducts}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Items.DataBaseObjects.ValidProducts@{Items.DataBaseObjects.ValidProducts}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products}{Valid\+Products}} Items.\+Data\+Base\+Objects.\+Valid\+Products.\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_valid_products_8cs_source_l00032}{32}} of file \mbox{\hyperlink{_valid_products_8cs_source}{Valid\+Products.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033         \{}
+\DoxyCodeLine{00034             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a1ef57b368f5e9ff322a85079b1ddc187}{\_instance}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{00035             \{}
+\DoxyCodeLine{00036                 \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a1ef57b368f5e9ff322a85079b1ddc187}{\_instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a847fe59be92fa30375d451011dc943d2}{ValidProducts}}();}
+\DoxyCodeLine{00037             \}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a1ef57b368f5e9ff322a85079b1ddc187}{\_instance}};}
+\DoxyCodeLine{00040         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_items_1_1_data_base_objects_1_1_valid_products_ab9b74ec4f9b8fc7915cc6c79f4c5275f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_items_1_1_data_base_objects_1_1_valid_products_a1ef57b368f5e9ff322a85079b1ddc187}\label{class_items_1_1_data_base_objects_1_1_valid_products_a1ef57b368f5e9ff322a85079b1ddc187}} 
+\index{Items.DataBaseObjects.ValidProducts@{Items.DataBaseObjects.ValidProducts}!\_instance@{\_instance}}
+\index{\_instance@{\_instance}!Items.DataBaseObjects.ValidProducts@{Items.DataBaseObjects.ValidProducts}}
+\doxysubsubsection{\texorpdfstring{\_instance}{\_instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products}{Valid\+Products}} Items.\+Data\+Base\+Objects.\+Valid\+Products.\+\_\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_valid_products_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_valid_products_8cs_source}{Valid\+Products.\+cs}}.
+
+\mbox{\Hypertarget{class_items_1_1_data_base_objects_1_1_valid_products_ab5a515b7ac70462373c62d0290d9a969}\label{class_items_1_1_data_base_objects_1_1_valid_products_ab5a515b7ac70462373c62d0290d9a969}} 
+\index{Items.DataBaseObjects.ValidProducts@{Items.DataBaseObjects.ValidProducts}!\_products@{\_products}}
+\index{\_products@{\_products}!Items.DataBaseObjects.ValidProducts@{Items.DataBaseObjects.ValidProducts}}
+\doxysubsubsection{\texorpdfstring{\_products}{\_products}}
+{\footnotesize\ttfamily Dictionary$<$String, List$<$String$>$ $>$ Items.\+Data\+Base\+Objects.\+Valid\+Products.\+\_\+products = new Dictionary$<$String, List$<$String$>$$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_valid_products_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_valid_products_8cs_source}{Valid\+Products.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_items_1_1_data_base_objects_1_1_valid_products_a5d2e8e11846429b6a87d945cd13f8352}\label{class_items_1_1_data_base_objects_1_1_valid_products_a5d2e8e11846429b6a87d945cd13f8352}} 
+\index{Items.DataBaseObjects.ValidProducts@{Items.DataBaseObjects.ValidProducts}!Products@{Products}}
+\index{Products@{Products}!Items.DataBaseObjects.ValidProducts@{Items.DataBaseObjects.ValidProducts}}
+\doxysubsubsection{\texorpdfstring{Products}{Products}}
+{\footnotesize\ttfamily Dictionary$<$String, List$<$String$>$ $>$ Items.\+Data\+Base\+Objects.\+Valid\+Products.\+Products\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_valid_products_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_valid_products_8cs_source}{Valid\+Products.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042         \{}
+\DoxyCodeLine{00043             \textcolor{keyword}{get}}
+\DoxyCodeLine{00044             \{}
+\DoxyCodeLine{00045                 \textcolor{keywordflow}{return} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_ab5a515b7ac70462373c62d0290d9a969}{\_products}};}
+\DoxyCodeLine{00046             \}}
+\DoxyCodeLine{00047         \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Items\+Dll/\+Items/\+Items/\+Data\+Base\+Objects/\mbox{\hyperlink{_valid_products_8cs}{Valid\+Products.\+cs}}\end{DoxyCompactItemize}

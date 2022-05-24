@@ -1,0 +1,9 @@
+<map id="TestPharmacyManagement.PharmacyManagementTest" name="TestPharmacyManagement.PharmacyManagementTest">
+<area shape="rect" id="node1" title=" " alt="" coords="203,953,447,1221"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html" title="This class acts as a protection proxy between those who will use the application and the various acti..." alt="" coords="216,623,433,891"/>
+<area shape="rect" id="node3" href="$interface_pharmacy_management_d_l_l_1_1_i_action_manager.html" title="This interface contains specific methods for actions that can take place in a pharmacy ; these method..." alt="" coords="5,42,172,237"/>
+<area shape="rect" id="node5" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html" title="This class provides useful methods in the management of a pharmacy and its staff." alt="" coords="67,336,276,560"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html" title="DB class. This is the sqlite database manager." alt="" coords="223,5,373,273"/>
+<area shape="rect" id="node6" href="$class_items_1_1_data_base_objects_1_1_user.html" title="This is the data class for an user. Contains only the getters and setters for the private members of ..." alt="" coords="428,351,619,545"/>
+<area shape="rect" id="node7" href="$class_pharmacy_management_d_l_l_1_1_permissions.html" title=" " alt="" coords="643,402,897,494"/>
+</map>

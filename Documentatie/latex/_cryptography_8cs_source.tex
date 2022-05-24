@@ -1,0 +1,44 @@
+\hypertarget{_cryptography_8cs_source}{}\doxysection{Cryptography.\+cs}
+\label{_cryptography_8cs_source}\index{ItemsDll/Items/Items/Commons/Cryptography.cs@{ItemsDll/Items/Items/Commons/Cryptography.cs}}
+\mbox{\hyperlink{_cryptography_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00001}00001 \textcolor{comment}{/**************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00002}00002 \textcolor{comment}{ *                                                                        *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00003}00003 \textcolor{comment}{ *  File:        Cryptography.cs                                          *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00004}00004 \textcolor{comment}{ *  Copyright:   (c) 2022, Gabriela Ursachi                               *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00005}00005 \textcolor{comment}{ *  E-\/mail:      gabriela.ursachi@student.tuiasi.ro                       *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00006}00006 \textcolor{comment}{ *  Description: This file deals with password encryption                 *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00007}00007 \textcolor{comment}{ *                                                                        *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00008}00008 \textcolor{comment}{ *                                                                        *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00009}00009 \textcolor{comment}{ *  This program is free software; you can redistribute it and/or modify  *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00010}00010 \textcolor{comment}{ *  it under the terms of the GNU General Public License as published by  *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00011}00011 \textcolor{comment}{ *  the Free Software Foundation. This program is distributed in the      *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00012}00012 \textcolor{comment}{ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00013}00013 \textcolor{comment}{ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00014}00014 \textcolor{comment}{ *  PURPOSE. See the GNU General Public License for more details.         *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00015}00015 \textcolor{comment}{ *                                                                        *}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00016}00016 \textcolor{comment}{ **************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00017}00017 \textcolor{keyword}{using }System;}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00018}00018 \textcolor{keyword}{using }System.IO;}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00019}00019 \textcolor{keyword}{using }System.Security.Cryptography;}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00020}00020 \textcolor{keyword}{using }System.Text;}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00023}\mbox{\hyperlink{namespace_items}{00023}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_items_1_1_commons}{Items.Commons}}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00024}00024 \{}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00025}\mbox{\hyperlink{class_items_1_1_commons_1_1_cryptography}{00025}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_items_1_1_commons_1_1_cryptography}{Cryptography}}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00026}00026     \{}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00033}\mbox{\hyperlink{class_items_1_1_commons_1_1_cryptography_a7ac01c0227e9bf3ce4ecb6480cab1441}{00033}}         \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_items_1_1_commons_1_1_cryptography_a7ac01c0227e9bf3ce4ecb6480cab1441}{HashString}}(\textcolor{keywordtype}{string} str)}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00034}00034         \{}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00035}00035             HashAlgorithm sha = \textcolor{keyword}{new} SHA1CryptoServiceProvider();}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00036}00036             \textcolor{keywordtype}{byte}[] buf = \textcolor{keyword}{new} \textcolor{keywordtype}{byte}[str.Length];}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00037}00037             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < str.Length; i++)}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00038}00038                 buf[i] = (\textcolor{keywordtype}{byte})str[i];}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00039}00039             \textcolor{keywordtype}{byte}[] result = sha.ComputeHash(buf);}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00040}00040             \textcolor{keywordflow}{return} Convert.ToBase64String(result);}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00041}00041         \}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{_cryptography_8cs_source_l00043}00043 \}}
+
+\end{DoxyCode}

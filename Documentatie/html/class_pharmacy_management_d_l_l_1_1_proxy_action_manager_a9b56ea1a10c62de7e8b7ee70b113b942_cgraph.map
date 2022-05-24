@@ -1,0 +1,6 @@
+<map id="PharmacyManagementDLL.ProxyActionManager.GetUsers" name="PharmacyManagementDLL.ProxyActionManager.GetUsers">
+<area shape="rect" id="node1" title="Queries database to display all existing users only if current user has &#39;view users right&#39;" alt="" coords="5,39,223,80"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#ab62aa7b35f072e80401fafc75e54d893" title="Queries database to display all existing users." alt="" coords="295,5,505,47"/>
+<area shape="rect" id="node4" href="$class_pharmacy_management_d_l_l_1_1_permissions.html#a99e2481e6c55f0c26f3d2e3ad1436f91" title="Returns a list of action rights depending on the position of each employee." alt="" coords="271,71,529,112"/>
+<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#abc3b8ce47235d9c72a0fe7b65bbc24cc" title="This method is used to return all users from the database." alt="" coords="577,5,769,47"/>
+</map>

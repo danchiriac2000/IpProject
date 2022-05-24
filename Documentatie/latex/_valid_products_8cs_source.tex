@@ -1,0 +1,59 @@
+\hypertarget{_valid_products_8cs_source}{}\doxysection{Valid\+Products.\+cs}
+\label{_valid_products_8cs_source}\index{ItemsDll/Items/Items/DataBaseObjects/ValidProducts.cs@{ItemsDll/Items/Items/DataBaseObjects/ValidProducts.cs}}
+\mbox{\hyperlink{_valid_products_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00001}00001 \textcolor{keyword}{using }System;}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00002}00002 \textcolor{keyword}{using }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00003}00003 \textcolor{keyword}{using }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00004}00004 \textcolor{keyword}{using }System.Text;}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00005}00005 \textcolor{keyword}{using }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00007}00007 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_items_1_1_data_base_objects}{Items.DataBaseObjects}}}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00009}\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products}{ValidProducts}}}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00012}\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_ab5a515b7ac70462373c62d0290d9a969}{00012}}         \textcolor{keyword}{private} Dictionary<String, List<String>> \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_ab5a515b7ac70462373c62d0290d9a969}{\_products}} = \textcolor{keyword}{new} Dictionary<String, List<String>>();}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00013}\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a1ef57b368f5e9ff322a85079b1ddc187}{00013}}         \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products}{ValidProducts}} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a1ef57b368f5e9ff322a85079b1ddc187}{\_instance}};}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00014}00014      }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00015}\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a847fe59be92fa30375d451011dc943d2}{00015}}         \textcolor{keyword}{private} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a847fe59be92fa30375d451011dc943d2}{ValidProducts}}()}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00016}00016         \{}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00018}00018             String[] lines = System.IO.File.ReadAllLines(\textcolor{stringliteral}{@"{}ValidProducts.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00019}00019             \textcolor{keywordflow}{foreach}(String line \textcolor{keywordflow}{in} lines)}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00020}00020             \{}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00021}00021                 String[] elements = line.Split(\textcolor{charliteral}{':'});}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00022}00022                 String category = elements[0];}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00024}00024                 String[] products = elements[1].Split(\textcolor{charliteral}{','});}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00026}00026                 \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_ab5a515b7ac70462373c62d0290d9a969}{\_products}}.Add(category, products.ToList());}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00028}00028             \}}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00030}00030         \}}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00031}00031         }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00032}\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_ab9b74ec4f9b8fc7915cc6c79f4c5275f}{00032}}         \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products}{ValidProducts}} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_ab9b74ec4f9b8fc7915cc6c79f4c5275f}{GetInstance}}()}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00033}00033         \{}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00034}00034             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a1ef57b368f5e9ff322a85079b1ddc187}{\_instance}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00035}00035             \{}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00036}00036                 \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a1ef57b368f5e9ff322a85079b1ddc187}{\_instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a847fe59be92fa30375d451011dc943d2}{ValidProducts}}();}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00037}00037             \}}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00039}00039             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a1ef57b368f5e9ff322a85079b1ddc187}{\_instance}};}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00040}00040         \}}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00041}\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a5d2e8e11846429b6a87d945cd13f8352}{00041}}         \textcolor{keyword}{public} Dictionary<String, List<String>> \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_a5d2e8e11846429b6a87d945cd13f8352}{Products}}}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00042}00042         \{}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00043}00043             \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00044}00044             \{}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00045}00045                 \textcolor{keywordflow}{return} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_valid_products_ab5a515b7ac70462373c62d0290d9a969}{\_products}};}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00046}00046             \}}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00047}00047         \}}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00052}00052     \}}
+\DoxyCodeLine{\Hypertarget{_valid_products_8cs_source_l00053}00053 \}}
+
+\end{DoxyCode}

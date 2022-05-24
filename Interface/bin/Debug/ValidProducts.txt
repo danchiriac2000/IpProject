@@ -2,7 +2,7 @@
 Anti-viral: Acyclovir, Tamiflu 
 Anti-fungal: Econazole, Fluconazole, Miconazole, Ketoconazole 
 Antibiotics: Azithromycin, Amoxicillin, Doxycycline, Cephalexin, Clindamycin
-Antitussives: Robitussin, Codeine
+Antitussives: Bronchophan, Codeine
 Antispasmodic: Bentyl, Librax, Dicycloverine, Hyoscine, Atropine
 Beta blockers: Metoprolol, Acebutolol, Bisoprolol, Propranolol  
 Corticosteroid: Dexamethasone , Cotolone, Medrol, Prednicot

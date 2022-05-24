@@ -1,0 +1,4 @@
+<map id="PharmacyManagementDLL.ProxyActionManager.GetInstance" name="PharmacyManagementDLL.ProxyActionManager.GetInstance">
+<area shape="rect" id="node1" title="It creates a new instance of proxy only if it hasn&#39;t been already created." alt="" coords="297,5,515,47"/>
+<area shape="rect" id="node2" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#aebfdf954e84af8213af7529baa06e4f4" title=" " alt="" coords="5,5,249,47"/>
+</map>

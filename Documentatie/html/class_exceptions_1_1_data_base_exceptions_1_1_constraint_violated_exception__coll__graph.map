@@ -1,0 +1,4 @@
+<map id="Exceptions.DataBaseExceptions.ConstraintViolatedException" name="Exceptions.DataBaseExceptions.ConstraintViolatedException">
+<area shape="rect" id="node1" title="This class inherits the Exception base class. If the unique or the primary key constraint is violated..." alt="" coords="5,131,223,252"/>
+<area shape="rect" id="node2" title=" " alt="" coords="74,5,154,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="PharmacyManagementDLL.RealActionManager" name="PharmacyManagementDLL.RealActionManager">
+<area shape="rect" id="node1" title="This class provides useful methods in the management of a pharmacy and its staff." alt="" coords="5,248,215,472"/>
+<area shape="rect" id="node2" href="$interface_pharmacy_management_d_l_l_1_1_i_action_manager.html" title="This interface contains specific methods for actions that can take place in a pharmacy ; these method..." alt="" coords="27,5,193,200"/>
+</map>

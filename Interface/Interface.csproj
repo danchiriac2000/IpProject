@@ -48,8 +48,7 @@
     <Reference Include="Exceptions">
       <HintPath>..\ExceptionsDll\Exceptions\Exceptions\bin\Debug\Exceptions.dll</HintPath>
     </Reference>
-    <Reference Include="Items, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Items">
       <HintPath>..\ItemsDll\Items\Items\bin\Debug\Items.dll</HintPath>
     </Reference>
     <Reference Include="PharmacyManagementDLL">

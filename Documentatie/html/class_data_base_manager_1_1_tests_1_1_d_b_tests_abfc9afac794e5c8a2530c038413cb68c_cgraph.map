@@ -1,0 +1,8 @@
+<map id="DataBaseManager.Tests.DBTests.InsertExceptionTest3" name="DataBaseManager.Tests.DBTests.InsertExceptionTest3">
+<area shape="rect" id="node1" title="This function tests if the ConstraintViolatedException is thrown if two products with the same id are..." alt="" coords="5,64,228,105"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#a3312487f889e113a7eac59cbe6e80c32" title="This method deletes a product from the database. if the id is not found, it will do nothing." alt="" coords="293,5,485,47"/>
+<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#aa458477a799b93f16bd1b841bc4798df" title="Method to get the global instance of the class." alt="" coords="276,71,501,98"/>
+<area shape="rect" id="node6" href="$class_data_base_manager_1_1_d_b.html#a9192c0fd8471e823b58f82f72f7e224f" title="This method add a new user to the database. If the id or the username is already in database,..." alt="" coords="295,122,482,149"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#a9a408c7f41195dbe963f8c00212a1698" title="This method change the connection of the database instance." alt="" coords="549,35,748,76"/>
+<area shape="rect" id="node5" href="$class_data_base_manager_1_1_d_b.html#aae7eb147833c5296b0112d2f7ff60312" title="This is the constructor for the database manager. This initializes the connection and check if the da..." alt="" coords="562,101,735,127"/>
+</map>

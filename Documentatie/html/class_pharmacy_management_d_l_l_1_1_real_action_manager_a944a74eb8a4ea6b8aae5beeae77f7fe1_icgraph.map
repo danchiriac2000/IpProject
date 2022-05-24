@@ -1,0 +1,6 @@
+<map id="PharmacyManagementDLL.RealActionManager.UpdateUserPassword" name="PharmacyManagementDLL.RealActionManager.UpdateUserPassword">
+<area shape="rect" id="node1" title="Modifies user password in database." alt="" coords="616,53,855,94"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#a33ba89156d91beb4908c3986cf9a1d2e" title="Lets only those with modify users db right to modify user password in database" alt="" coords="329,53,568,94"/>
+<area shape="rect" id="node3" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ad8fa7998b73a6d3aa93549fb5f18913e" title=" " alt="" coords="5,5,281,61"/>
+<area shape="rect" id="node4" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a44fa48ca4cc9a43a460ee5ccda879878" title=" " alt="" coords="5,85,281,141"/>
+</map>

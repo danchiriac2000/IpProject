@@ -1,0 +1,9 @@
+<map id="PharmacyManagementDLL.ProxyActionManager" name="PharmacyManagementDLL.ProxyActionManager">
+<area shape="rect" id="node1" title="This class acts as a protection proxy between those who will use the application and the various acti..." alt="" coords="362,953,579,1221"/>
+<area shape="rect" id="node2" href="$interface_pharmacy_management_d_l_l_1_1_i_action_manager.html" title="This interface contains specific methods for actions that can take place in a pharmacy ; these method..." alt="" coords="604,42,771,237"/>
+<area shape="rect" id="node4" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html" title="This class provides useful methods in the management of a pharmacy and its staff." alt="" coords="35,336,244,560"/>
+<area shape="rect" id="node7" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html" title="This class acts as a protection proxy between those who will use the application and the various acti..." alt="" coords="471,623,688,891"/>
+<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html" title="DB class. This is the sqlite database manager." alt="" coords="64,5,215,273"/>
+<area shape="rect" id="node5" href="$class_items_1_1_data_base_objects_1_1_user.html" title="This is the data class for an user. Contains only the getters and setters for the private members of ..." alt="" coords="726,351,916,545"/>
+<area shape="rect" id="node6" href="$class_pharmacy_management_d_l_l_1_1_permissions.html" title=" " alt="" coords="268,402,523,494"/>
+</map>

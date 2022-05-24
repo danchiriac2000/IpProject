@@ -1,0 +1,7 @@
+<map id="Interface.FormLogIn.InitializeComponent" name="Interface.FormLogIn.InitializeComponent">
+<area shape="rect" id="node1" title="Required method for Designer support &#45; do not modify the contents of this method with the code editor..." alt="" coords="5,39,192,80"/>
+<area shape="rect" id="node2" href="$class_interface_1_1_form_log_in.html#a6dcc783f0e75226d63ab708352ed14d3" title=" " alt="" coords="240,39,407,80"/>
+<area shape="rect" id="node3" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#aa59798df45d331d93500529ad520188b" title="Verifies username and password and provides access to app only to those who are registered in the use..." alt="" coords="455,39,672,80"/>
+<area shape="rect" id="node4" href="$class_items_1_1_commons_1_1_cryptography.html#a7ac01c0227e9bf3ce4ecb6480cab1441" title="Returns the hash of a string" alt="" coords="720,5,923,47"/>
+<area shape="rect" id="node5" href="$class_data_base_manager_1_1_d_b.html#abc3b8ce47235d9c72a0fe7b65bbc24cc" title="This method is used to return all users from the database." alt="" coords="725,71,917,112"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="DataBaseManager.Tests.DBTests.TestAutoIncrement" name="DataBaseManager.Tests.DBTests.TestAutoIncrement">
+<area shape="rect" id="node1" title="This function tests if the autoincrement works." alt="" coords="5,253,228,295"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#a56fbf644be69925f3ff56adcda09501a" title="This method deletes all products from the database." alt="" coords="296,5,481,47"/>
+<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#a77b1b12695b9eea513beb8effe8fcbf9" title="This method deletes all users from the database." alt="" coords="296,71,481,112"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#abfec02ddd31c73d6215b89af9d4fe63e" title="This method creates the users and the products tables." alt="" coords="292,136,485,177"/>
+<area shape="rect" id="node5" href="$class_data_base_manager_1_1_d_b.html#aa458477a799b93f16bd1b841bc4798df" title="Method to get the global instance of the class." alt="" coords="276,202,501,229"/>
+<area shape="rect" id="node8" href="$class_data_base_manager_1_1_d_b.html#a08de6396d620f6eb5cd470a900f6fe94" title="This method is used to get max id from products table. It is used for autoincrement: new Product(GetL..." alt="" coords="288,253,489,295"/>
+<area shape="rect" id="node9" href="$class_data_base_manager_1_1_d_b.html#a80982de3f0bbdf8af1784e17d7faca65" title="This method is used to get max id from users table. It is used for autoincrement: new User(GetLastUse..." alt="" coords="288,319,489,360"/>
+<area shape="rect" id="node10" href="$class_data_base_manager_1_1_d_b.html#a9192c0fd8471e823b58f82f72f7e224f" title="This method add a new user to the database. If the id or the username is already in database,..." alt="" coords="295,385,482,411"/>
+<area shape="rect" id="node11" href="$class_data_base_manager_1_1_d_b.html#a904efedfd5523ae6cafbba7fc9061d97" title="This method is used to return all products from the database." alt="" coords="293,436,485,477"/>
+<area shape="rect" id="node12" href="$class_data_base_manager_1_1_d_b.html#abc3b8ce47235d9c72a0fe7b65bbc24cc" title="This method is used to return all users from the database." alt="" coords="293,501,485,543"/>
+<area shape="rect" id="node6" href="$class_data_base_manager_1_1_d_b.html#a9a408c7f41195dbe963f8c00212a1698" title="This method change the connection of the database instance." alt="" coords="549,165,748,207"/>
+<area shape="rect" id="node7" href="$class_data_base_manager_1_1_d_b.html#aae7eb147833c5296b0112d2f7ff60312" title="This is the constructor for the database manager. This initializes the connection and check if the da..." alt="" coords="562,231,735,258"/>
+</map>

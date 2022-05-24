@@ -1,0 +1,4 @@
+<map id="PharmacyManagementDLL.ProxyActionManager.GetProducts" name="PharmacyManagementDLL.ProxyActionManager.GetProducts">
+<area shape="rect" id="node1" title="Transmit Product list only to those who have viewProducts right." alt="" coords="349,5,567,47"/>
+<area shape="rect" id="node2" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ace66c9eb04e7dbf21dd09703d78915e0" title=" " alt="" coords="5,5,301,47"/>
+</map>

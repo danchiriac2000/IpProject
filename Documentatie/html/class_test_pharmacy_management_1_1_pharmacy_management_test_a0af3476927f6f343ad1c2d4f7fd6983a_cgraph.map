@@ -1,0 +1,11 @@
+<map id="TestPharmacyManagement.PharmacyManagementTest.DeleteUserTest" name="TestPharmacyManagement.PharmacyManagementTest.DeleteUserTest">
+<area shape="rect" id="node1" title=" " alt="" coords="5,122,249,163"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#abc11dc7a42337f3830c170c49082da1e" title="Lets only those with modify users db right to remove a user ;" alt="" coords="297,89,515,130"/>
+<area shape="rect" id="node7" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#aa59798df45d331d93500529ad520188b" title="Verifies username and password and provides access to app only to those who are registered in the use..." alt="" coords="297,154,515,195"/>
+<area shape="rect" id="node3" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a6c8a11aa7682e6577b266c28e89b6be6" title="Removes a user only if it exists." alt="" coords="587,23,797,65"/>
+<area shape="rect" id="node6" href="$class_pharmacy_management_d_l_l_1_1_permissions.html#a99e2481e6c55f0c26f3d2e3ad1436f91" title="Returns a list of action rights depending on the position of each employee." alt="" coords="563,89,821,130"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#a7badf05498c894a7b72b6ed9d7f2332f" title="This method deletes an user from the database. if the id is not found, it will do nothing." alt="" coords="869,5,1088,32"/>
+<area shape="rect" id="node5" href="$class_data_base_manager_1_1_d_b.html#a50d501d97ddfb4bfd741c162c498c722" title="This method returns an user with the given id. If the id is not found in the table,..." alt="" coords="869,56,1088,83"/>
+<area shape="rect" id="node8" href="$class_items_1_1_commons_1_1_cryptography.html#a7ac01c0227e9bf3ce4ecb6480cab1441" title="Returns the hash of a string" alt="" coords="591,154,793,195"/>
+<area shape="rect" id="node9" href="$class_data_base_manager_1_1_d_b.html#abc3b8ce47235d9c72a0fe7b65bbc24cc" title="This method is used to return all users from the database." alt="" coords="596,219,788,261"/>
+</map>

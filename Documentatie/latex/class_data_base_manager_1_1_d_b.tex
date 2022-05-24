@@ -1,0 +1,1156 @@
+\hypertarget{class_data_base_manager_1_1_d_b}{}\doxysection{Data\+Base\+Manager.\+DB Class Reference}
+\label{class_data_base_manager_1_1_d_b}\index{DataBaseManager.DB@{DataBaseManager.DB}}
+
+
+\mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} class. This is the sqlite database manager.  
+
+
+
+
+Collaboration diagram for Data\+Base\+Manager.\+DB\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{class_data_base_manager_1_1_d_b__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9a408c7f41195dbe963f8c00212a1698}{Change\+Connection}} (string db\+Name)
+\begin{DoxyCompactList}\small\item\em This method change the connection of the database instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_d_b_abfec02ddd31c73d6215b89af9d4fe63e}{Create\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em This method creates the users and the products tables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}{Insert}} (\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} usr)
+\begin{DoxyCompactList}\small\item\em This method add a new user to the database. If the id or the username is already in database, the method will throw an exception. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_d_b_aec84ee2a2ee57410cef53b9c5160371f}{Insert}} (\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} prod)
+\begin{DoxyCompactList}\small\item\em This method add a new product to the database. If the id or the name is already in database, the method will throw an exception. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} $>$ \mbox{\hyperlink{class_data_base_manager_1_1_d_b_abc3b8ce47235d9c72a0fe7b65bbc24cc}{Select\+All\+Users}} ()
+\begin{DoxyCompactList}\small\item\em This method is used to return all users from the database. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} $>$ \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a904efedfd5523ae6cafbba7fc9061d97}{Select\+All\+Products}} ()
+\begin{DoxyCompactList}\small\item\em This method is used to return all products from the database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a50d501d97ddfb4bfd741c162c498c722}{Select\+User}} (int id)
+\begin{DoxyCompactList}\small\item\em This method returns an user with the given id. If the id is not found in the table, the method will return a null object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} \mbox{\hyperlink{class_data_base_manager_1_1_d_b_aefb69276f8bb34f1d32baaeee29a6f28}{Select\+Product}} (int id)
+\begin{DoxyCompactList}\small\item\em This method returns a product with the given id. If the id is not found in the table, the method will return a null object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} \mbox{\hyperlink{class_data_base_manager_1_1_d_b_aee8fa7a057db761583d4e4f09e02dcb9}{Select\+User}} (string user\+Name)
+\begin{DoxyCompactList}\small\item\em Because username is UK, Select\+User function by username is relevant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} \mbox{\hyperlink{class_data_base_manager_1_1_d_b_abc747b0522fb7375d8261a6f8ae245ba}{Select\+Product}} (string name)
+\begin{DoxyCompactList}\small\item\em Because name is UK, Select\+Product function by name is relevant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a7badf05498c894a7b72b6ed9d7f2332f}{Delete\+User}} (int id)
+\begin{DoxyCompactList}\small\item\em This method deletes an user from the database. if the id is not found, it will do nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3312487f889e113a7eac59cbe6e80c32}{Delete\+Product}} (int id)
+\begin{DoxyCompactList}\small\item\em This method deletes a product from the database. if the id is not found, it will do nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a77b1b12695b9eea513beb8effe8fcbf9}{Clear\+Users}} ()
+\begin{DoxyCompactList}\small\item\em This method deletes all users from the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a56fbf644be69925f3ff56adcda09501a}{Clear\+Products}} ()
+\begin{DoxyCompactList}\small\item\em This method deletes all products from the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a90d337d555d84f241f46d69cf9acb337}{Update}} (\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em This method will check if the user exists in the database. If it exists, it will update the record from the database with all modified members of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a6d20cf508396ae023c006318a91853b7}{Update}} (\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} product)
+\begin{DoxyCompactList}\small\item\em This method will check if the product exists in the database. If it exists, it will update the record from the database with all modified members of the object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a80982de3f0bbdf8af1784e17d7faca65}{Get\+Last\+User\+ID}} ()
+\begin{DoxyCompactList}\small\item\em This method is used to get max id from users table. It is used for autoincrement\+: new User(Get\+Last\+User\+Id()+1,.....) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a08de6396d620f6eb5cd470a900f6fe94}{Get\+Last\+Product\+ID}} ()
+\begin{DoxyCompactList}\small\item\em This method is used to get max id from products table. It is used for autoincrement\+: new Product(Get\+Last\+Product\+Id()+1,.....) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} \mbox{\hyperlink{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}{Get\+Instance}} (string db\+Name)
+\begin{DoxyCompactList}\small\item\em Method to get the global instance of the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+SQLite\+Connection \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a73de071f49118cf24d6fc701dd5ecf24}{Connection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The getter for the connection. It is necessary if the main application wants to use commmands on the database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_base_manager_1_1_d_b_aae7eb147833c5296b0112d2f7ff60312}{DB}} (string db\+Name)
+\begin{DoxyCompactList}\small\item\em This is the constructor for the database manager. This initializes the connection and check if the database has the right file extension. This constructor can throw an exception if something goes wrong. It is private because the class is a singleton and need to be instantiated just once. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+SQLite\+Connection \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\+\_\+connection}}
+\begin{DoxyCompactList}\small\item\em Private member used to retain the connection to the database. It is initialized in the constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a1707cad57f9c25fa2fe4f31162845246}{instance}} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} class. This is the sqlite database manager. 
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_aae7eb147833c5296b0112d2f7ff60312}\label{class_data_base_manager_1_1_d_b_aae7eb147833c5296b0112d2f7ff60312}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!DB@{DB}}
+\index{DB@{DB}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{DB()}{DB()}}
+{\footnotesize\ttfamily Data\+Base\+Manager.\+DB.\+DB (\begin{DoxyParamCaption}\item[{string}]{db\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This is the constructor for the database manager. This initializes the connection and check if the database has the right file extension. This constructor can throw an exception if something goes wrong. It is private because the class is a singleton and need to be instantiated just once. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Name} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Extension\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00051}{51}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052         \{}
+\DoxyCodeLine{00053             \textcolor{keywordflow}{if} (Path.GetExtension(dbName) != \textcolor{stringliteral}{"{}.db"{}})}
+\DoxyCodeLine{00054             \{}
+\DoxyCodeLine{00055                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \mbox{\hyperlink{class_exceptions_1_1_data_base_exceptions_1_1_invalid_extension_exception}{InvalidExtensionException}}();}
+\DoxyCodeLine{00056             \}}
+\DoxyCodeLine{00057             \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}} = \textcolor{keyword}{new} SQLiteConnection(String.Format(\textcolor{stringliteral}{"{}Data Source=\{0\}; Version = 3; New = True; Compress = True; "{}}, dbName));}
+\DoxyCodeLine{00058             \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00059             \{}
+\DoxyCodeLine{00060                 \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.Open();}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062             \}}
+\DoxyCodeLine{00063             \textcolor{keywordflow}{catch} (Exception ex)}
+\DoxyCodeLine{00064             \{}
+\DoxyCodeLine{00065                 Console.WriteLine(ex.Message);}
+\DoxyCodeLine{00066             \}}
+\DoxyCodeLine{00067         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_aae7eb147833c5296b0112d2f7ff60312_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a9a408c7f41195dbe963f8c00212a1698}\label{class_data_base_manager_1_1_d_b_a9a408c7f41195dbe963f8c00212a1698}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!ChangeConnection@{ChangeConnection}}
+\index{ChangeConnection@{ChangeConnection}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{ChangeConnection()}{ChangeConnection()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+DB.\+Change\+Connection (\begin{DoxyParamCaption}\item[{string}]{db\+Name }\end{DoxyParamCaption})}
+
+
+
+This method change the connection of the database instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Name} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Extension\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00103}{103}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104         \{}
+\DoxyCodeLine{00105             \textcolor{keywordflow}{if} (Path.GetExtension(dbName) != \textcolor{stringliteral}{"{}.db"{}})}
+\DoxyCodeLine{00106             \{}
+\DoxyCodeLine{00107                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \mbox{\hyperlink{class_exceptions_1_1_data_base_exceptions_1_1_invalid_extension_exception}{InvalidExtensionException}}();}
+\DoxyCodeLine{00108             \}}
+\DoxyCodeLine{00109             \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.Close();}
+\DoxyCodeLine{00110             \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}} = \textcolor{keyword}{new} SQLiteConnection(String.Format(\textcolor{stringliteral}{"{}Data Source=\{0\}; Version = 3; New = True; Compress = True; "{}}, dbName));}
+\DoxyCodeLine{00111             \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00112             \{}
+\DoxyCodeLine{00113                 \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.Open();}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115             \}}
+\DoxyCodeLine{00116             \textcolor{keywordflow}{catch} (Exception ex)}
+\DoxyCodeLine{00117             \{}
+\DoxyCodeLine{00118                 Console.WriteLine(ex.Message);}
+\DoxyCodeLine{00119             \}}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_a9a408c7f41195dbe963f8c00212a1698_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a56fbf644be69925f3ff56adcda09501a}\label{class_data_base_manager_1_1_d_b_a56fbf644be69925f3ff56adcda09501a}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!ClearProducts@{ClearProducts}}
+\index{ClearProducts@{ClearProducts}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{ClearProducts()}{ClearProducts()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+DB.\+Clear\+Products (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method deletes all products from the database. 
+
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00447}{447}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00448         \{}
+\DoxyCodeLine{00449             SQLiteCommand command;}
+\DoxyCodeLine{00450             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00451             command.CommandText = String.Format(\textcolor{stringliteral}{"{}DELETE FROM products"{}});}
+\DoxyCodeLine{00452             command.ExecuteNonQuery();}
+\DoxyCodeLine{00453         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_a56fbf644be69925f3ff56adcda09501a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a77b1b12695b9eea513beb8effe8fcbf9}\label{class_data_base_manager_1_1_d_b_a77b1b12695b9eea513beb8effe8fcbf9}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!ClearUsers@{ClearUsers}}
+\index{ClearUsers@{ClearUsers}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{ClearUsers()}{ClearUsers()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+DB.\+Clear\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method deletes all users from the database. 
+
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00437}{437}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00438         \{}
+\DoxyCodeLine{00439             SQLiteCommand command;}
+\DoxyCodeLine{00440             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00441             command.CommandText = String.Format(\textcolor{stringliteral}{"{}DELETE FROM users"{}});}
+\DoxyCodeLine{00442             command.ExecuteNonQuery();}
+\DoxyCodeLine{00443         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_a77b1b12695b9eea513beb8effe8fcbf9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_abfec02ddd31c73d6215b89af9d4fe63e}\label{class_data_base_manager_1_1_d_b_abfec02ddd31c73d6215b89af9d4fe63e}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!CreateTables@{CreateTables}}
+\index{CreateTables@{CreateTables}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{CreateTables()}{CreateTables()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+DB.\+Create\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method creates the users and the products tables. 
+
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00127}{127}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00128         \{}
+\DoxyCodeLine{00129             SQLiteCommand command;}
+\DoxyCodeLine{00130             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00131             \textcolor{comment}{//Check if the table already exists.}}
+\DoxyCodeLine{00132             command.CommandText = \textcolor{stringliteral}{"{}SELECT name FROM sqlite\_master WHERE type='table' AND name='USERS'"{}};}
+\DoxyCodeLine{00133             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00134             \textcolor{keywordtype}{string} userTableName = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00135             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00136             \{}
+\DoxyCodeLine{00137                 \textcolor{keywordtype}{string} myreader = sqlite\_datareader.GetString(0);}
+\DoxyCodeLine{00138                 userTableName += myreader;}
+\DoxyCodeLine{00139             \}}
+\DoxyCodeLine{00140             \textcolor{comment}{//If the table was found, will not try to create the same table again.}}
+\DoxyCodeLine{00141             \textcolor{keywordflow}{if} (userTableName == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00142             \{}
+\DoxyCodeLine{00143 }
+\DoxyCodeLine{00144                 \textcolor{keywordtype}{string} usersTableCreate = \textcolor{stringliteral}{"{}CREATE TABLE USERS  (id INT PRIMARY KEY,"{}} +}
+\DoxyCodeLine{00145                     \textcolor{stringliteral}{"{}username VARCHAR2(40) UNIQUE,"{}} +}
+\DoxyCodeLine{00146                     \textcolor{stringliteral}{"{}password VARCHAR2(40) NOT NULL,"{}} +}
+\DoxyCodeLine{00147                     \textcolor{stringliteral}{"{}rights INT NOT NULL)"{}};}
+\DoxyCodeLine{00148                 command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00149                 command.CommandText = usersTableCreate;}
+\DoxyCodeLine{00150                 command.ExecuteNonQuery();}
+\DoxyCodeLine{00151             \}}
+\DoxyCodeLine{00152             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00153             \{}
+\DoxyCodeLine{00154                 \textcolor{comment}{//Do nothing.....}}
+\DoxyCodeLine{00155             \}}
+\DoxyCodeLine{00156             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00157             command.CommandText = \textcolor{stringliteral}{"{}SELECT name FROM sqlite\_master WHERE type='table' AND name='USERS'"{}};}
+\DoxyCodeLine{00158             sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00159             \textcolor{keywordtype}{string} productsTableName = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00160             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00161             \{}
+\DoxyCodeLine{00162                 \textcolor{keywordtype}{string} myreader = sqlite\_datareader.GetString(0);}
+\DoxyCodeLine{00163                 productsTableName += myreader;}
+\DoxyCodeLine{00164             \}}
+\DoxyCodeLine{00165             \textcolor{keywordflow}{if} (userTableName == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00166             \{}
+\DoxyCodeLine{00167 }
+\DoxyCodeLine{00168                 \textcolor{keywordtype}{string} productsTableCreate = \textcolor{stringliteral}{"{}CREATE TABLE PRODUCTS  (id INT PRIMARY KEY,"{}} +}
+\DoxyCodeLine{00169                     \textcolor{stringliteral}{"{}name VARCHAR2(40) UNIQUE,"{}} +}
+\DoxyCodeLine{00170                     \textcolor{stringliteral}{"{}category VARCHAR2(40),"{}} +}
+\DoxyCodeLine{00171                     \textcolor{stringliteral}{"{}price DOUBLE,"{}} +}
+\DoxyCodeLine{00172                     \textcolor{stringliteral}{"{}stock INT"{}} +}
+\DoxyCodeLine{00173                     \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00174                 command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00175                 command.CommandText = productsTableCreate;}
+\DoxyCodeLine{00176                 command.ExecuteNonQuery();}
+\DoxyCodeLine{00177             \}}
+\DoxyCodeLine{00178             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00179             \{}
+\DoxyCodeLine{00180                 \textcolor{comment}{//Do nothing...}}
+\DoxyCodeLine{00181             \}}
+\DoxyCodeLine{00182 }
+\DoxyCodeLine{00183         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_abfec02ddd31c73d6215b89af9d4fe63e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a3312487f889e113a7eac59cbe6e80c32}\label{class_data_base_manager_1_1_d_b_a3312487f889e113a7eac59cbe6e80c32}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!DeleteProduct@{DeleteProduct}}
+\index{DeleteProduct@{DeleteProduct}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{DeleteProduct()}{DeleteProduct()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+DB.\+Delete\+Product (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+This method deletes a product from the database. if the id is not found, it will do nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00426}{426}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00427         \{}
+\DoxyCodeLine{00428             SQLiteCommand command;}
+\DoxyCodeLine{00429             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00430             command.CommandText = String.Format(\textcolor{stringliteral}{"{}DELETE FROM products where id=\{0\}"{}}, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00431             command.ExecuteNonQuery();}
+\DoxyCodeLine{00432         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_a3312487f889e113a7eac59cbe6e80c32_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a7badf05498c894a7b72b6ed9d7f2332f}\label{class_data_base_manager_1_1_d_b_a7badf05498c894a7b72b6ed9d7f2332f}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!DeleteUser@{DeleteUser}}
+\index{DeleteUser@{DeleteUser}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{DeleteUser()}{DeleteUser()}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+DB.\+Delete\+User (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+This method deletes an user from the database. if the id is not found, it will do nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00413}{413}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00414         \{}
+\DoxyCodeLine{00415             SQLiteCommand command;}
+\DoxyCodeLine{00416             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00417             command.CommandText = String.Format(\textcolor{stringliteral}{"{}DELETE FROM users where id=\{0\}"{}}, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00418             command.ExecuteNonQuery();}
+\DoxyCodeLine{00419 }
+\DoxyCodeLine{00420         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_a7badf05498c894a7b72b6ed9d7f2332f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}\label{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} Data\+Base\+Manager.\+DB.\+Get\+Instance (\begin{DoxyParamCaption}\item[{string}]{db\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to get the global instance of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074         \{}
+\DoxyCodeLine{00075             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a1707cad57f9c25fa2fe4f31162845246}{instance}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{00076             \{}
+\DoxyCodeLine{00077                 \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a1707cad57f9c25fa2fe4f31162845246}{instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_data_base_manager_1_1_d_b_aae7eb147833c5296b0112d2f7ff60312}{DB}}(dbName);}
+\DoxyCodeLine{00078             \}}
+\DoxyCodeLine{00079             \textcolor{comment}{//If the dbName is different from the path of the current connection, change it.}}
+\DoxyCodeLine{00080             \textcolor{keywordflow}{if} (dbName.Substring(0, dbName.Length -\/ 3) != \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a1707cad57f9c25fa2fe4f31162845246}{instance}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a73de071f49118cf24d6fc701dd5ecf24}{Connection}}.DataSource)}
+\DoxyCodeLine{00081             \{}
+\DoxyCodeLine{00082             }
+\DoxyCodeLine{00083                 \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a1707cad57f9c25fa2fe4f31162845246}{instance}}.\mbox{\hyperlink{class_data_base_manager_1_1_d_b_a9a408c7f41195dbe963f8c00212a1698}{ChangeConnection}}(dbName);}
+\DoxyCodeLine{00084             \}}
+\DoxyCodeLine{00085             \textcolor{keywordflow}{return} \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a1707cad57f9c25fa2fe4f31162845246}{instance}};}
+\DoxyCodeLine{00086         \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_aa458477a799b93f16bd1b841bc4798df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a08de6396d620f6eb5cd470a900f6fe94}\label{class_data_base_manager_1_1_d_b_a08de6396d620f6eb5cd470a900f6fe94}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!GetLastProductID@{GetLastProductID}}
+\index{GetLastProductID@{GetLastProductID}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{GetLastProductID()}{GetLastProductID()}}
+{\footnotesize\ttfamily int Data\+Base\+Manager.\+DB.\+Get\+Last\+Product\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is used to get max id from products table. It is used for autoincrement\+: new Product(Get\+Last\+Product\+Id()+1,.....) 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00561}{561}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00562         \{}
+\DoxyCodeLine{00563             SQLiteCommand command;}
+\DoxyCodeLine{00564             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00565             command.CommandText = String.Format(\textcolor{stringliteral}{"{}SELECT MAX(id) FROM products"{}});}
+\DoxyCodeLine{00566             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00567             \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = -\/1;}
+\DoxyCodeLine{00568             \textcolor{keywordflow}{if} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00569             \{}
+\DoxyCodeLine{00570                 \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00571                 \{}
+\DoxyCodeLine{00572                     \textcolor{keywordtype}{int} myreader = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00573                     \textcolor{keywordtype}{id} = myreader;}
+\DoxyCodeLine{00574                 \}}
+\DoxyCodeLine{00575                 \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{00576                 \{}
+\DoxyCodeLine{00577                     \textcolor{keywordtype}{id} = -\/1;}
+\DoxyCodeLine{00578                 \}}
+\DoxyCodeLine{00579             \}}
+\DoxyCodeLine{00580 }
+\DoxyCodeLine{00581             \textcolor{keywordflow}{return} id;}
+\DoxyCodeLine{00582         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_a08de6396d620f6eb5cd470a900f6fe94_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a80982de3f0bbdf8af1784e17d7faca65}\label{class_data_base_manager_1_1_d_b_a80982de3f0bbdf8af1784e17d7faca65}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!GetLastUserID@{GetLastUserID}}
+\index{GetLastUserID@{GetLastUserID}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{GetLastUserID()}{GetLastUserID()}}
+{\footnotesize\ttfamily int Data\+Base\+Manager.\+DB.\+Get\+Last\+User\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is used to get max id from users table. It is used for autoincrement\+: new User(Get\+Last\+User\+Id()+1,.....) 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00534}{534}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00535         \{}
+\DoxyCodeLine{00536             SQLiteCommand command;}
+\DoxyCodeLine{00537             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00538             command.CommandText = String.Format(\textcolor{stringliteral}{"{}SELECT MAX(id) FROM users"{}});}
+\DoxyCodeLine{00539             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00540             \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = -\/1;}
+\DoxyCodeLine{00541             \textcolor{keywordflow}{if} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00542             \{}
+\DoxyCodeLine{00543                 \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00544                 \{}
+\DoxyCodeLine{00545                     \textcolor{keywordtype}{int} myreader = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00546                     \textcolor{keywordtype}{id} = myreader;}
+\DoxyCodeLine{00547                 \}}
+\DoxyCodeLine{00548                 \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{00549                 \{}
+\DoxyCodeLine{00550                     \textcolor{keywordtype}{id} = -\/1;}
+\DoxyCodeLine{00551                 \}}
+\DoxyCodeLine{00552             \}}
+\DoxyCodeLine{00553 }
+\DoxyCodeLine{00554             \textcolor{keywordflow}{return} id;}
+\DoxyCodeLine{00555         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_a80982de3f0bbdf8af1784e17d7faca65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_aec84ee2a2ee57410cef53b9c5160371f}\label{class_data_base_manager_1_1_d_b_aec84ee2a2ee57410cef53b9c5160371f}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!Insert@{Insert}}
+\index{Insert@{Insert}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+DB.\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}}]{prod }\end{DoxyParamCaption})}
+
+
+
+This method add a new product to the database. If the id or the name is already in database, the method will throw an exception. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prod} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unique\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00229}{229}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00230         \{}
+\DoxyCodeLine{00231             \textcolor{keywordflow}{if} (prod.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_abfa57938ae1d47f617dfd0722d733f43}{Stock}} < 0)}
+\DoxyCodeLine{00232             \{}
+\DoxyCodeLine{00233                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \mbox{\hyperlink{class_exceptions_1_1_data_base_exceptions_1_1_invalid_stock_exception}{InvalidStockException}}();}
+\DoxyCodeLine{00234             \}}
+\DoxyCodeLine{00235             SQLiteCommand command;}
+\DoxyCodeLine{00236             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00237             command.CommandText = String.Format(\textcolor{stringliteral}{"{}SELECT id FROM products WHERE id=\{0\}"{}},prod.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a8f2bcb2fe32bfa0dd4e2735db324298e}{Id}});}
+\DoxyCodeLine{00238             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00239             \textcolor{keywordtype}{string} \textcolor{keywordtype}{id} = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00240             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00241             \{}
+\DoxyCodeLine{00242                 \textcolor{keywordtype}{int} myreader = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00243                 \textcolor{keywordtype}{id} += myreader;}
+\DoxyCodeLine{00244             \}}
+\DoxyCodeLine{00245             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} != \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00246             \{}
+\DoxyCodeLine{00247                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \mbox{\hyperlink{class_exceptions_1_1_data_base_exceptions_1_1_constraint_violated_exception}{ConstraintViolatedException}}();}
+\DoxyCodeLine{00248             \}}
+\DoxyCodeLine{00249 }
+\DoxyCodeLine{00250             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00251             command.CommandText = String.Format(\textcolor{stringliteral}{"{}SELECT name FROM products WHERE name='\{0\}'"{}}, prod.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a9db429b8933506ece8be2583669750e2}{Name}});}
+\DoxyCodeLine{00252             \textcolor{keywordtype}{string} username = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00253             sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00254             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00255             \{}
+\DoxyCodeLine{00256                 \textcolor{keywordtype}{string} myreader = sqlite\_datareader.GetString(0);}
+\DoxyCodeLine{00257                 username += myreader;}
+\DoxyCodeLine{00258             \}}
+\DoxyCodeLine{00259             \textcolor{keywordflow}{if} (username != \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00260             \{}
+\DoxyCodeLine{00261                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \mbox{\hyperlink{class_exceptions_1_1_data_base_exceptions_1_1_constraint_violated_exception}{ConstraintViolatedException}}();}
+\DoxyCodeLine{00262             \}}
+\DoxyCodeLine{00263             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00264             command.CommandText = String.Format(\textcolor{stringliteral}{"{}INSERT INTO products(id,name,category,price,stock) VALUES(\{0\},'\{1\}','\{2\}',\{3\},\{4\})"{}}, prod.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a8f2bcb2fe32bfa0dd4e2735db324298e}{Id}}, prod.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a9db429b8933506ece8be2583669750e2}{Name}},prod.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a3136011320ffe6bf1c0c391d03209fac}{Category}},prod.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a55eb36b2f3160ce3daedb2f97c489c9a}{Price}},prod.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_abfa57938ae1d47f617dfd0722d733f43}{Stock}});}
+\DoxyCodeLine{00265             command.ExecuteNonQuery();}
+\DoxyCodeLine{00266         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}\label{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!Insert@{Insert}}
+\index{Insert@{Insert}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+DB.\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}}]{usr }\end{DoxyParamCaption})}
+
+
+
+This method add a new user to the database. If the id or the username is already in database, the method will throw an exception. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usr} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unique\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00189}{189}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00190         \{}
+\DoxyCodeLine{00191             SQLiteCommand command;}
+\DoxyCodeLine{00192             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00193             command.CommandText =String.Format(\textcolor{stringliteral}{"{}SELECT id FROM users WHERE id=\{0\}"{}},usr.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a9138535e5bac7515e0b683004f8173c8}{Id}});}
+\DoxyCodeLine{00194             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00195             \textcolor{keywordtype}{string} \textcolor{keywordtype}{id} = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00196             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00197             \{}
+\DoxyCodeLine{00198                 \textcolor{keywordtype}{int} myreader = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00199                 \textcolor{keywordtype}{id} += myreader;}
+\DoxyCodeLine{00200             \}}
+\DoxyCodeLine{00201             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} != \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00202             \{}
+\DoxyCodeLine{00203                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \mbox{\hyperlink{class_exceptions_1_1_data_base_exceptions_1_1_constraint_violated_exception}{ConstraintViolatedException}}();}
+\DoxyCodeLine{00204             \}}
+\DoxyCodeLine{00205          }
+\DoxyCodeLine{00206             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00207             command.CommandText = String.Format(\textcolor{stringliteral}{"{}SELECT username FROM users WHERE username='\{0\}'"{}}, usr.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a1986ae3c7630ce95709cb6adaedfc2bf}{Username}});}
+\DoxyCodeLine{00208             \textcolor{keywordtype}{string} username = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00209             sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00210             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00211             \{}
+\DoxyCodeLine{00212                 \textcolor{keywordtype}{string} myreader = sqlite\_datareader.GetString(0);}
+\DoxyCodeLine{00213                 username += myreader;}
+\DoxyCodeLine{00214             \}}
+\DoxyCodeLine{00215             \textcolor{keywordflow}{if} (username != \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00216             \{}
+\DoxyCodeLine{00217                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \mbox{\hyperlink{class_exceptions_1_1_data_base_exceptions_1_1_constraint_violated_exception}{ConstraintViolatedException}}();}
+\DoxyCodeLine{00218             \}}
+\DoxyCodeLine{00219             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00220             command.CommandText =String.Format(\textcolor{stringliteral}{"{}INSERT INTO users(id,username,password,rights) VALUES(\{0\},'\{1\}','\{2\}',\{3\})"{}},usr.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a9138535e5bac7515e0b683004f8173c8}{Id}},usr.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a1986ae3c7630ce95709cb6adaedfc2bf}{Username}},usr.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a3779f8a7a0515674cc45174ba00f3959}{Password}},usr.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_ae62df27867676b0909c00a8e85ea3744}{Rights}});}
+\DoxyCodeLine{00221             command.ExecuteNonQuery();}
+\DoxyCodeLine{00222 }
+\DoxyCodeLine{00223         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_a9192c0fd8471e823b58f82f72f7e224f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a904efedfd5523ae6cafbba7fc9061d97}\label{class_data_base_manager_1_1_d_b_a904efedfd5523ae6cafbba7fc9061d97}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!SelectAllProducts@{SelectAllProducts}}
+\index{SelectAllProducts@{SelectAllProducts}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{SelectAllProducts()}{SelectAllProducts()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} $>$ Data\+Base\+Manager.\+DB.\+Select\+All\+Products (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is used to return all products from the database. 
+
+\begin{DoxyReturn}{Returns}
+Return a List of Products
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00295}{295}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00296         \{}
+\DoxyCodeLine{00297             List<Product> products = \textcolor{keyword}{new} List<Product>();}
+\DoxyCodeLine{00298             SQLiteCommand command;}
+\DoxyCodeLine{00299             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00300             command.CommandText = \textcolor{stringliteral}{"{}SELECT * FROM products"{}};}
+\DoxyCodeLine{00301             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00302             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00303             \{}
+\DoxyCodeLine{00304                 \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00305                 \textcolor{keywordtype}{string} name = sqlite\_datareader.GetString(1);}
+\DoxyCodeLine{00306                 \textcolor{keywordtype}{string} category = sqlite\_datareader.GetString(2);}
+\DoxyCodeLine{00307                 \textcolor{keywordtype}{double} price = sqlite\_datareader.GetDouble(3);}
+\DoxyCodeLine{00308                 \textcolor{keywordtype}{int} stock = sqlite\_datareader.GetInt32(4);}
+\DoxyCodeLine{00309                 \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} product = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(\textcolor{keywordtype}{id}, name, category, price,stock);}
+\DoxyCodeLine{00310                 products.Add(product);}
+\DoxyCodeLine{00311             \}}
+\DoxyCodeLine{00312             \textcolor{keywordflow}{return} products;}
+\DoxyCodeLine{00313 }
+\DoxyCodeLine{00314         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_a904efedfd5523ae6cafbba7fc9061d97_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_abc3b8ce47235d9c72a0fe7b65bbc24cc}\label{class_data_base_manager_1_1_d_b_abc3b8ce47235d9c72a0fe7b65bbc24cc}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!SelectAllUsers@{SelectAllUsers}}
+\index{SelectAllUsers@{SelectAllUsers}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{SelectAllUsers()}{SelectAllUsers()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} $>$ Data\+Base\+Manager.\+DB.\+Select\+All\+Users (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is used to return all users from the database. 
+
+\begin{DoxyReturn}{Returns}
+Return a List of Users
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00271}{271}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00272         \{}
+\DoxyCodeLine{00273             List<User> users = \textcolor{keyword}{new} List<User>();}
+\DoxyCodeLine{00274             SQLiteCommand command;}
+\DoxyCodeLine{00275             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00276             command.CommandText = \textcolor{stringliteral}{"{}SELECT * FROM users"{}};}
+\DoxyCodeLine{00277             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00278             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00279             \{}
+\DoxyCodeLine{00280                 \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00281                 \textcolor{keywordtype}{string} username = sqlite\_datareader.GetString(1);}
+\DoxyCodeLine{00282                 \textcolor{keywordtype}{string} password = sqlite\_datareader.GetString(2);}
+\DoxyCodeLine{00283                 \textcolor{keywordtype}{int} rights = sqlite\_datareader.GetInt32(3);}
+\DoxyCodeLine{00284                 \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} usr = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(\textcolor{keywordtype}{id}, username, password, rights);}
+\DoxyCodeLine{00285                 users.Add(usr);}
+\DoxyCodeLine{00286             \}}
+\DoxyCodeLine{00287             \textcolor{keywordflow}{return} users;}
+\DoxyCodeLine{00288 }
+\DoxyCodeLine{00289 }
+\DoxyCodeLine{00290         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_abc3b8ce47235d9c72a0fe7b65bbc24cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_aefb69276f8bb34f1d32baaeee29a6f28}\label{class_data_base_manager_1_1_d_b_aefb69276f8bb34f1d32baaeee29a6f28}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!SelectProduct@{SelectProduct}}
+\index{SelectProduct@{SelectProduct}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{SelectProduct()}{SelectProduct()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} Data\+Base\+Manager.\+DB.\+Select\+Product (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+This method returns a product with the given id. If the id is not found in the table, the method will return a null object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00342}{342}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00343         \{}
+\DoxyCodeLine{00344             SQLiteCommand command;}
+\DoxyCodeLine{00345             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00346             command.CommandText = String.Format(\textcolor{stringliteral}{"{}SELECT * FROM products where id=\{0\}"{}}, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00347             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00348             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} product = \textcolor{keyword}{null};}
+\DoxyCodeLine{00349             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00350             \{}
+\DoxyCodeLine{00351                 \textcolor{keywordtype}{int} pid = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00352                 \textcolor{keywordtype}{string} name = sqlite\_datareader.GetString(1);}
+\DoxyCodeLine{00353                 \textcolor{keywordtype}{string} category = sqlite\_datareader.GetString(2);}
+\DoxyCodeLine{00354                 \textcolor{keywordtype}{double} price = sqlite\_datareader.GetDouble(3);}
+\DoxyCodeLine{00355                 \textcolor{keywordtype}{int} stock = sqlite\_datareader.GetInt32(4);}
+\DoxyCodeLine{00356                 product = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(\textcolor{keywordtype}{id}, name, category, price, stock);}
+\DoxyCodeLine{00357              }
+\DoxyCodeLine{00358             \}}
+\DoxyCodeLine{00359             \textcolor{keywordflow}{return} product;}
+\DoxyCodeLine{00360         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_aefb69276f8bb34f1d32baaeee29a6f28_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_abc747b0522fb7375d8261a6f8ae245ba}\label{class_data_base_manager_1_1_d_b_abc747b0522fb7375d8261a6f8ae245ba}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!SelectProduct@{SelectProduct}}
+\index{SelectProduct@{SelectProduct}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{SelectProduct()}{SelectProduct()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} Data\+Base\+Manager.\+DB.\+Select\+Product (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Because name is UK, Select\+Product function by name is relevant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00389}{389}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00390         \{}
+\DoxyCodeLine{00391             SQLiteCommand command;}
+\DoxyCodeLine{00392             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00393             command.CommandText = String.Format(\textcolor{stringliteral}{"{}SELECT * FROM products where name='\{0\}'"{}}, name);}
+\DoxyCodeLine{00394             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00395             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}} product = \textcolor{keyword}{null};}
+\DoxyCodeLine{00396             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00397             \{}
+\DoxyCodeLine{00398                 \textcolor{keywordtype}{int} pid = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00399                 \textcolor{keywordtype}{string} productname = sqlite\_datareader.GetString(1);}
+\DoxyCodeLine{00400                 \textcolor{keywordtype}{string} category = sqlite\_datareader.GetString(2);}
+\DoxyCodeLine{00401                 \textcolor{keywordtype}{double} price = sqlite\_datareader.GetDouble(3);}
+\DoxyCodeLine{00402                 \textcolor{keywordtype}{int} stock = sqlite\_datareader.GetInt32(4);}
+\DoxyCodeLine{00403                 product = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}(pid, productname, category, price, stock);}
+\DoxyCodeLine{00404 }
+\DoxyCodeLine{00405             \}}
+\DoxyCodeLine{00406             \textcolor{keywordflow}{return} product;}
+\DoxyCodeLine{00407         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a50d501d97ddfb4bfd741c162c498c722}\label{class_data_base_manager_1_1_d_b_a50d501d97ddfb4bfd741c162c498c722}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!SelectUser@{SelectUser}}
+\index{SelectUser@{SelectUser}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{SelectUser()}{SelectUser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} Data\+Base\+Manager.\+DB.\+Select\+User (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+This method returns an user with the given id. If the id is not found in the table, the method will return a null object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00320}{320}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00321         \{}
+\DoxyCodeLine{00322             SQLiteCommand command;}
+\DoxyCodeLine{00323             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00324             command.CommandText = String.Format(\textcolor{stringliteral}{"{}SELECT * FROM users where id=\{0\}"{}},\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00325             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00326             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} user = \textcolor{keyword}{null};}
+\DoxyCodeLine{00327             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00328             \{}
+\DoxyCodeLine{00329                 \textcolor{keywordtype}{int} uid = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00330                 \textcolor{keywordtype}{string} username = sqlite\_datareader.GetString(1);}
+\DoxyCodeLine{00331                 \textcolor{keywordtype}{string} password = sqlite\_datareader.GetString(2);}
+\DoxyCodeLine{00332                 \textcolor{keywordtype}{int} rights = sqlite\_datareader.GetInt32(3);}
+\DoxyCodeLine{00333                 user = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(uid, username, password, rights);}
+\DoxyCodeLine{00334             \}}
+\DoxyCodeLine{00335             \textcolor{keywordflow}{return} user;}
+\DoxyCodeLine{00336         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_a50d501d97ddfb4bfd741c162c498c722_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_aee8fa7a057db761583d4e4f09e02dcb9}\label{class_data_base_manager_1_1_d_b_aee8fa7a057db761583d4e4f09e02dcb9}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!SelectUser@{SelectUser}}
+\index{SelectUser@{SelectUser}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{SelectUser()}{SelectUser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} Data\+Base\+Manager.\+DB.\+Select\+User (\begin{DoxyParamCaption}\item[{string}]{user\+Name }\end{DoxyParamCaption})}
+
+
+
+Because username is UK, Select\+User function by username is relevant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00366}{366}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00367         \{}
+\DoxyCodeLine{00368             SQLiteCommand command;}
+\DoxyCodeLine{00369             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00370             command.CommandText = String.Format(\textcolor{stringliteral}{"{}SELECT * FROM users where username='\{0\}'"{}}, userName);}
+\DoxyCodeLine{00371             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00372             \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}} user = \textcolor{keyword}{null};}
+\DoxyCodeLine{00373             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00374             \{}
+\DoxyCodeLine{00375                 \textcolor{keywordtype}{int} uid = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00376                 \textcolor{keywordtype}{string} username = sqlite\_datareader.GetString(1);}
+\DoxyCodeLine{00377                 \textcolor{keywordtype}{string} password = sqlite\_datareader.GetString(2);}
+\DoxyCodeLine{00378                 \textcolor{keywordtype}{int} rights = sqlite\_datareader.GetInt32(3);}
+\DoxyCodeLine{00379                 user = \textcolor{keyword}{new} \mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}(uid, username, password, rights);}
+\DoxyCodeLine{00380             \}}
+\DoxyCodeLine{00381             \textcolor{keywordflow}{return} user;}
+\DoxyCodeLine{00382         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a6d20cf508396ae023c006318a91853b7}\label{class_data_base_manager_1_1_d_b_a6d20cf508396ae023c006318a91853b7}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!Update@{Update}}
+\index{Update@{Update}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+DB.\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product}{Product}}}]{product }\end{DoxyParamCaption})}
+
+
+
+This method will check if the product exists in the database. If it exists, it will update the record from the database with all modified members of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em product} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00493}{493}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00494         \{}
+\DoxyCodeLine{00495             \textcolor{keywordflow}{if} (product.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_abfa57938ae1d47f617dfd0722d733f43}{Stock}} < 0)}
+\DoxyCodeLine{00496             \{}
+\DoxyCodeLine{00497                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \mbox{\hyperlink{class_exceptions_1_1_data_base_exceptions_1_1_invalid_stock_exception}{InvalidStockException}}();}
+\DoxyCodeLine{00498             \}}
+\DoxyCodeLine{00499             SQLiteCommand command;}
+\DoxyCodeLine{00500             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00501             command.CommandText = String.Format(\textcolor{stringliteral}{"{}SELECT id FROM products WHERE id=\{0\}"{}}, product.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a8f2bcb2fe32bfa0dd4e2735db324298e}{Id}});}
+\DoxyCodeLine{00502             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00503             \textcolor{keywordtype}{string} \textcolor{keywordtype}{id} = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00504             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00505             \{}
+\DoxyCodeLine{00506                 \textcolor{keywordtype}{int} myreader = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00507                 \textcolor{keywordtype}{id} += myreader;}
+\DoxyCodeLine{00508             \}}
+\DoxyCodeLine{00509             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} != \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00510             \{}
+\DoxyCodeLine{00511                 command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00512                 command.CommandText = String.Format(\textcolor{stringliteral}{"{}UPDATE products"{}} +}
+\DoxyCodeLine{00513                     \textcolor{stringliteral}{"{} SET name='\{0\}',"{}} +}
+\DoxyCodeLine{00514                     \textcolor{stringliteral}{"{}category='\{1\}',"{}} +}
+\DoxyCodeLine{00515                     \textcolor{stringliteral}{"{}price='\{2\}',"{}} +}
+\DoxyCodeLine{00516                     \textcolor{stringliteral}{"{}stock=\{3\}"{}} +}
+\DoxyCodeLine{00517                     \textcolor{stringliteral}{"{} WHERE id=\{4\}"{}}, product.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a9db429b8933506ece8be2583669750e2}{Name}},product.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a3136011320ffe6bf1c0c391d03209fac}{Category}},product.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a55eb36b2f3160ce3daedb2f97c489c9a}{Price}},product.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_abfa57938ae1d47f617dfd0722d733f43}{Stock}},product.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_product_a8f2bcb2fe32bfa0dd4e2735db324298e}{Id}});}
+\DoxyCodeLine{00518 }
+\DoxyCodeLine{00519                 command.ExecuteNonQuery();}
+\DoxyCodeLine{00520             \}}
+\DoxyCodeLine{00521             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00522             \{}
+\DoxyCodeLine{00523                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \mbox{\hyperlink{class_exceptions_1_1_data_base_exceptions_1_1_record_not_found_exception}{RecordNotFoundException}}();}
+\DoxyCodeLine{00524 }
+\DoxyCodeLine{00525             \}}
+\DoxyCodeLine{00526 }
+\DoxyCodeLine{00527 }
+\DoxyCodeLine{00528         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a90d337d555d84f241f46d69cf9acb337}\label{class_data_base_manager_1_1_d_b_a90d337d555d84f241f46d69cf9acb337}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!Update@{Update}}
+\index{Update@{Update}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Data\+Base\+Manager.\+DB.\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user}{User}}}]{user }\end{DoxyParamCaption})}
+
+
+
+This method will check if the user exists in the database. If it exists, it will update the record from the database with all modified members of the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00458}{458}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00459         \{}
+\DoxyCodeLine{00460             SQLiteCommand command;}
+\DoxyCodeLine{00461             command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00462             command.CommandText = String.Format(\textcolor{stringliteral}{"{}SELECT id FROM users WHERE id=\{0\}"{}},user.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a9138535e5bac7515e0b683004f8173c8}{Id}});}
+\DoxyCodeLine{00463             SQLiteDataReader sqlite\_datareader = command.ExecuteReader();}
+\DoxyCodeLine{00464             \textcolor{keywordtype}{string} \textcolor{keywordtype}{id} = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00465             \textcolor{keywordflow}{while} (sqlite\_datareader.Read())}
+\DoxyCodeLine{00466             \{}
+\DoxyCodeLine{00467                 \textcolor{keywordtype}{int} myreader = sqlite\_datareader.GetInt32(0);}
+\DoxyCodeLine{00468                 \textcolor{keywordtype}{id} += myreader;}
+\DoxyCodeLine{00469             \}}
+\DoxyCodeLine{00470             \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} != \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00471             \{}
+\DoxyCodeLine{00472                 command = \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}}.CreateCommand();}
+\DoxyCodeLine{00473                 command.CommandText = String.Format(\textcolor{stringliteral}{"{}UPDATE users"{}} +}
+\DoxyCodeLine{00474                     \textcolor{stringliteral}{"{} SET username='\{0\}',"{}} +}
+\DoxyCodeLine{00475                     \textcolor{stringliteral}{"{}password='\{1\}',"{}} +}
+\DoxyCodeLine{00476                     \textcolor{stringliteral}{"{}rights=\{2\}"{}} +}
+\DoxyCodeLine{00477                     \textcolor{stringliteral}{"{} WHERE id=\{3\}"{}},user.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a1986ae3c7630ce95709cb6adaedfc2bf}{Username}},user.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a3779f8a7a0515674cc45174ba00f3959}{Password}},user.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_ae62df27867676b0909c00a8e85ea3744}{Rights}},user.\mbox{\hyperlink{class_items_1_1_data_base_objects_1_1_user_a9138535e5bac7515e0b683004f8173c8}{Id}});}
+\DoxyCodeLine{00478                 }
+\DoxyCodeLine{00479                 command.ExecuteNonQuery();}
+\DoxyCodeLine{00480             \}}
+\DoxyCodeLine{00481             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00482             \{}
+\DoxyCodeLine{00483                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} \mbox{\hyperlink{class_exceptions_1_1_data_base_exceptions_1_1_record_not_found_exception}{RecordNotFoundException}}();}
+\DoxyCodeLine{00484             }
+\DoxyCodeLine{00485             \}}
+\DoxyCodeLine{00486 }
+\DoxyCodeLine{00487 }
+\DoxyCodeLine{00488         \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_data_base_manager_1_1_d_b_a90d337d555d84f241f46d69cf9acb337_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}\label{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!\_connection@{\_connection}}
+\index{\_connection@{\_connection}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{\_connection}{\_connection}}
+{\footnotesize\ttfamily SQLite\+Connection Data\+Base\+Manager.\+DB.\+\_\+connection\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private member used to retain the connection to the database. It is initialized in the constructor. 
+
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a1707cad57f9c25fa2fe4f31162845246}\label{class_data_base_manager_1_1_d_b_a1707cad57f9c25fa2fe4f31162845246}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!instance@{instance}}
+\index{instance@{instance}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_data_base_manager_1_1_d_b}{DB}} Data\+Base\+Manager.\+DB.\+instance = null\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_data_base_manager_1_1_d_b_a73de071f49118cf24d6fc701dd5ecf24}\label{class_data_base_manager_1_1_d_b_a73de071f49118cf24d6fc701dd5ecf24}} 
+\index{DataBaseManager.DB@{DataBaseManager.DB}!Connection@{Connection}}
+\index{Connection@{Connection}!DataBaseManager.DB@{DataBaseManager.DB}}
+\doxysubsubsection{\texorpdfstring{Connection}{Connection}}
+{\footnotesize\ttfamily SQLite\+Connection Data\+Base\+Manager.\+DB.\+Connection\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The getter for the connection. It is necessary if the main application wants to use commmands on the database. 
+
+
+
+Definition at line \mbox{\hyperlink{_data_base_manager_8cs_source_l00090}{90}} of file \mbox{\hyperlink{_data_base_manager_8cs_source}{Data\+Base\+Manager.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091         \{}
+\DoxyCodeLine{00092             \textcolor{keyword}{get}}
+\DoxyCodeLine{00093             \{}
+\DoxyCodeLine{00094                 \textcolor{keywordflow}{return} \mbox{\hyperlink{class_data_base_manager_1_1_d_b_a3fc5b7cacc2dd12d9e8904f573f5d559}{\_connection}};}
+\DoxyCodeLine{00095             \}}
+\DoxyCodeLine{00096           }
+\DoxyCodeLine{00097         \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Base\+Dll/\+Data\+Base\+Manager/\mbox{\hyperlink{_data_base_manager_8cs}{Data\+Base\+Manager.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="PharmacyManagementDLL.ProxyActionManager.GetUser" name="PharmacyManagementDLL.ProxyActionManager.GetUser">
+<area shape="rect" id="node1" title="Gets info about a user only to those who have view users right." alt="" coords="5,39,223,80"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#ac23796bea165249c183d9e94e1b843e9" title="Gets info about a user with the given id." alt="" coords="295,5,505,47"/>
+<area shape="rect" id="node4" href="$class_pharmacy_management_d_l_l_1_1_permissions.html#a99e2481e6c55f0c26f3d2e3ad1436f91" title="Returns a list of action rights depending on the position of each employee." alt="" coords="271,71,529,112"/>
+<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#a50d501d97ddfb4bfd741c162c498c722" title="This method returns an user with the given id. If the id is not found in the table,..." alt="" coords="577,13,796,39"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="PharmacyManagementDLL.RealActionManager.DeleteUser" name="PharmacyManagementDLL.RealActionManager.DeleteUser">
+<area shape="rect" id="node1" title="Removes a user only if it exists." alt="" coords="5,23,215,65"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#a7badf05498c894a7b72b6ed9d7f2332f" title="This method deletes an user from the database. if the id is not found, it will do nothing." alt="" coords="263,5,481,32"/>
+<area shape="rect" id="node3" href="$class_data_base_manager_1_1_d_b.html#a50d501d97ddfb4bfd741c162c498c722" title="This method returns an user with the given id. If the id is not found in the table,..." alt="" coords="263,56,481,83"/>
+</map>

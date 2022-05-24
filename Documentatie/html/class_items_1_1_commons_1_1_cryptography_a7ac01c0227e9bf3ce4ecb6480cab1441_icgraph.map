@@ -1,0 +1,33 @@
+<map id="Items.Commons.Cryptography.HashString" name="Items.Commons.Cryptography.HashString">
+<area shape="rect" id="node1" title="Returns the hash of a string" alt="" coords="1451,692,1653,733"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a5d4c9cd691b743e5ac26b83d65e9d0e0" title="Add new employee profile to database." alt="" coords="1179,369,1388,411"/>
+<area shape="rect" id="node9" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#aa59798df45d331d93500529ad520188b" title="Verifies username and password and provides access to app only to those who are registered in the use..." alt="" coords="888,692,1105,733"/>
+<area shape="rect" id="node30" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a944a74eb8a4ea6b8aae5beeae77f7fe1" title="Modifies user password in database." alt="" coords="1164,987,1403,1028"/>
+<area shape="rect" id="node3" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#a28f55eb8e23c4bb69c5e4b367d19f608" title="Lets currentUser to add new employee profile to database only if he has this right" alt="" coords="888,104,1105,145"/>
+<area shape="rect" id="node4" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ae5742464573d9f00b258b01d5cbbafd2" title=" " alt="" coords="526,71,801,112"/>
+<area shape="rect" id="node5" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ac327a7d8c52984b737c1d3e9af32b059" title=" " alt="" coords="497,136,829,177"/>
+<area shape="rect" id="node6" href="$class_interface_1_1_form_add_user.html#aee440bb26b3e2df9b17fb775c02752db" title=" " alt="" coords="566,5,761,47"/>
+<area shape="rect" id="node7" href="$class_interface_1_1_form_add_user.html#a47eb0e23051c5da31ac6a128b76bdcf6" title="Required method for Designer support &#45; do not modify the contents of this method with the code editor..." alt="" coords="243,5,449,47"/>
+<area shape="rect" id="node8" href="$class_interface_1_1_form_add_user.html#aa9a746e3e72c4d019aaa8eb8d0f483e1" title=" " alt="" coords="5,5,195,47"/>
+<area shape="rect" id="node10" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a98ee5aa6a1da89d78a121b4b505f91dc" title=" " alt="" coords="523,1116,804,1157"/>
+<area shape="rect" id="node11" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a5abfcecba187cc615c0fe9696684bcef" title=" " alt="" coords="502,1181,825,1223"/>
+<area shape="rect" id="node12" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a31c1573c24526de6a851d9e612c409b1" title=" " alt="" coords="500,201,827,243"/>
+<area shape="rect" id="node13" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a55d17aeb45e79cdc631bbe7de4558061" title=" " alt="" coords="529,267,798,308"/>
+<area shape="rect" id="node14" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a0af3476927f6f343ad1c2d4f7fd6983a" title=" " alt="" coords="541,332,785,373"/>
+<area shape="rect" id="node15" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a9afc883a29e11cef757aa04f863b2cc9" title=" " alt="" coords="522,397,805,439"/>
+<area shape="rect" id="node16" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ace66c9eb04e7dbf21dd09703d78915e0" title=" " alt="" coords="515,463,811,504"/>
+<area shape="rect" id="node17" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a4d51b6f4f6eec75d7a796dd4ae0acd63" title=" " alt="" coords="541,528,785,569"/>
+<area shape="rect" id="node18" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ab4e25a63ecd0519b520b1ae94ac5f477" title=" " alt="" coords="541,593,785,635"/>
+<area shape="rect" id="node19" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#aac3f063ccc5116a5535c968837238416" title=" " alt="" coords="541,659,785,700"/>
+<area shape="rect" id="node20" href="$class_interface_1_1_form_log_in.html#a6dcc783f0e75226d63ab708352ed14d3" title=" " alt="" coords="580,724,747,765"/>
+<area shape="rect" id="node23" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a3a61fa7ac893836e1e223960785552c0" title=" " alt="" coords="534,855,793,896"/>
+<area shape="rect" id="node24" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a0f83db624707cbc0bdc88fc48bc5ce1c" title=" " alt="" coords="535,920,792,961"/>
+<area shape="rect" id="node25" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a4be09837835613f3e1076461499e596c" title=" " alt="" coords="541,985,785,1027"/>
+<area shape="rect" id="node26" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a7a59e994ba64896fb351b9b5cad3b505" title=" " alt="" coords="536,1051,791,1092"/>
+<area shape="rect" id="node27" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a3ef5a72254eba475207096307c624883" title=" " alt="" coords="520,789,807,831"/>
+<area shape="rect" id="node28" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#ad8fa7998b73a6d3aa93549fb5f18913e" title=" " alt="" coords="525,1327,801,1383"/>
+<area shape="rect" id="node29" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a44fa48ca4cc9a43a460ee5ccda879878" title=" " alt="" coords="525,1247,801,1303"/>
+<area shape="rect" id="node21" href="$class_interface_1_1_form_log_in.html#ab4bdd909ae2342481f0adbb3572ab689" title="Required method for Designer support &#45; do not modify the contents of this method with the code editor..." alt="" coords="253,724,439,765"/>
+<area shape="rect" id="node22" href="$class_interface_1_1_form_log_in.html#a752aa27de2fc204d17eb82b12b1df4e3" title=" " alt="" coords="15,724,185,765"/>
+<area shape="rect" id="node31" href="$class_pharmacy_management_d_l_l_1_1_proxy_action_manager.html#a33ba89156d91beb4908c3986cf9a1d2e" title="Lets only those with modify users db right to modify user password in database" alt="" coords="877,1255,1116,1296"/>
+</map>

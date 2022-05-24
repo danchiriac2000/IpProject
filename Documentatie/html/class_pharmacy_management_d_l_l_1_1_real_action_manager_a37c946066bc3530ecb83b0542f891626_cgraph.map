@@ -1,0 +1,4 @@
+<map id="PharmacyManagementDLL.RealActionManager.GetProducts" name="PharmacyManagementDLL.RealActionManager.GetProducts">
+<area shape="rect" id="node1" title="Queries database for obtain a list of all existing products." alt="" coords="5,5,215,47"/>
+<area shape="rect" id="node2" href="$class_data_base_manager_1_1_d_b.html#a904efedfd5523ae6cafbba7fc9061d97" title="This method is used to return all products from the database." alt="" coords="263,5,455,47"/>
+</map>

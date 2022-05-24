@@ -1,0 +1,5 @@
+<map id="PharmacyManagementDLL.ProxyActionManager.SellProduct" name="PharmacyManagementDLL.ProxyActionManager.SellProduct">
+<area shape="rect" id="node1" title="Gives access to sell products only to those who have SellRight." alt="" coords="340,39,557,80"/>
+<area shape="rect" id="node2" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a7a59e994ba64896fb351b9b5cad3b505" title=" " alt="" coords="21,5,276,47"/>
+<area shape="rect" id="node3" href="$class_test_pharmacy_management_1_1_pharmacy_management_test.html#a3ef5a72254eba475207096307c624883" title=" " alt="" coords="5,71,292,112"/>
+</map>

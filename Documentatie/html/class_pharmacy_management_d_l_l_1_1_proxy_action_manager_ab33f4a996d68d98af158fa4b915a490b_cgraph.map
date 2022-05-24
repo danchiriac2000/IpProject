@@ -1,0 +1,7 @@
+<map id="PharmacyManagementDLL.ProxyActionManager.SellProduct" name="PharmacyManagementDLL.ProxyActionManager.SellProduct">
+<area shape="rect" id="node1" title="Gives access to sell products only to those who have SellRight." alt="" coords="5,39,223,80"/>
+<area shape="rect" id="node2" href="$class_pharmacy_management_d_l_l_1_1_permissions.html#a99e2481e6c55f0c26f3d2e3ad1436f91" title="Returns a list of action rights depending on the position of each employee." alt="" coords="271,5,529,47"/>
+<area shape="rect" id="node3" href="$class_pharmacy_management_d_l_l_1_1_real_action_manager.html#a1a1ef6a5fe94d9cec61edba813c134f8" title="Sell product with the given barcode and returns failure(false) if the product doesn&#39;t exist or if it&#39;..." alt="" coords="295,71,505,112"/>
+<area shape="rect" id="node4" href="$class_data_base_manager_1_1_d_b.html#aefb69276f8bb34f1d32baaeee29a6f28" title="This method returns a product with the given id. If the id is not found in the table,..." alt="" coords="579,41,771,83"/>
+<area shape="rect" id="node5" href="$class_data_base_manager_1_1_d_b.html#a90d337d555d84f241f46d69cf9acb337" title="This method will check if the user exists in the database. If it exists, it will update the record fr..." alt="" coords="577,107,773,134"/>
+</map>
