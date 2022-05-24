@@ -1,4 +1,14 @@
-﻿using Exceptions.AccessRightsExceptions;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        FormUpdatePrice.cs                                       *
+ *  Copyright:   (c) 2022, Cuptor Iuliana-Stefania                        *
+ *  E-mail:      iuliana-stefania.cuptor@student.tuiasi.ro                *
+ *  Description: This file contains the implementation of Update Price    *
+ *        Interface where, based on its barcode, we can update the price  *
+ *                                                                        *
+ **************************************************************************/
+
+using Exceptions.AccessRightsExceptions;
 using Exceptions.DataBaseExceptions;
 using PharmacyManagementDLL;
 using System;

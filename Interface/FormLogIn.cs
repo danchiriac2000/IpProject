@@ -1,4 +1,13 @@
-﻿using DataBaseManager;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        FormLogIn.cs                                             *
+ *  Copyright:   (c) 2022, Cuptor Iuliana-Stefania                        *
+ *  E-mail:      iuliana-stefania.cuptor@student.tuiasi.ro                *
+ *  Description: This file contains the implementation of LogIn Interface *
+ *                                                                        *
+ **************************************************************************/
+
+using DataBaseManager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

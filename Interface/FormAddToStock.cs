@@ -1,4 +1,14 @@
-﻿using Exceptions.AccessRightsExceptions;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        FormAddToStock.cs                                        *
+ *  Copyright:   (c) 2022, Cuptor Iuliana-Stefania                        *
+ *  E-mail:      iuliana-stefania.cuptor@student.tuiasi.ro                *
+ *  Description: This file contains the implementation of Add To Stock    *
+ *      Interface where we can add new stocks of a specific product       *
+ *                                                                        *
+ **************************************************************************/
+
+using Exceptions.AccessRightsExceptions;
 using Exceptions.DataBaseExceptions;
 using PharmacyManagementDLL;
 using System;
