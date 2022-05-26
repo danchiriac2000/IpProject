@@ -1,0 +1,29 @@
+In urma unui meeting, s-au stabilit de catre toti membrii echipei urmatoarele:
+-Tema aleasa;
+-Organizarea si impartirea task-urilor;
+-Proiectarea aplicatiei;
+
+Task-uri:
+
+Ursachi Gabriela:
+-Implementare proxy in PharmacyManagementDLL;
+-Testarea unitatilor pentru proxy;
+-Implementare AccessRightsExceptions in Exceptions.dll;
+-Implementare modul commons in Items.dll;
+
+Cuptor Iuliana-Stefania:
+-Aspectul interfetei + implementarea functionalitatii acesteia;
+-Documentul Help;
+-O lista cu produsele valide ale aplicatiei;
+
+Ratoi Liviu:
+-Documentatie SRS;
+-Documentatie;
+-Generare doxygen;
+-Diagramele de clase, cazuri de utilizare, secvente si activitati;
+
+Chiriac Dan-Constantin:
+-Implementarea bazei da date in DataBaseManager.dll;
+-Testarea unitatilor pentru baza de date;
+-Implementare DataBaseExceptions in Exceptions.dll;
+-Implementare modul DataBaseObjects in Items.dll;
